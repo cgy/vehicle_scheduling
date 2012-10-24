@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20121024104337) do
     t.boolean  "admin",           :default => false
   end
 
+  add_index "users", ["name"], :name => "index_users_on_name", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end
