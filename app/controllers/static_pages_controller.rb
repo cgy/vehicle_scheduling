@@ -1,6 +1,9 @@
 class StaticPagesController < ApplicationController
   def home
-    if signed_in?
+    @trip = Trip.all
+    if !@trip.nil?
+      @car = @trip.car
+      @user = @trip.user
     end
   end
 

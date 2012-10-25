@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :password, :password_confirmation, :remember_token
   has_secure_password
-  has_one :trip
   belongs_to :car_driver
 
   before_save :create_remember_token
