@@ -2,12 +2,13 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
-<%= render 'layouts/header'  %>
+<%= render 'layouts/header' %>
 <div class="container">
   <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "alert alert-#{key}") %>
@@ -15,5 +16,17 @@
   <%= yield %>
   <%= render 'layouts/footer' %>
 </div>
+<script>
+    $(function () {
+        if ($.browser.msie && parseInt($.browser.version, 10) === 6) {
+            $('.row div[class^="span"]:last-child').addClass("last-child");
+            $('[class*="span"]').addClass("margin-left-20");
+            $(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset");
+            $(":checkbox").addClass("input-checkbox");
+            $('[class^="icon-"], [class*=" icon-"]').addClass("icon-sprite");
+            $(".pagination li:first-child a").addClass("pagination-first-child")
+        }
+    })
+</script>
 </body>
 </html>
