@@ -107,15 +107,6 @@ footer {
   }
 }
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
 
 /* sidebar */
 
@@ -214,17 +205,6 @@ input, textarea, select, .uneditable-input {
   }
 }
 
-/* microposts */
-
-.microposts {
-  list-style: none;
-  margin: 10px 0 0 0;
-
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-}
 
 .content {
   display: block;

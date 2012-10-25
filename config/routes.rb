@@ -1,8 +1,25 @@
 VehicleScheduling::Application.routes.draw do
+  resources :car_drivers
+
+  resources :destinations
+
+  resources :trips
+
+  resources :cars
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+
+  #static pages
+  root to:"static_pages#home"
+
+  match '/about', to:"static_pages#about"
+
+  match '/help', to:"static_pages#help"
+
+  match '/contact', to:"static_pages#contact"
 
   # user pages
   match '/signup',  to:'users#new'
