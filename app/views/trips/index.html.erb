@@ -2,11 +2,11 @@
 
 <table>
   <tr>
-    <th>Car</th>
-    <th>User</th>
+    <th>Car driver</th>
     <th>Destination</th>
-    <th>Start</th>
-    <th>End</th>
+    <th>Departure time</th>
+    <th>Back time</th>
+    <th>Note</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,11 +14,11 @@
 
 <% @trips.each do |trip| %>
   <tr>
-    <td><%= trip.car_id %></td>
-    <td><%= trip.user_id %></td>
+    <td><%= trip.car_driver_id %></td>
     <td><%= trip.destination_id %></td>
-    <td><%= trip.start %></td>
-    <td><%= trip.end %></td>
+    <td><%= trip.departure_time %></td>
+    <td><%= trip.back_time %></td>
+    <td><%= trip.note %></td>
     <td><%= link_to 'Show', trip %></td>
     <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
     <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>

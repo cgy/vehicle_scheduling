@@ -1,5 +1,4 @@
 class DestinationsController < ApplicationController
-  before_filter :admin_user, only: [:new, :edit, :create, :update, :destory]
   # GET /destinations
   # GET /destinations.json
   def index

@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :car_id %><br />
-    <%= f.number_field :car_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.label :car_driver_id %><br />
+    <%= f.number_field :car_driver_id %>
   </div>
   <div class="field">
     <%= f.label :destination_id %><br />
     <%= f.number_field :destination_id %>
   </div>
   <div class="field">
-    <%= f.label :start %><br />
-    <%= f.date_select :start %>
+    <%= f.label :departure_time %><br />
+    <%= f.date_select :departure_time %>
   </div>
   <div class="field">
-    <%= f.label :end %><br />
-    <%= f.date_select :end %>
+    <%= f.label :back_time %><br />
+    <%= f.date_select :back_time %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_field :note %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -11,6 +11,18 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :car_id %><br />
+    <%= f.number_field :car_id %>
+  </div>
+  <div class="field">
+    <%= f.label :driver_id %><br />
+    <%= f.number_field :driver_id %>
+  </div>
+  <div class="field">
+    <%= f.label :available %><br />
+    <%= f.check_box :available %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

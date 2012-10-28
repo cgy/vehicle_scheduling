@@ -1,5 +1,4 @@
 class CarDriversController < ApplicationController
-  before_filter :admin_user, only: [:new, :edit, :create, :update, :destory]
   # GET /car_drivers
   # GET /car_drivers.json
   def index

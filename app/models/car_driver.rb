@@ -1,6 +1,6 @@
 class CarDriver < ActiveRecord::Base
-  attr_accessible :available
-  has_one :car
-  has_one :user
-  belongs_to :trip
+  attr_accessible :available, :car_id, :driver_id
+  belongs_to :car
+  belongs_to :user
+  has_one :trip
 end

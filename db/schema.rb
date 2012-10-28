@@ -11,12 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121025030930) do
+ActiveRecord::Schema.define(:version => 20121028173720) do
 
   create_table "car_drivers", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.boolean  "available"
+    t.integer  "car_id"
+    t.integer  "driver_id"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "current_trip", :default => 0
   end
 
   create_table "cars", :force => true do |t|
@@ -32,15 +34,27 @@ ActiveRecord::Schema.define(:version => 20121025030930) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "members", :force => true do |t|
+    t.string   "name"
+    t.integer  "group_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "trips", :force => true do |t|
-    t.integer  "car_id"
-    t.integer  "user_id"
+    t.integer  "car_driver_id"
     t.integer  "destination_id"
-    t.date     "start"
-    t.date     "end"
+    t.date     "departure_time"
+    t.date     "back_time"
+    t.string   "note"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-    t.string   "note"
   end
 
   create_table "users", :force => true do |t|
