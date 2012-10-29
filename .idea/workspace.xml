@@ -50,28 +50,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="boot.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/boot.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/application.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="40" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
+            <state line="63" column="12" selection-start="2330" selection-end="2330" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RailsDependency/#vehicle_scheduling" pinned="false" current="false" current-in-tab="false">
+        <entry file="uml://RailsDependency/#vehicle_scheduling">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>RailsDependency</ID>
+              <OriginalElement>#vehicle_scheduling</OriginalElement>
+              <nodes>
+                <node x="0.0" y="133.0">User</node>
+                <node x="9.5" y="0.0">Car</node>
+                <node x="302.0" y="340.0">Member</node>
+                <node x="15.5" y="350.5">Group</node>
+                <node x="282.0" y="67.25000000000003">CarDriver</node>
+                <node x="305.0" y="221.25000000000003">Destination</node>
+                <node x="537.0" y="178.5">Trip</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="Destination" target="Trip">
+                  <point x="64.5" y="-0.0" />
+                  <point x="-99.0" y="-0.0" />
+                </edge>
+                <edge source="Car" target="CarDriver">
+                  <point x="91.5" y="-0.0" />
+                  <point x="-87.5" y="-28.5" />
+                </edge>
+                <edge source="User" target="CarDriver">
+                  <point x="101.0" y="-0.0" />
+                  <point x="-87.5" y="28.5" />
+                </edge>
+                <edge source="Group" target="Member">
+                  <point x="85.5" y="-0.0" />
+                  <point x="-67.5" y="-0.0" />
+                </edge>
+                <edge source="CarDriver" target="Trip">
+                  <point x="87.5" y="-0.0" />
+                  <point x="-99.0" y="-52.0" />
+                </edge>
+                <edge source="Member" target="Trip">
+                  <point x="67.5" y="-0.0" />
+                  <point x="457.0" y="386.5" />
+                  <point x="-99.0" y="52.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="35.0" y="49.5" />
+              <SelectedNodes>
+                <node>User</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Association fields</Category>
+                <Category>Migration fields</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="0.40428063">
               <folding />
             </state>
           </provider>
@@ -95,10 +141,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="25" selection-start="685" selection-end="685" vertical-scroll-proportion="0.35315102">
+            <state line="55" column="25" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,18 +179,18 @@
         <option value="$PROJECT_DIR$/db/migrate/20121028173720_add_current_trip_to_car_driver.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/sample_data.rake" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="440" />
-    <option name="y" value="146" />
+    <option name="x" value="807" />
+    <option name="y" value="265" />
     <option name="width" value="1659" />
     <option name="height" value="985" />
   </component>
@@ -886,7 +932,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="440" y="146" width="1659" height="985" extended-state="0" />
+    <frame x="807" y="265" width="1659" height="985" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -963,20 +1009,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/initializers/backtrace_silencers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/mime_types.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/secret_token.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1019,20 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="40" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="33" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="101" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
@@ -1070,7 +1088,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="25" selection-start="685" selection-end="685" vertical-scroll-proportion="0.35315102">
+        <state line="55" column="25" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="33" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="12" selection-start="2330" selection-end="2330" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://RailsDependency/#vehicle_scheduling">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>RailsDependency</ID>
+          <OriginalElement>#vehicle_scheduling</OriginalElement>
+          <nodes>
+            <node x="0.0" y="133.0">User</node>
+            <node x="9.5" y="0.0">Car</node>
+            <node x="302.0" y="340.0">Member</node>
+            <node x="15.5" y="350.5">Group</node>
+            <node x="282.0" y="67.25000000000003">CarDriver</node>
+            <node x="305.0" y="221.25000000000003">Destination</node>
+            <node x="537.0" y="178.5">Trip</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Destination" target="Trip">
+              <point x="64.5" y="-0.0" />
+              <point x="-99.0" y="-0.0" />
+            </edge>
+            <edge source="Car" target="CarDriver">
+              <point x="91.5" y="-0.0" />
+              <point x="-87.5" y="-28.5" />
+            </edge>
+            <edge source="User" target="CarDriver">
+              <point x="101.0" y="-0.0" />
+              <point x="-87.5" y="28.5" />
+            </edge>
+            <edge source="Group" target="Member">
+              <point x="85.5" y="-0.0" />
+              <point x="-67.5" y="-0.0" />
+            </edge>
+            <edge source="CarDriver" target="Trip">
+              <point x="87.5" y="-0.0" />
+              <point x="-99.0" y="-52.0" />
+            </edge>
+            <edge source="Member" target="Trip">
+              <point x="67.5" y="-0.0" />
+              <point x="457.0" y="386.5" />
+              <point x="-99.0" y="52.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="35.0" y="49.5" />
+          <SelectedNodes>
+            <node>User</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Association fields</Category>
+            <Category>Migration fields</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="0.40428063">
           <folding />
         </state>
       </provider>
