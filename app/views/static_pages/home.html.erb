@@ -7,16 +7,22 @@
   <table class="table table-hover">
     <thead>
     <tr>
+      <th>#</th>
       <th>车型</th>
       <th>车牌</th>
       <th>司机</th>
     </tr>
     </thead>
-    <% @available_cars.each do |c| %>
+    <% @available_cars.each_with_index do |c, i| %>
         <tr class="alert alert-success">
-          <td><%= c.model %></td>
-          <td><%= link_to c.plate, c%></td>
-          <td><%= "c[:driver].name" %></td>
+          <td><%= i+1 %></td>
+          <td><%= c[:car].model %></td>
+          <td><%= link_to c[:car].plate, c[:car]%></td>
+          <% if !c[:driver].nil? %>
+            <td><%= c[:driver].name %>(<%= c[:driver].phone %>)</td>
+          <% else %>
+            <td></td>
+          <% end %>
         </tr>
     <% end %>
   </table>
@@ -26,20 +32,24 @@
   <table class="table table-hover">
     <thead>
       <tr>
+        <th>#</th>
         <th>车型</th>
         <th>车牌</th>
         <th>司机</th>
+        <th>工作人员</th>
         <th>出差地</th>
         <th>出发时间</th>
         <th>预计归来时间</th>
         <th>事由</th>
       </tr>
     </thead>
-    <% @cars_in_use.each do |c| %>
+    <% @cars_in_use.each_with_index do |c, i| %>
         <tr class="alert alert-error">
+        <td><%= i+1 %></td>
         <td><%= c[:car].model %></td>
         <td><%= link_to c[:car].plate, c[:car] %></td>
         <td><%= c[:driver].name %></td>
+        <td>夏一博，汪磊，刘湖钰，梅立奇</td>
         <td><%= c[:destination].name %></td>
         <td><%= c[:departure_time] %></td>
         <td><%= c[:back_time] %></td>

@@ -3,6 +3,6 @@ class Trip < ActiveRecord::Base
   belongs_to :car
   belongs_to :user
   belongs_to :destination
-  has_and_belongs_to_many :member
+  has_many :trip_members
 
 end

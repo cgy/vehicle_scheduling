@@ -6,14 +6,6 @@ class StaticPagesController < ApplicationController
     cars = Car.all
     users = User.all
 
-    @available_users = []
-    users.each { |user|
-      if !user.admin? && user.current_trip == 0
-        @available_users << user
-      end
-    }
-
-
     @available_cars = []
     @cars_in_use = []
     cars.each { |car|
@@ -28,10 +20,22 @@ class StaticPagesController < ApplicationController
           note:           @trip.note,
         }
       else
-        cd = CarDriver.where(car_id = car.id).order('created_at desc')
-        @available_cars << car
+        #该车最近一次由谁驾驶？
+        car_driver = CarDriver.where("car_id=?",car.id).order('created_at desc').first
+        if car_driver.nil?
+          @available_cars << {
+              car: car,
+              driver: nil
+          }
+        else
+          @available_cars << {
+            car: car,
+            driver: User.find(car_driver.driver_id)
+          }
+        end
       end
     }
+
   end
 
   def help

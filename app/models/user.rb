@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :trip
+  has_many :car_driver
 
   before_save :create_remember_token
 

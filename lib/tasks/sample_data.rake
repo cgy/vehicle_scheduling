@@ -34,6 +34,18 @@ namespace :db do
                            phone:    "668740",
                            password: "000000",
                            password_confirmation:"000000")
+    driver7 = User.create!(name:     "任正熊",
+                           phone:    "663649",
+                           password: "000000",
+                           password_confirmation:"000000")
+    driver8 = User.create!(name:     "钟小双",
+                           phone:    "667890",
+                           password: "000000",
+                           password_confirmation:"000000")
+    driver9 = User.create!(name:     "周竟声",
+                           phone:    "667894",
+                           password: "000000",
+                           password_confirmation:"000000")
 
     car1 = Car.create!(model: "风神",
                        plate:"赣A25568")
@@ -47,6 +59,17 @@ namespace :db do
                        plate:"赣A74841")
     car6 = Car.create!(model: "陆虎",
                        plate:"赣A26501")
+    car7 = Car.create!(model: "全顺",
+                       plate:"赣A28978")
+    car8 = Car.create!(model: "顺风",
+                       plate:"赣A28725")
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+    CarDriver.create!(car_id: car5.id, driver_id: driver7.id)
+    CarDriver.create!(car_id: car8.id, driver_id: driver6.id)
+    CarDriver.create!(car_id: car9.id, driver_id: driver6.id)
+    CarDriver.create!(car_id: car9.id, driver_id: driver7.id)
+    CarDriver.create!(car_id: car9.id, driver_id: driver8.id)
 
     dest1 = Destination.create!(name:"南昌变")
     dest2 = Destination.create!(name:"梦山变")
