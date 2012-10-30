@@ -11,21 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121028173720) do
-
-  create_table "car_drivers", :force => true do |t|
-    t.integer  "car_id"
-    t.integer  "driver_id"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
-    t.integer  "current_trip", :default => 0
-  end
+ActiveRecord::Schema.define(:version => 20121030022023) do
 
   create_table "cars", :force => true do |t|
     t.string   "model"
     t.string   "plate"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "current_trip", :default => 0
   end
 
   create_table "destinations", :force => true do |t|
@@ -48,13 +41,14 @@ ActiveRecord::Schema.define(:version => 20121028173720) do
   end
 
   create_table "trips", :force => true do |t|
-    t.integer  "car_driver_id"
     t.integer  "destination_id"
     t.date     "departure_time"
     t.date     "back_time"
     t.string   "note"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.integer  "car_id"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
@@ -64,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20121028173720) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           :default => false
+    t.integer  "current_trip"
   end
 
   add_index "users", ["name"], :name => "index_users_on_name", :unique => true

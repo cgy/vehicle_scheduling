@@ -52,19 +52,6 @@ namespace :db do
     car6 = Car.create!(model: "陆虎",
                        plate:"赣A26501")
 
-    car_driver_1 = CarDriver.create!(car_id: car1.id,
-                                     driver_id: driver1.id)
-    car_driver_2 = CarDriver.create!(car_id: car2.id,
-                                     driver_id: driver2.id)
-    car_driver_3 = CarDriver.create!(car_id: car3.id,
-                                     driver_id: driver3.id)
-    car_driver_4 = CarDriver.create!(car_id: car4.id,
-                                     driver_id: driver4.id)
-    car_driver_5 = CarDriver.create!(car_id: car5.id,
-                                     driver_id: driver5.id)
-    car_driver_6 = CarDriver.create!(car_id: car6.id,
-                                     driver_id: driver6.id)
-
     dest1 = Destination.create!(name:"南昌变")
     dest2 = Destination.create!(name:"梦山变")
     dest3 = Destination.create!(name:"进贤变")
@@ -98,38 +85,50 @@ namespace :db do
     menber9 = Member.create!(name:"刘宇",
                              group_id: group6.id)
 
-    trip1 = Trip.create!(car_driver_id: car_driver_1.id,
+    trip1 = Trip.create!(car_id: car1.id,
+                         user_id: driver1.id,
                          destination_id: dest1.id,
                          departure_time:Date.new(2012,10,28),
                          back_time:Date.new(2012,10,29),
                          note:"年检")
-    car_driver_1.current_trip = trip1.id
-    car_driver_1.save
+    car1.current_trip = trip1.id
+    car1.save
+    driver1.current_trip = trip1.id
+    driver1.save
 
 
-    trip2 = Trip.create!(car_driver_id: car_driver_3.id,
+    trip2 = Trip.create!(car_id: car2.id,
+                         user_id: driver3.id,
                          destination_id: dest3.id,
                          departure_time:Date.new(2012,10,27),
                          back_time:Date.new(2012,10,28),
                          note:"主变检修")
-    car_driver_3.current_trip = trip2.id
-    car_driver_3.save
+    car2.current_trip = trip2.id
+    car2.save
+    driver3.current_trip = trip2.id
+    driver3.save
 
-    trip3 = Trip.create!(car_driver_id: car_driver_4.id,
+    trip3 = Trip.create!(car_id: car4.id,
+                         user_id: driver5.id,
                          destination_id: dest3.id,
                          departure_time:Date.new(2012,10,26),
                          back_time:Date.new(2012,10,30),
                          note:"开关检修")
-    car_driver_4.current_trip = trip3.id
-    car_driver_4.save
+    car4.current_trip = trip3.id
+    car4.save
+    driver5.current_trip = trip3.id
+    driver5.save
 
-    trip4 = Trip.create!(car_driver_id: car_driver_6.id,
+    trip4 = Trip.create!(car_id: car5.id,
+                         user_id: driver6.id,
                          destination_id: dest5.id,
                          departure_time:Date.new(2012,10,28),
                          back_time:Date.new(2012,10,31),
                          note:"")
-    car_driver_6.current_trip = trip4.id
-    car_driver_6.save
+    car5.current_trip = trip4.id
+    car5.save
+    driver6.current_trip = trip4.id
+    driver6.save
 
     users = User.all(limit: 6)
     50.times do

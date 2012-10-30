@@ -3,16 +3,16 @@ class StaticPagesController < ApplicationController
 
     redirect_to user_path if signed_in?
 
-    car_drivers = CarDriver.all
+    cars = Car.all
 
     @car_status = []
-    car_drivers.each { |car_driver|
-      if car_driver.current_trip > 0
-        @trip = Trip.find(car_driver.current_trip)
+    cars.each { |car|
+      if car.current_trip > 0
+        @trip = Trip.find(car.current_trip)
         @car_status << {
-          model:          car_driver.car.model,
-          plate:          car_driver.car.plate,
-          driver:         User.find(car_driver.driver_id).name,
+          model:          car.model,
+          plate:          car.plate,
+          driver:         @trip.user.name,
           destination:    @trip.destination.name,
           departure_time: @trip.departure_time,
           back_time:      @trip.back_time,
@@ -21,9 +21,9 @@ class StaticPagesController < ApplicationController
         }
       else
         @car_status << {
-          model:          car_driver.car.model,
-          plate:          car_driver.car.plate,
-          driver:         User.find(car_driver.driver_id).name,
+          model:          car.model,
+          plate:          car.plate,
+          driver:         @trip.user.name,
           destination:    "",
           departure_time: "",
           back_time:      "",
