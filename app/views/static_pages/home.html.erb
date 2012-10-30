@@ -2,7 +2,26 @@
 
 <div class="center container">
   <h2>
-    车辆使用情况
+    可用车辆情况
+  </h2>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>车型</th>
+      <th>车牌</th>
+      <th>司机</th>
+    </tr>
+    </thead>
+    <% @available_cars.each do |c| %>
+        <tr class="alert alert-success">
+          <td><%= c.model %></td>
+          <td><%= link_to c.plate, c%></td>
+          <td><%= "c[:driver].name" %></td>
+        </tr>
+    <% end %>
+  </table>
+  <h2>
+    在用车辆情况
   </h2>
   <table class="table table-hover">
     <thead>
@@ -16,16 +35,12 @@
         <th>事由</th>
       </tr>
     </thead>
-    <% @car_status.each do |c| %>
-      <% if c[:available] %>
-        <tr class="alert alert-success">
-      <% else %>
+    <% @cars_in_use.each do |c| %>
         <tr class="alert alert-error">
-      <% end %>
-        <td><%= c[:model] %></td>
-        <td><%= c[:plate] %></td>
-        <td><%= c[:driver] %></td>
-        <td><%= c[:destination] %></td>
+        <td><%= c[:car].model %></td>
+        <td><%= link_to c[:car].plate, c[:car] %></td>
+        <td><%= c[:driver].name %></td>
+        <td><%= c[:destination].name %></td>
         <td><%= c[:departure_time] %></td>
         <td><%= c[:back_time] %></td>
         <td><%= c[:note] %></td>

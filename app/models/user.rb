@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :password, :password_confirmation, :remember_token, :current_trip
+  attr_accessible :name, :phone, :password, :password_confirmation, :remember_token, :current_trip
   has_secure_password
 
   has_many :trip

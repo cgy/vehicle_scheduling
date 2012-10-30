@@ -4,39 +4,39 @@ class StaticPagesController < ApplicationController
     redirect_to user_path if signed_in?
 
     cars = Car.all
+    users = User.all
 
-    @car_status = []
+    @available_users = []
+    users.each { |user|
+      if !user.admin? && user.current_trip == 0
+        @available_users << user
+      end
+    }
+
+
+    @available_cars = []
+    @cars_in_use = []
     cars.each { |car|
       if car.current_trip > 0
         @trip = Trip.find(car.current_trip)
-        @car_status << {
-          model:          car.model,
-          plate:          car.plate,
-          driver:         @trip.user.name,
-          destination:    @trip.destination.name,
+        @cars_in_use << {
+          car:            car,
+          driver:         @trip.user,
+          destination:    @trip.destination,
           departure_time: @trip.departure_time,
           back_time:      @trip.back_time,
           note:           @trip.note,
-          available:      false
         }
       else
-        @car_status << {
-          model:          car.model,
-          plate:          car.plate,
-          driver:         @trip.user.name,
-          destination:    "",
-          departure_time: "",
-          back_time:      "",
-          note:           "",
-          available:      true
-        }
-      end }
-    @car_status.sort!{ |a, b| a[:destination] <=> b[:destination] }
+        cd = CarDriver.where(car_id = car.id).order('created_at desc')
+        @available_cars << car
+      end
+    }
   end
 
   def help
   end
-  
+
   def about
   end
 

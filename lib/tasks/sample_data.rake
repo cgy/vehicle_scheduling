@@ -10,34 +10,30 @@ namespace :db do
     admin.toggle!(:admin)
 
 
-    driver1 = User.create!(name:     "小强",
+    driver1 = User.create!(name:     "李年伟",
+                           phone:    "668810",
                            password: "000000",
                            password_confirmation:"000000")
-    driver2 = User.create!(name:     "小任",
+    driver2 = User.create!(name:     "王超",
+                           phone:    "663563",
                            password: "000000",
                            password_confirmation:"000000")
-    driver3 = User.create!(name:     "小钟",
+    driver3 = User.create!(name:     "黄明辕",
+                           phone:    "13970031807",
                            password: "000000",
                            password_confirmation:"000000")
-    driver4 = User.create!(name:     "申辉",
+    driver4 = User.create!(name:     "谈建军",
+                           phone:    "664646",
                            password: "000000",
                            password_confirmation:"000000")
-    driver5 = User.create!(name:     "小李",
+    driver5 = User.create!(name:     "魏群敏",
+                           phone:    "668759",
                            password: "000000",
                            password_confirmation:"000000")
-    driver6 = User.create!(name:     "小季",
+    driver6 = User.create!(name:     "周卫东",
+                           phone:    "668740",
                            password: "000000",
                            password_confirmation:"000000")
-
-
-    93.times do |n|
-      name = Faker::Name.name
-      password = "password"
-      User.create!(name:     name,
-                   password: password,
-                   password_confirmation:password)
-    end
-
 
     car1 = Car.create!(model: "风神",
                        plate:"赣A25568")
@@ -84,7 +80,7 @@ namespace :db do
                              group_id: group5.id)
     menber9 = Member.create!(name:"刘宇",
                              group_id: group6.id)
-
+    CarDriver.create!(car_id: car5.id, driver_id: driver2.id)
     trip1 = Trip.create!(car_id: car1.id,
                          user_id: driver1.id,
                          destination_id: dest1.id,
@@ -95,6 +91,7 @@ namespace :db do
     car1.save
     driver1.current_trip = trip1.id
     driver1.save
+    CarDriver.create!(car_id: car1.id, driver_id: driver1.id)
 
 
     trip2 = Trip.create!(car_id: car2.id,
@@ -107,6 +104,7 @@ namespace :db do
     car2.save
     driver3.current_trip = trip2.id
     driver3.save
+    CarDriver.create!(car_id: car2.id, driver_id: driver3.id)
 
     trip3 = Trip.create!(car_id: car4.id,
                          user_id: driver5.id,
@@ -118,6 +116,7 @@ namespace :db do
     car4.save
     driver5.current_trip = trip3.id
     driver5.save
+    CarDriver.create!(car_id: car4.id, driver_id: driver5.id)
 
     trip4 = Trip.create!(car_id: car5.id,
                          user_id: driver6.id,
@@ -129,10 +128,7 @@ namespace :db do
     car5.save
     driver6.current_trip = trip4.id
     driver6.save
+    CarDriver.create!(car_id: car5.id, driver_id: driver6.id)
 
-    users = User.all(limit: 6)
-    50.times do
-      content = Faker::Lorem.sentence(5)
-    end
   end
 end

@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121030022023) do
+ActiveRecord::Schema.define(:version => 20121030073819) do
+
+  create_table "car_drivers", :force => true do |t|
+    t.integer  "car_id"
+    t.integer  "driver_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "cars", :force => true do |t|
     t.string   "model"
@@ -59,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20121030022023) do
     t.string   "remember_token"
     t.boolean  "admin",           :default => false
     t.integer  "current_trip"
+    t.string   "phone"
   end
 
   add_index "users", ["name"], :name => "index_users_on_name", :unique => true
