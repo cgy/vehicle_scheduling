@@ -4,5 +4,6 @@ class Trip < ActiveRecord::Base
   belongs_to :user
   belongs_to :destination
   has_many :trip_members
+  has_many :members, through: :trip_members
 
 end

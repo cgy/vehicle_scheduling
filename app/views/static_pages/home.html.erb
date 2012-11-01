@@ -49,7 +49,7 @@
         <td><%= c[:car].model %></td>
         <td><%= link_to c[:car].plate, c[:car] %></td>
         <td><%= c[:driver].name %></td>
-        <td>夏一博，汪磊，刘湖钰，梅立奇</td>
+        <td><%= c[:trip_members].join('，') %></td>
         <td><%= c[:destination].name %></td>
         <td><%= c[:departure_time] %></td>
         <td><%= c[:back_time] %></td>

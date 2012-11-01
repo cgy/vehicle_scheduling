@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
 
-    redirect_to user_path if signed_in?
+    redirect_to current_user if signed_in?
 
     cars = Car.all
     users = User.all
@@ -9,8 +9,13 @@ class StaticPagesController < ApplicationController
     @available_cars = []
     @cars_in_use = []
     cars.each { |car|
+      #该车已出差
       if car.current_trip > 0
         @trip = Trip.find(car.current_trip)
+        trip_member = TripMember.find_all_by_trip_id(@trip.id)
+        members = []
+        trip_member.each { |tp| members << User.find(tp.member_id).name } if !trip_member.nil?
+
         @cars_in_use << {
           car:            car,
           driver:         @trip.user,
@@ -18,6 +23,7 @@ class StaticPagesController < ApplicationController
           departure_time: @trip.departure_time,
           back_time:      @trip.back_time,
           note:           @trip.note,
+          trip_members:   members
         }
       else
         #该车最近一次由谁驾驶？

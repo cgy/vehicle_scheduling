@@ -3,8 +3,6 @@ VehicleScheduling::Application.routes.draw do
 
   resources :groups
 
-  resources :car_drivers
-
   resources :destinations
 
   resources :trips

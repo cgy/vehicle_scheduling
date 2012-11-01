@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :phone, :password, :password_confirmation, :remember_token, :current_trip
+  attr_accessible :name, :phone, :group_id, :user_type, :password, :password_confirmation, :remember_token, :current_trip
   has_secure_password
 
-  has_many :trip
-  has_many :car_driver
+  has_many :trips
+  has_many :car_drivers
+  has_many :trip_members
+  belongs_to :group
 
   before_save :create_remember_token
 

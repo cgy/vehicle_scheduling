@@ -6,44 +6,54 @@ namespace :db do
   task populate: :environment do
     admin = User.create!(name:     "admin",
                          password: "000000",
+                         user_type: 0,
                          password_confirmation:"000000")
     admin.toggle!(:admin)
 
 
     driver1 = User.create!(name:     "李年伟",
                            phone:    "668810",
+                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
     driver2 = User.create!(name:     "王超",
                            phone:    "663563",
+                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
     driver3 = User.create!(name:     "黄明辕",
                            phone:    "13970031807",
+                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
     driver4 = User.create!(name:     "谈建军",
                            phone:    "664646",
+                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
     driver5 = User.create!(name:     "魏群敏",
                            phone:    "668759",
+                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
     driver6 = User.create!(name:     "周卫东",
                            phone:    "668740",
+                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
     driver7 = User.create!(name:     "任正熊",
                            phone:    "663649",
+                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
     driver8 = User.create!(name:     "钟小双",
                            phone:    "667890",
+                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
     driver9 = User.create!(name:     "周竟声",
                            phone:    "667894",
+                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
 
@@ -85,23 +95,50 @@ namespace :db do
     group5 = Group.create!(name:"二次二班")
     group6 = Group.create!(name:"二次三班")
 
-    menber1 = Member.create!(name:"贺兆哲",
+    member1 = User.create!(name:"贺兆哲",
+                           user_type: 2,
+                             password: "000000",
+                             password_confirmation:"000000",
                              group_id: group1.id)
-    menber2 = Member.create!(name:"杜海波",
+    member2 = User.create!(name:"杜海波",
+                           user_type: 2,
+                             password: "000000",
+                             password_confirmation:"000000",
                              group_id: group1.id)
-    menber3 = Member.create!(name:"程文星",
+    member3 = User.create!(name:"程文星",
+                           user_type: 2,
+                             password: "000000",
+                             password_confirmation:"000000",
                              group_id: group2.id)
-    menber4 = Member.create!(name:"朱擘",
+    member4 = User.create!(name:"朱擘",
+                             user_type: 2,
+                             password: "000000",
+                             password_confirmation:"000000",
                              group_id: group2.id)
-    menber5 = Member.create!(name:"刘小平",
+    member5 = User.create!(name:"刘小平",
+                             user_type: 2,
+                             password: "000000",
+                             password_confirmation:"000000",
                              group_id: group3.id)
-    menber6 = Member.create!(name:"范思哲",
+    member6 = User.create!(name:"范思哲",
+                             user_type: 2,
+                             password: "000000",
+                             password_confirmation:"000000",
                              group_id: group3.id)
-    menber7 = Member.create!(name:"刘德华",
+    member7 = User.create!(name:"刘德华",
+                             user_type: 2,
+                             password: "000000",
+                             password_confirmation:"000000",
                              group_id: group4.id)
-    menber8 = Member.create!(name:"钟小思",
+    member8 = User.create!(name:"钟小思",
+                             user_type: 2,
+                             password: "000000",
+                             password_confirmation:"000000",
                              group_id: group5.id)
-    menber9 = Member.create!(name:"刘宇",
+    member9 = User.create!(name:"刘宇",
+                             user_type: 2,
+                             password: "000000",
+                             password_confirmation:"000000",
                              group_id: group6.id)
     CarDriver.create!(car_id: car5.id, driver_id: driver2.id)
     trip1 = Trip.create!(car_id: car1.id,
@@ -115,7 +152,8 @@ namespace :db do
     driver1.current_trip = trip1.id
     driver1.save
     CarDriver.create!(car_id: car1.id, driver_id: driver1.id)
-
+    TripMember.create!(trip_id:trip1.id, member_id:member1.id)
+    TripMember.create!(trip_id:trip1.id, member_id:member2.id)
 
     trip2 = Trip.create!(car_id: car2.id,
                          user_id: driver3.id,
@@ -128,6 +166,10 @@ namespace :db do
     driver3.current_trip = trip2.id
     driver3.save
     CarDriver.create!(car_id: car2.id, driver_id: driver3.id)
+    TripMember.create!(trip_id:trip2.id, member_id:member3.id)
+    TripMember.create!(trip_id:trip2.id, member_id:member4.id)
+
+
 
     trip3 = Trip.create!(car_id: car4.id,
                          user_id: driver5.id,
@@ -140,6 +182,8 @@ namespace :db do
     driver5.current_trip = trip3.id
     driver5.save
     CarDriver.create!(car_id: car4.id, driver_id: driver5.id)
+    TripMember.create!(trip_id:trip3.id, member_id:member5.id)
+    TripMember.create!(trip_id:trip3.id, member_id:member6.id)
 
     trip4 = Trip.create!(car_id: car5.id,
                          user_id: driver6.id,
@@ -152,6 +196,8 @@ namespace :db do
     driver6.current_trip = trip4.id
     driver6.save
     CarDriver.create!(car_id: car5.id, driver_id: driver6.id)
+    TripMember.create!(trip_id:trip4.id, member_id:member8.id)
+    TripMember.create!(trip_id:trip4.id, member_id:member9.id)
 
   end
 end
