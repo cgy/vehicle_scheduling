@@ -14,21 +14,29 @@ body , a{
 	background: url(image_path('index_02.jpeg')) no-repeat 217px 0;
 }
 .head .logo{
-	float:left;
+  float:left;
 }
-
+.head .title{
+  float:left;
+  padding:25px 0 0 5px;
+}
+.head .title p{
+  font:normal bold 14px "微软雅黑,宋体";
+  padding-top:5px;
+  color:#000;
+}
 .head .nologin , .head .login{
-	float:right;
-	padding:45px 10px 0 0;
+  float:right;
+  padding:45px 10px 0 0;
 
 }
 .head a ,.head span{
-	font:normal normal 14px "宋体";
-	color:#444;
-	margin-left:15px;
+  font:normal normal 14px "宋体";
+  color:#444;
+  margin-left:15px;
 }
 .head a:hover{
-	color:green;
+  color:green;
 }
 
 
