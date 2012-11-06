@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -9,25 +11,14 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
-<div class="container">
+<div class="content">
   <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "alert alert-#{key}") %>
   <% end %>
+  <%= render "side" %>
   <%= yield %>
   <%= render 'layouts/footer' %>
-  <%= debug(params) if Rails.env.development? %>
+<!--  <%= debug(params) if Rails.env.development? %>       -->
 </div>
-<script>
-    $(function () {
-        if ($.browser.msie && parseInt($.browser.version, 10) === 6) {
-            $('.row div[class^="span"]:last-child').addClass("last-child");
-            $('[class*="span"]').addClass("margin-left-20");
-            $(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset");
-            $(":checkbox").addClass("input-checkbox");
-            $('[class^="icon-"], [class*=" icon-"]').addClass("icon-sprite");
-            $(".pagination li:first-child a").addClass("pagination-first-child")
-        }
-    })
-</script>
 </body>
 </html>

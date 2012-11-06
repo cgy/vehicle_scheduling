@@ -1,0 +1,137 @@
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, 
+p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr{
+	margin: 0;
+	padding: 0;
+}
+body , a{
+	color:#444;
+	text-decoration: none;
+}
+.head{
+	width:950px;
+	margin: 0 auto 10px;
+	height:69px;
+	background: url(image_path('index_02.jpeg')) no-repeat 217px 0;
+}
+.head .logo{
+	float:left;
+}
+
+.head .nologin , .head .login{
+	float:right;
+	padding:45px 10px 0 0;
+
+}
+.head a ,.head span{
+	font:normal normal 14px "宋体";
+	color:#444;
+	margin-left:15px;
+}
+.head a:hover{
+	color:green;
+}
+
+
+.content{
+	width:950px;
+	margin:10px auto;
+	background: url(image_path('bg_main.png')) repeat-y 0 0;
+	border-radius: 3px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.content .left{
+	float: left;
+	overflow: hidden;
+	color: #444;
+	width: 180px;
+}
+.content .left .nav h3{
+	font: bold 15px/50px 'Microsoft Yahei',SimSun;
+	padding-left: 35px;
+
+}
+
+.content .left .nav li{
+	margin-bottom: 5px;
+	list-style: none;
+	_height:30px;
+	_overflow:hidden;
+	_margin-bottom:0
+}
+.content .left .nav li.hover a{
+	background:#b9e9bb;
+}
+.content .left .nav li.set a.link{
+	background:green;
+	color:#fff;
+}
+.content .left .nav li.set i{
+	background-position-x:0;
+}
+
+.content .left .nav li a.link {
+	display: block;
+	_padding: 8px 0;
+	padding-left: 35px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #444;
+}
+
+.content .left .nav li i{
+	width: 20px;
+	background-image: url(image_path('ico_nav.png'));
+	_background-image: url(image_path('ico_nav.gif'));
+	margin-right: 5px;
+	display: inline-block;
+	height: 16px;
+	vertical-align: -3px;
+	_padding-bottom:4px;
+}
+i.icon{
+	background-position: -20px 0;
+}
+i.icon1{
+	background-position: -20px -20px;
+}
+i.icon2{
+	background-position: -20px -40px;
+}
+i.icon3{
+	background-position: -20px -60px;
+}
+i.icon4{
+	background-position: -20px -80px;
+}
+i.icon5{
+	background-position: -20px -100px;
+}
+i.icon6{
+	background-position: -20px -120px;
+}
+i.icon7{
+	background-position: -20px -140px;
+}
+i.icon8{
+	background-position: -20px -160px;
+}
+i.icon9{
+	background-position: -20px -180px;
+}
+i.icon10{
+	background-position: -20px -200px;
+}
+i.icon11{
+	background-position: -20px -220px;
+}
+i.icon12{
+	background-position: -20px -240px;
+}
+.content .right{
+	width: 710px;
+	padding: 15px 30px;
+	overflow: hidden;
+	float: left;
+}
