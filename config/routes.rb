@@ -26,7 +26,7 @@ VehicleScheduling::Application.routes.draw do
   # user pages
   match '/signup',  to:'users#new'
   match '/signin',  to:'sessions#new'
-  match '/signout', to:'sessions#destroy', via: :delete
+  match '/signout', to: 'sessions#destroy', via: :delete
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

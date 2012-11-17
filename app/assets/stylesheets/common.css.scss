@@ -40,11 +40,19 @@ body, a {
 .head a, .head span {
   font: normal normal 14px "宋体";
   color: #444;
-  margin-left: 15px;
 }
 
 .head a:hover {
   color: green;
+}
+
+.head ul {
+  float: right;
+  list-style: none;
+  li {
+    float: left;
+    margin-left: 10px;
+  }
 }
 
 .content {
