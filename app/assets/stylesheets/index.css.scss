@@ -56,15 +56,16 @@ table caption {
   margin-top: 15px;
   margin-bottom: 10px;
 }
-.available-hover {
+
+.available tr:hover {
   background-color: #bac8b4;
 }
 
-.occupied-hover {
+.occupied tr:hover {
   background-color: #c0b0b0;
 }
 
-footer {
+.footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #d3d3d3;
