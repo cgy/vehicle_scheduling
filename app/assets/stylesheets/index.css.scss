@@ -46,23 +46,24 @@ body, a {
     margin-left: 10px;
   }
 }
-
+table {
+  margin-top: 25px;
+}
 table caption {
   color: #444;
   font-size: 16px;
   height: 18px;
   line-height: 18px;
   font-weight: bold;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
-.available tr:hover {
-  background-color: #bac8b4;
+.tr-hover {
+  background-color: #b9e9bb;
 }
 
-.occupied tr:hover {
-  background-color: #c0b0b0;
+.occupied-hover {
+  background-color: #b9e9bb;
 }
 
 .footer {

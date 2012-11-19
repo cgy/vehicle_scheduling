@@ -11,7 +11,7 @@
     <th>司机</th>
   </tr>
   </thead>
-  <tbody class="available">
+  <tbody>
   <% @available_cars.each_with_index do |c, i| %>
       <tr class="alert alert-success">
         <td><%= i+1 %></td>
@@ -42,7 +42,7 @@
     <th>事由</th>
   </tr>
   </thead>
-  <tbody class="occupied">
+  <tbody>
   <% @cars_in_use.each_with_index do |c, i| %>
       <tr class="alert alert-error">
         <td><%= i+1 %></td>
