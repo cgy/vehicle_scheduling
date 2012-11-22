@@ -15,7 +15,7 @@ VehicleScheduling::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   #static pages
-  root to:"static_pages#home"
+  root to:"index_page#index"
 
   match '/about', to:"static_pages#about"
 

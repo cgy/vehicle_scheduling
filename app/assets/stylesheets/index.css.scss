@@ -1,84 +1,18 @@
-@import "bootstrap";
+/*首页表格*/
 
-body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td,
-p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr {
-  margin: 0;
-  padding: 0;
-}
-
-body, a {
-  color: #444;
-  text-decoration: none;
-}
-
-.head {
-  width: 950px;
-  margin: 0 auto -10px;
-  height: 69px;
-  background: url(image_path('index_02.jpeg')) no-repeat 217px 0;
-}
-
-.head .logo {
-  float: left;
-}
-
-
-.head .nologin, .head .login {
-  float: right;
-  padding: 45px 10px 0 0;
-
-}
-
-.head a, .head span {
-  font: normal normal 14px "宋体";
-  color: #444;
-}
-
-.head a:hover {
-  color: green;
-}
-
-.head ul {
-  float: right;
-  list-style: none;
-  li {
-    float: left;
-    margin-left: 10px;
-  }
-}
 table {
   margin-top: 25px;
 }
+
 table caption {
   color: #444;
   font-size: 16px;
   height: 18px;
   line-height: 18px;
   font-weight: bold;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .tr-hover {
   background-color: #b9e9bb;
-}
-
-.occupied-hover {
-  background-color: #b9e9bb;
-}
-
-.footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #d3d3d3;
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
 }
