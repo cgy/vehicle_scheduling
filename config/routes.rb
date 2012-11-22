@@ -9,6 +9,18 @@ VehicleScheduling::Application.routes.draw do
 
   resources :cars
 
+  namespace :admin do
+    resources :trips
+    resources :cars
+    resources :drivers
+    resources :groups
+    resources :destinations
+    resources :workers
+    resources :notes
+    match '/workers-history', to:"workers_history#index"
+    match '/drivers-history', to:"drivers_history#index"
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   resources :users

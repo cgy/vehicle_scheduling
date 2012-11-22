@@ -8,4 +8,9 @@ module UsersHelper
     redirect_to(root_path) unless current_user?(@user)
   end
 
+  def driver_user?(user)
+    user.user_type == 1
+  end
+
+
 end

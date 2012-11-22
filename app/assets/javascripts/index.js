@@ -5,3 +5,4 @@ jQuery(document).ready(function ($) {
         $(this).removeClass("tr-hover");
     });
 });
+

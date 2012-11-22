@@ -2,9 +2,35 @@
   <div id="header" class="row">
     <div class="span12">
       <ul class="nav-right-top">
-        <li class="active"><a href="#">首页</a></li>
-        <li><a href="#">登录</a></li>
+        <li class="active"><%= link_to "首页", root_path %></li>
+        <li><a href="#myModal" data-toggle="modal">登录</a></li>
       </ul>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">登录车辆管理系统</h3>
+    </div>
+    <div class="modal-body">
+      <%= form_tag sessions_path do %>
+          <div class="field">
+            <%= label_tag "用户名" %>
+            <%= text_field_tag :name %>
+          </div>
+
+          <div class="field">
+            <%= label_tag "密码" %>
+            <%= password_field_tag :password %>
+          </div>
+
+      <% end %>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" onClick="submit()" aria-hidden="true">登录</button>
+      <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+
     </div>
   </div>
 </div>
