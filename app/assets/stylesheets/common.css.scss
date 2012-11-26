@@ -1,6 +1,9 @@
-@import "bootstrap";
+@import "bootstrap-chosen";
 
 $grayMediumLight: #eaeaea;
+$gray: #555 !default;
+$grayLight: #999 !default;
+$grayDarker: #222 !default;
 
 body, a {
   color: #000;
