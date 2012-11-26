@@ -1,4 +1,4 @@
-module Driver
+module DriverController
   class TripController < BaseController
     def index
       @trip = Trip.new

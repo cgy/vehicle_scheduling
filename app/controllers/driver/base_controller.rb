@@ -1,4 +1,4 @@
-module Driver
+module DriverController
   class BaseController < ApplicationController
   end
 end

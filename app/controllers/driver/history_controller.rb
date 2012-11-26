@@ -1,4 +1,4 @@
-module Driver
+module DriverController
   class HistoryController < BaseController
     # GET /trips
     # GET /trips.json

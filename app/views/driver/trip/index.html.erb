@@ -2,10 +2,19 @@
 
 <div class="content span9">
   <h3>出差管理</h3>
-  <%= form_for(@trip) do |f| %>
+
   <div class="chosen">
-      <%= f.label :user_ids, "Users" %><br />
-      <%= f.collection_select :user_ids, User.order(:name), :id, :name, {}, {multiple: true} %>
+    <select data-placeholder="请选择车辆..." class="chzn-select-deselect" tabindex="10">
+      <option value=""></option>
+      <option>途胜|赣M96036</option>
+      <option>全顺|赣M99665</option>
+      <option>风行|赣M87711</option>
+      <option>瑞风|赣M71479</option>
+      <option>全顺工程车|赣AC0325</option>
+      <option>瑞风|赣A0T567</option>
+      <option>依维柯|赣AT0062</option>
+      <option>25米高空作业车|赣M05899</option>
+      <option>14米高空作业车赣|M03717</option>
+    </select>
   </div>
-  <% end %>
 </div>
