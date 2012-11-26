@@ -15,10 +15,21 @@ VehicleScheduling::Application.routes.draw do
     resources :drivers
     resources :groups
     resources :destinations
-    resources :workers
     resources :notes
+    match '/workers',         to:"workers#index"
+    match '/drivers',         to:"drivers#index"
     match '/workers-history', to:"workers_history#index"
     match '/drivers-history', to:"drivers_history#index"
+  end
+
+  namespace :driver do
+    match '/trip',            to:"trip#index"
+    match '/drivers-history', to:"history#index"
+  end
+
+  namespace :worker do
+    match '/trip',            to:"trip#index"
+    match '/workers-history', to:"history#index"
   end
 
   # The priority is based upon order of creation:

@@ -16,7 +16,7 @@
     <div class="modal-body">
       <%= form_tag sessions_path do %>
           <div class="field">
-            <%= label_tag "用户名" %>
+            <%= label_tag "用户名"%>
             <%= text_field_tag :name %>
           </div>
 
@@ -24,11 +24,10 @@
             <%= label_tag "密码" %>
             <%= password_field_tag :password %>
           </div>
-
       <% end %>
     </div>
     <div class="modal-footer">
-      <button class="btn" onClick="submit()" aria-hidden="true">登录</button>
+      <button type="submit" class="btn" onClick="submit()" aria-hidden="true">登录</button>
       <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
 
     </div>

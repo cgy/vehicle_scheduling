@@ -9,8 +9,10 @@ class SessionsController < ApplicationController
       sign_in user
       if current_user.admin?
         redirect_back_or admin_trips_path
+      elsif driver_user?(current_user)
+        redirect_back_or driver_trip_path
       else
-        redirect_back_or user
+        redirect_back_or worker_trip_path
       end
     else
       flash.now[:error] = '*用户名或密码错误!'
