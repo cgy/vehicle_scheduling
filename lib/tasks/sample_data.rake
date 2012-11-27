@@ -727,6 +727,261 @@ namespace :db do
 
     #测试数据
 
+    #历史出差数据
+
+    trip1 = Trip.create!(drivership_id: ds1.id,
+                         destination_id: dest1.id,
+                         departure_time: Date.new(2012,11,1),
+                         back_time: Date.new(2012,11,2),
+                         note_id: note1.id)
+
+    workerships1 = Workership.create!(trip_id: trip1.id, worker_id: worker1.id)
+    workerships2 = Workership.create!(trip_id: trip1.id, worker_id: worker2.id)
+    workerships3 = Workership.create!(trip_id: trip1.id, worker_id: worker3.id)
+
+
+    trip2 = Trip.create!(drivership_id: ds2.id,
+                         destination_id: dest2.id,
+                         departure_time: Date.new(2012,11,1),
+                         back_time: Date.new(2012,11,6),
+                         note_id: note2.id)
+
+    workerships4 = Workership.create!(trip_id: trip2.id, worker_id: worker3.id)
+    workerships5 = Workership.create!(trip_id: trip2.id, worker_id: worker4.id)
+
+
+    trip3 = Trip.create!(drivership_id: ds3.id,
+                         destination_id: dest3.id,
+                         departure_time: Date.new(2012,11,3),
+                         back_time: Date.new(2012,11,5),
+                         note_id: note3.id)
+
+    workerships6 = Workership.create!(trip_id: trip3.id, worker_id: worker5.id)
+    workerships7 = Workership.create!(trip_id: trip3.id, worker_id: worker6.id)
+    workerships8 = Workership.create!(trip_id: trip3.id, worker_id: worker7.id)
+    workerships9 = Workership.create!(trip_id: trip3.id, worker_id: worker8.id)
+
+
+    trip4 = Trip.create!(drivership_id: ds4.id,
+                         destination_id: dest4.id,
+                         departure_time: Date.new(2012,11,10),
+                         back_time: Date.new(2012,11,12),
+                         note_id: note4.id)
+
+    workerships10 = Workership.create!(trip_id: trip4.id, worker_id: worker9.id)
+    workerships11 = Workership.create!(trip_id: trip4.id, worker_id: worker10.id)
+    workerships12 = Workership.create!(trip_id: trip4.id, worker_id: worker11.id)
+    workerships13 = Workership.create!(trip_id: trip4.id, worker_id: worker12.id)
+
+
+    trip5 = Trip.create!(drivership_id: ds5.id,
+                         destination_id: dest5.id,
+                         departure_time: Date.new(2012,11,11),
+                         back_time: Date.new(2012,11,11),
+                         note_id: note3.id)
+
+    workerships14 = Workership.create!(trip_id: trip5.id, worker_id: worker13.id)
+    workerships15 = Workership.create!(trip_id: trip5.id, worker_id: worker14.id)
+    workerships16 = Workership.create!(trip_id: trip5.id, worker_id: worker15.id)
+
+
+    trip6 = Trip.create!(drivership_id: ds6.id,
+                         destination_id: dest6.id,
+                         departure_time: Date.new(2012,11,12),
+                         back_time: Date.new(2012,11,16),
+                         note_id: note1.id)
+
+    workerships18 = Workership.create!(trip_id: trip6.id, worker_id: worker16.id)
+    workerships19 = Workership.create!(trip_id: trip6.id, worker_id: worker17.id)
+
+
+    trip7 = Trip.create!(drivership_id: ds7.id,
+                         destination_id: dest7.id,
+                         departure_time: Date.new(2012,11,13),
+                         back_time: Date.new(2012,11,15),
+                         note_id: note2.id)
+
+    workerships20 = Workership.create!(trip_id: trip7.id, worker_id: worker18.id)
+    workerships21 = Workership.create!(trip_id: trip7.id, worker_id: worker19.id)
+
+
+    trip8 = Trip.create!(drivership_id: ds8.id,
+                         destination_id: dest8.id,
+                         departure_time: Date.new(2012,11,17),
+                         back_time: Date.new(2012,11,20),
+                         note_id: note4.id)
+
+    workerships22 = Workership.create!(trip_id: trip8.id, worker_id: worker20.id)
+    workerships23 = Workership.create!(trip_id: trip8.id, worker_id: worker21.id)
+    workerships24 = Workership.create!(trip_id: trip8.id, worker_id: worker22.id)
+    workerships25 = Workership.create!(trip_id: trip8.id, worker_id: worker23.id)
+
+
+    trip9 = Trip.create!(drivership_id: ds9.id,
+                         destination_id: dest9.id,
+                         departure_time: Date.new(2012,11,18),
+                         back_time: Date.new(2012,11,23),
+                         note_id: note1.id)
+
+    workerships26 = Workership.create!(trip_id: trip9.id, worker_id: worker24.id)
+    workerships27 = Workership.create!(trip_id: trip9.id, worker_id: worker25.id)
+
+
+    trip10 = Trip.create!(drivership_id: ds10.id,
+                         destination_id: dest10.id,
+                         departure_time: Date.new(2012,11,23),
+                         back_time: Date.new(2012,11,25),
+                         note_id: note3.id)
+
+    workerships28 = Workership.create!(trip_id: trip10.id, worker_id: worker26.id)
+    workerships29 = Workership.create!(trip_id: trip10.id, worker_id: worker27.id)
+    workerships30 = Workership.create!(trip_id: trip10.id, worker_id: worker28.id)
+
+
+    trip11 = Trip.create!(drivership_id: ds1.id,
+                         destination_id: dest1.id,
+                         departure_time: Date.new(2012,10,1),
+                         back_time: Date.new(2012,10,2),
+                         note_id: note1.id)
+    trip12 = Trip.create!(drivership_id: ds2.id,
+                         destination_id: dest2.id,
+                         departure_time: Date.new(2012,10,1),
+                         back_time: Date.new(2012,10,6),
+                         note_id: note2.id)
+    trip13 = Trip.create!(drivership_id: ds3.id,
+                         destination_id: dest3.id,
+                         departure_time: Date.new(2012,10,3),
+                         back_time: Date.new(2012,10,5),
+                         note_id: note3.id)
+    trip14 = Trip.create!(drivership_id: ds4.id,
+                         destination_id: dest4.id,
+                         departure_time: Date.new(2012,10,10),
+                         back_time: Date.new(2012,10,12),
+                         note_id: note4.id)
+    trip15 = Trip.create!(drivership_id: ds5.id,
+                         destination_id: dest5.id,
+                         departure_time: Date.new(2012,10,11),
+                         back_time: Date.new(2012,10,11),
+                         note_id: note3.id)
+    trip16 = Trip.create!(drivership_id: ds6.id,
+                         destination_id: dest6.id,
+                         departure_time: Date.new(2012,10,12),
+                         back_time: Date.new(2012,10,16),
+                         note_id: note1.id)
+    trip17 = Trip.create!(drivership_id: ds7.id,
+                         destination_id: dest7.id,
+                         departure_time: Date.new(2012,10,13),
+                         back_time: Date.new(2012,10,15),
+                         note_id: note2.id)
+    trip18 = Trip.create!(drivership_id: ds8.id,
+                         destination_id: dest8.id,
+                         departure_time: Date.new(2012,10,17),
+                         back_time: Date.new(2012,10,20),
+                         note_id: note4.id)
+    trip19 = Trip.create!(drivership_id: ds9.id,
+                         destination_id: dest9.id,
+                         departure_time: Date.new(2012,10,18),
+                         back_time: Date.new(2012,10,23),
+                         note_id: note1.id)
+
+    trip20 = Trip.create!(drivership_id: ds10.id,
+                          destination_id: dest10.id,
+                          departure_time: Date.new(2012,10,23),
+                          back_time: Date.new(2012,10,25),
+                          note_id: note3.id)
+    trip21 = Trip.create!(drivership_id: ds6.id,
+                         destination_id: dest6.id,
+                         departure_time: Date.new(2012,9,12),
+                         back_time: Date.new(2012,9,16),
+                         note_id: note1.id)
+    trip22 = Trip.create!(drivership_id: ds7.id,
+                         destination_id: dest7.id,
+                         departure_time: Date.new(2012,9,13),
+                         back_time: Date.new(2012,9,15),
+                         note_id: note2.id)
+    trip23 = Trip.create!(drivership_id: ds8.id,
+                         destination_id: dest8.id,
+                         departure_time: Date.new(2012,8,17),
+                         back_time: Date.new(2012,8,20),
+                         note_id: note4.id)
+    trip24 = Trip.create!(drivership_id: ds9.id,
+                         destination_id: dest9.id,
+                         departure_time: Date.new(2012,8,18),
+                         back_time: Date.new(2012,11,23),
+                         note_id: note1.id)
+
+    trip25 = Trip.create!(drivership_id: ds10.id,
+                          destination_id: dest10.id,
+                          departure_time: Date.new(2012,8,23),
+                          back_time: Date.new(2012,8,25),
+                          note_id: note3.id)
+    trip26 = Trip.create!(drivership_id: ds1.id,
+                          destination_id: dest1.id,
+                          departure_time: Date.new(2012,7,1),
+                          back_time: Date.new(2012,7,2),
+                          note_id: note1.id)
+    trip27 = Trip.create!(drivership_id: ds2.id,
+                          destination_id: dest2.id,
+                          departure_time: Date.new(2012,7,1),
+                          back_time: Date.new(2012,7,6),
+                          note_id: note2.id)
+    trip28 = Trip.create!(drivership_id: ds3.id,
+                          destination_id: dest3.id,
+                          departure_time: Date.new(2012,7,3),
+                          back_time: Date.new(2012,7,5),
+                          note_id: note3.id)
+    trip29 = Trip.create!(drivership_id: ds4.id,
+                          destination_id: dest4.id,
+                          departure_time: Date.new(2012,7,10),
+                          back_time: Date.new(2012,7,12),
+                          note_id: note4.id)
+    trip30 = Trip.create!(drivership_id: ds5.id,
+                          destination_id: dest5.id,
+                          departure_time: Date.new(2012,6,11),
+                          back_time: Date.new(2012,6,11),
+                          note_id: note3.id)
+
+    #出差中
+    trip31 = Trip.create!(drivership_id: ds1.id,
+                         destination_id: dest1.id,
+                         departure_time: Date.new(2012,11,27),
+                         back_time: Date.new(2012,11,27),
+                         note_id: note1.id)
+    trip32 = Trip.create!(drivership_id: ds2.id,
+                         destination_id: dest2.id,
+                         departure_time: Date.new(2012,11,27),
+                         back_time: Date.new(2012,11,28),
+                         note_id: note2.id)
+    trip33 = Trip.create!(drivership_id: ds3.id,
+                         destination_id: dest3.id,
+                         departure_time: Date.new(2012,11,28),
+                         back_time: Date.new(2012,11,28),
+                         note_id: note3.id)
+    trip34 = Trip.create!(drivership_id: ds4.id,
+                         destination_id: dest4.id,
+                         departure_time: Date.new(2012,11,27),
+                         back_time: Date.new(2012,11,28),
+                         note_id: note4.id)
+    trip35 = Trip.create!(drivership_id: ds5.id,
+                         destination_id: dest5.id,
+                         departure_time: Date.new(2012,11,27),
+                         back_time: Date.new(2012,11,29),
+                         note_id: note3.id)
+    trip36 = Trip.create!(drivership_id: ds6.id,
+                         destination_id: dest6.id,
+                         departure_time: Date.new(2012,11,27),
+                         back_time: Date.new(2012,11,30),
+                         note_id: note1.id)
+    trip37 = Trip.create!(drivership_id: ds7.id,
+                         destination_id: dest7.id,
+                         departure_time: Date.new(2012,11,28),
+                         back_time: Date.new(2012,11,30),
+                         note_id: note2.id)
+    trip38 = Trip.create!(drivership_id: ds8.id,
+                         destination_id: dest8.id,
+                         departure_time: Date.new(2012,11,28),
+                         back_time: Date.new(2012,12,6),
+                         note_id: note4.id)
 
 
 
