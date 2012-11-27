@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       if current_user.admin?
         redirect_back_or admin_trips_path
       elsif driver_user?(current_user)
-        redirect_back_or driver_trip_path
+        redirect_back_or drivers_trip_path
       else
         redirect_back_or worker_trip_path
       end

@@ -9,7 +9,7 @@ VehicleScheduling::Application.routes.draw do
 
   resources :cars
 
-  namespace :admin do
+  namespace :admins do
     resources :trips
     resources :cars
     resources :drivers
@@ -22,12 +22,12 @@ VehicleScheduling::Application.routes.draw do
     match '/drivers-history', to:"drivers_history#index"
   end
 
-  namespace :driver do
+  namespace :drivers do
     match '/trip',            to:"trip#index"
     match '/drivers-history', to:"history#index"
   end
 
-  namespace :worker do
+  namespace :workers do
     match '/trip',            to:"trip#index"
     match '/workers-history', to:"history#index"
   end

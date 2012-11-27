@@ -2,7 +2,6 @@ class CreateTrips < ActiveRecord::Migration
   def change
     create_table :trips do |t|
       t.integer :car_driver_id
-      t.integer :destination_id
       t.date :departure_time
       t.date :back_time
       t.string :note

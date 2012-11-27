@@ -11,14 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121122144604) do
-
-  create_table "car_drivers", :force => true do |t|
-    t.integer  "car_id"
-    t.integer  "driver_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20121127034319) do
 
   create_table "cars", :force => true do |t|
     t.string   "model"
@@ -34,6 +27,16 @@ ActiveRecord::Schema.define(:version => 20121122144604) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "driverships", :force => true do |t|
+    t.integer  "car_id"
+    t.integer  "driver_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "driverships", ["car_id"], :name => "index_driverships_on_car_id"
+  add_index "driverships", ["driver_id"], :name => "index_driverships_on_driver_id"
+
   create_table "groups", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -46,38 +49,39 @@ ActiveRecord::Schema.define(:version => 20121122144604) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "trip_members", :force => true do |t|
-    t.integer  "trip_id"
-    t.integer  "member_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "trips", :force => true do |t|
-    t.integer  "destination_id"
     t.date     "departure_time"
     t.date     "back_time"
-    t.string   "note"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-    t.integer  "car_id"
-    t.integer  "user_id"
+    t.integer  "note_id"
+    t.integer  "destination_id"
+    t.integer  "drivership_id"
   end
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.string   "password_digest"
     t.string   "remember_token"
-    t.boolean  "admin",           :default => false
     t.integer  "current_trip"
     t.string   "phone"
+    t.string   "type"
     t.integer  "group_id"
-    t.integer  "user_type"
   end
 
   add_index "users", ["name"], :name => "index_users_on_name", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
+
+  create_table "workerships", :force => true do |t|
+    t.integer  "trip_id"
+    t.integer  "worker_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "workerships", ["trip_id"], :name => "index_workerships_on_trip_id"
+  add_index "workerships", ["worker_id"], :name => "index_workerships_on_worker_id"
 
 end
