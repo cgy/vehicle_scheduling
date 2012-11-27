@@ -4,65 +4,95 @@ require 'date'
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
-    admin = User.create!(name:     "admin",
+
+    admin = Admin.create!(name:     "admin",
                          password: "000000",
-                         user_type: 0,
                          password_confirmation:"000000")
-    admin.toggle!(:admin)
 
 
-    driver1 = User.create!(name:     "李年伟",
-                           phone:    "668810",
-                           user_type: 1,
+    driver1 = Driver.create!(name:     "余靓",
+                           phone:    "663941",
                            password: "000000",
                            password_confirmation:"000000")
-    driver2 = User.create!(name:     "王超",
-                           phone:    "663563",
-                           user_type: 1,
+    driver2 = Driver.create!(name:     "唐振军",
+                           phone:    "663984",
                            password: "000000",
                            password_confirmation:"000000")
-    driver3 = User.create!(name:     "黄明辕",
+    driver3 = Driver.create!(name:     "钱家意",
+                           phone:    "665701",
+                           password: "000000",
+                           password_confirmation:"000000")
+    driver4 = Driver.create!(name:     "程鹏",
+                           phone:    "668799",
+                           password: "000000",
+                           password_confirmation:"000000")
+    driver5 = Driver.create!(name:     "邹睿",
+                           phone:    "668346",
+                           password: "000000",
+                           password_confirmation:"000000")
+    driver6 = Driver.create!(name:     "黄明辕",
                            phone:    "13970031807",
-                           user_type: 1,
                            password: "000000",
                            password_confirmation:"000000")
-    driver4 = User.create!(name:     "谈建军",
-                           phone:    "664646",
-                           user_type: 1,
+    driver7 = Driver.create!(name:     "谢强",
+                           phone:    "665840",
                            password: "000000",
                            password_confirmation:"000000")
-    driver5 = User.create!(name:     "魏群敏",
-                           phone:    "668759",
-                           user_type: 1,
+    driver8 = Driver.create!(name:     "章建兵",
+                           phone:    "663942",
                            password: "000000",
                            password_confirmation:"000000")
-    driver6 = User.create!(name:     "周卫东",
-                           phone:    "668740",
-                           user_type: 1,
+    driver9 = Driver.create!(name:     "梁红林",
+                           phone:    "660304",
                            password: "000000",
                            password_confirmation:"000000")
-    driver7 = User.create!(name:     "任正熊",
-                           phone:    "663649",
-                           user_type: 1,
-                           password: "000000",
-                           password_confirmation:"000000")
-    driver8 = User.create!(name:     "钟小双",
-                           phone:    "667890",
-                           user_type: 1,
-                           password: "000000",
-                           password_confirmation:"000000")
-    driver9 = User.create!(name:     "周竟声",
-                           phone:    "667894",
-                           user_type: 1,
-                           password: "000000",
-                           password_confirmation:"000000")
+    driver10 = Driver.create!(name:     "李年伟",
+                             phone:    "668810",
+                             password: "000000",
+                             password_confirmation:"000000")
+    driver11 = Driver.create!(name:     "魏群敏",
+                             phone:    "668759",
+                             password: "000000",
+                             password_confirmation:"000000")
+    driver12 = Driver.create!(name:     "胡晓俊",
+                             phone:    "665643",
+                             password: "000000",
+                             password_confirmation:"000000")
+    driver13 = Driver.create!(name:     "徐志华",
+                             phone:    "668812",
+                             password: "000000",
+                             password_confirmation:"000000")
+    driver14 = Driver.create!(name:     "蔡浩",
+                             phone:    "660351",
+                             password: "000000",
+                             password_confirmation:"000000")
+    driver15 = Driver.create!(name:     "徐后勤",
+                             phone:    "18979128743",
+                             password: "000000",
+                             password_confirmation:"000000")
+    driver16 = Driver.create!(name:     "孟建忠",
+                             phone:    "663546",
+                             password: "000000",
+                             password_confirmation:"000000")
+    driver17 = Driver.create!(name:     "谭建军",
+                             phone:    "664646",
+                             password: "000000",
+                             password_confirmation:"000000")
+    driver18 = Driver.create!(name:     "周卫东",
+                             phone:    "668740",
+                             password: "000000",
+                             password_confirmation:"000000")
+    driver19 = Driver.create!(name:     "张建新",
+                             phone:    "668467",
+                             password: "000000",
+                             password_confirmation:"000000")
 
-    car1 = Car.create!(model: "风神",
-                       plate:"赣A25568")
-    car2 = Car.create!(model: "全顺",
-                       plate:"赣B14524")
+    car1 = Car.create!(model: "风行",
+                       plate:"赣M87711")
+    car2 = Car.create!(model: "瑞风",
+                       plate:"赣M71479")
     car3 = Car.create!(model: "风神",
-                       plate:"赣A78945")
+                       plate:"赣M71479")
     car4 = Car.create!(model: "皮卡",
                        plate:"赣A26364")
     car5 = Car.create!(model: "东风",
@@ -75,11 +105,25 @@ namespace :db do
                        plate:"赣A28725")
     car9 = Car.create!(model: "陆虎",
                        plate:"赣A22554")
-    CarDriver.create!(car_id: car5.id, driver_id: driver7.id)
-    CarDriver.create!(car_id: car8.id, driver_id: driver6.id)
-    CarDriver.create!(car_id: car9.id, driver_id: driver6.id)
-    CarDriver.create!(car_id: car9.id, driver_id: driver7.id)
-    CarDriver.create!(car_id: car9.id, driver_id: driver8.id)
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+    car9 = Car.create!(model: "陆虎",
+                       plate:"赣A22554")
+
 
     dest1 = Destination.create!(name:"南昌变")
     dest2 = Destination.create!(name:"梦山变")
@@ -96,47 +140,38 @@ namespace :db do
     group6 = Group.create!(name:"二次三班")
 
     member1 = User.create!(name:"贺兆哲",
-                           user_type: 2,
                              password: "000000",
                              password_confirmation:"000000",
                              group_id: group1.id)
     member2 = User.create!(name:"杜海波",
-                           user_type: 2,
                              password: "000000",
                              password_confirmation:"000000",
                              group_id: group1.id)
     member3 = User.create!(name:"程文星",
-                           user_type: 2,
                              password: "000000",
                              password_confirmation:"000000",
                              group_id: group2.id)
     member4 = User.create!(name:"朱擘",
-                             user_type: 2,
                              password: "000000",
                              password_confirmation:"000000",
                              group_id: group2.id)
     member5 = User.create!(name:"刘小平",
-                             user_type: 2,
                              password: "000000",
                              password_confirmation:"000000",
                              group_id: group3.id)
     member6 = User.create!(name:"范思哲",
-                             user_type: 2,
                              password: "000000",
                              password_confirmation:"000000",
                              group_id: group3.id)
     member7 = User.create!(name:"刘德华",
-                             user_type: 2,
                              password: "000000",
                              password_confirmation:"000000",
                              group_id: group4.id)
     member8 = User.create!(name:"钟小思",
-                             user_type: 2,
                              password: "000000",
                              password_confirmation:"000000",
                              group_id: group5.id)
     member9 = User.create!(name:"刘宇",
-                             user_type: 2,
                              password: "000000",
                              password_confirmation:"000000",
                              group_id: group6.id)

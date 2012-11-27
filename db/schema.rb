@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121127034319) do
+ActiveRecord::Schema.define(:version => 20121127063639) do
 
   create_table "cars", :force => true do |t|
     t.string   "model"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20121127034319) do
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.integer  "current_trip", :default => 0
+    t.integer  "limit"
   end
 
   create_table "destinations", :force => true do |t|
@@ -67,8 +68,8 @@ ActiveRecord::Schema.define(:version => 20121127034319) do
     t.string   "remember_token"
     t.integer  "current_trip"
     t.string   "phone"
-    t.string   "type"
     t.integer  "group_id"
+    t.string   "type"
   end
 
   add_index "users", ["name"], :name => "index_users_on_name", :unique => true

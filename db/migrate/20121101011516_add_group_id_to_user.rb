@@ -1,4 +1,4 @@
-class AddGroupIdToUsers < ActiveRecord::Migration
+class AddGroupIdToUser < ActiveRecord::Migration
   def change
     add_column :users, :group_id, :integer
   end

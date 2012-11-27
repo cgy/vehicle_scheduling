@@ -1,5 +1,5 @@
 class Car < ActiveRecord::Base
-  attr_accessible :model, :plate, :current_trip
+  attr_accessible :model, :plate, :limit, :current_trip
 
   has_many :driverships
   has_many :drivers, through: :driverships
