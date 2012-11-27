@@ -77,7 +77,10 @@ namespace :db do
 
 
     note1 = Note.create!(name:"消缺")
-    note2 = Note.create!(name:"技改")
+    note2 = Note.create!(name:"临检")
+    note3 = Note.create!(name:"定检")
+    note4 = Note.create!(name:"抢修")
+    note5 = Note.create!(name:"其它")
 
 
     group1 = Group.create!(name:"二次一班")
