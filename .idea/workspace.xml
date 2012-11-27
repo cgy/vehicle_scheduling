@@ -23,51 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sample_data.rake" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="41" selection-start="4324" selection-end="4324" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="car.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/car.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="42" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20121027022431_create_groups.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20121027022431_create_groups.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20121028002632_create_trips.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20121028002632_create_trips.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="32" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20121101011516_add_group_id_to_user.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20121101011516_add_group_id_to_user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="36" selection-start="115" selection-end="115" vertical-scroll-proportion="0.15929204">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RailsDependency/#vehicle_scheduling" pinned="false" current="false" current-in-tab="false">
         <entry file="uml://RailsDependency/#vehicle_scheduling">
           <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -75,88 +30,117 @@
               <ID>RailsDependency</ID>
               <OriginalElement>#vehicle_scheduling</OriginalElement>
               <nodes>
-                <node x="1365.0" y="434.0">User</node>
-                <node x="278.0" y="517.0572916666666">Driver</node>
-                <node x="0.0" y="377.8932291666667">Car</node>
-                <node x="1073.0" y="125.55729166666663">Worker</node>
-                <node x="561.0" y="277.8307291666667">Drivership</node>
-                <node x="566.5" y="118.0">Note</node>
-                <node x="781.0" y="75.49739583333331">Trip</node>
-                <node x="566.5" y="0.0">Destination</node>
-                <node x="1114.5" y="590.5572916666666">Group</node>
-                <node x="1077.5" y="381.55729166666663">Admin</node>
-                <node x="1389.5" y="104.49739583333331">Workership</node>
+                <node x="514.2314049586776" y="506.0110623278234">Driver</node>
+                <node x="1365.0" y="388.5">User</node>
+                <node x="162.4090909090909" y="274.74408143939394">Car</node>
+                <node x="1120.574380165289" y="116.15155819559229">Worker</node>
+                <node x="561.0" y="276.0494791666667">Drivership</node>
+                <node x="566.5" y="0.0">Note</node>
+                <node x="781.0" y="73.71614583333331">Trip</node>
+                <node x="566.5" y="118.0">Destination</node>
+                <node x="1114.5" y="378.71354166666663">Group</node>
+                <node x="1077.5" y="496.71354166666663">Admin</node>
+                <node x="1102.4132231404958" y="-28.52352358815429">Workership</node>
               </nodes>
               <notes />
               <edges>
-                <edge source="Car" target="Drivership">
-                  <point x="99.0" y="-36.75" />
-                  <point x="278.0" y="302.8307291666667" />
-                  <point x="-70.0" y="-25.0" />
-                </edge>
                 <edge source="Destination" target="Trip">
-                  <point x="64.5" y="-0.0" />
-                  <point x="-106.0" y="-64.33333333333331" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Car" target="Drivership">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Admin" target="User">
-                  <point x="101.5" y="-0.0" />
-                  <point x="-101.5" y="-24.125" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Worker" target="Workership">
-                  <point x="106.0" y="-54.0" />
-                  <point x="1365.0" y="162.24739583333331" />
-                  <point x="-77.0" y="19.25" />
-                </edge>
-                <edge source="Driver" target="Drivership">
-                  <point x="101.5" y="-54.0" />
-                  <point x="-70.0" y="25.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Trip" target="Worker">
-                  <point x="106.0" y="48.25" />
-                  <point x="-106.0" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Driver" target="Drivership">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Driver" target="User">
-                  <point x="101.5" y="54.0" />
-                  <point x="1285.0" y="679.0572916666666" />
-                  <point x="-101.5" y="72.375" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Note" target="Trip">
-                  <point x="64.5" y="-0.0" />
-                  <point x="-106.0" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Trip" target="Workership">
-                  <point x="106.0" y="-48.25" />
-                  <point x="1073.0" y="115.05729166666663" />
-                  <point x="1285.0" y="115.05729166666663" />
-                  <point x="1365.0" y="123.74739583333331" />
-                  <point x="-77.0" y="-19.25" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Drivership" target="Trip">
-                  <point x="70.0" y="-0.0" />
-                  <point x="-106.0" y="64.33333333333331" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Worker" target="User">
-                  <point x="106.0" y="54.0" />
-                  <point x="-101.5" y="-72.375" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Group" target="User">
-                  <point x="64.5" y="-0.0" />
-                  <point x="1285.0" y="629.5572916666666" />
-                  <point x="-101.5" y="24.125" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Car" target="Driver">
-                  <point x="99.0" y="36.75" />
-                  <point x="-101.5" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.6442065491183879" x="383.55131964809385" y="324.55131964809385" />
+              <settings layout="Hierarchic Group" zoom="0.6095717884130982" x="383.71900826446284" y="299.0599173553719" />
               <SelectedNodes>
-                <node>Car</node>
+                <node>Drivership</node>
               </SelectedNodes>
               <Categories>
                 <Category>Association fields</Category>
                 <Category>Migration fields</Category>
               </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20121127022051_create_driverships.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20121127022051_create_driverships.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="39" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_data.rake" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="725" column="4" selection-start="32789" selection-end="32789" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drivership.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/drivership.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="note.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/note.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="6" selection-start="6" selection-end="10" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -185,8 +169,8 @@
         <option value="$PROJECT_DIR$/db/migrate/20121127034056_add_drivership_id_to_trips.rb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121028002632_create_trips.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/sample_data.rake" />
         <option value="$PROJECT_DIR$/app/models/car.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/sample_data.rake" />
       </list>
     </option>
   </component>
@@ -268,6 +252,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -509,19 +494,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../269-template-inheritance-master/store-after" />
     <property name="FullScreen" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -702,13 +686,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -740,6 +717,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -899,7 +883,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.670045" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3723404" sideWeight="0.6720779" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32294834" sideWeight="0.6720779" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33167702" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -969,163 +953,34 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/destination.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="65" selection-end="80" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/note.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="73" selection-end="73" vertical-scroll-proportion="0.06122449">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20121127033906_add_note_id_to_trips.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20121127033953_add_destination_id_to_trips.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121127022051_create_driverships.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20121127020336_create_workerships.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20120906124803_create_users.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="8" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="8" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20121127034056_add_drivership_id_to_trips.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://RailsDependency/#vehicle_scheduling">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>RailsDependency</ID>
-          <OriginalElement>#vehicle_scheduling</OriginalElement>
-          <nodes>
-            <node x="1365.0" y="434.0">User</node>
-            <node x="278.0" y="517.0572916666666">Driver</node>
-            <node x="0.0" y="377.8932291666667">Car</node>
-            <node x="1073.0" y="125.55729166666663">Worker</node>
-            <node x="561.0" y="277.8307291666667">Drivership</node>
-            <node x="566.5" y="118.0">Note</node>
-            <node x="781.0" y="75.49739583333331">Trip</node>
-            <node x="566.5" y="0.0">Destination</node>
-            <node x="1114.5" y="590.5572916666666">Group</node>
-            <node x="1077.5" y="381.55729166666663">Admin</node>
-            <node x="1389.5" y="104.49739583333331">Workership</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="Car" target="Drivership">
-              <point x="99.0" y="-36.75" />
-              <point x="278.0" y="302.8307291666667" />
-              <point x="-70.0" y="-25.0" />
-            </edge>
-            <edge source="Destination" target="Trip">
-              <point x="64.5" y="-0.0" />
-              <point x="-106.0" y="-64.33333333333331" />
-            </edge>
-            <edge source="Admin" target="User">
-              <point x="101.5" y="-0.0" />
-              <point x="-101.5" y="-24.125" />
-            </edge>
-            <edge source="Worker" target="Workership">
-              <point x="106.0" y="-54.0" />
-              <point x="1365.0" y="162.24739583333331" />
-              <point x="-77.0" y="19.25" />
-            </edge>
-            <edge source="Driver" target="Drivership">
-              <point x="101.5" y="-54.0" />
-              <point x="-70.0" y="25.0" />
-            </edge>
-            <edge source="Trip" target="Worker">
-              <point x="106.0" y="48.25" />
-              <point x="-106.0" y="-0.0" />
-            </edge>
-            <edge source="Driver" target="User">
-              <point x="101.5" y="54.0" />
-              <point x="1285.0" y="679.0572916666666" />
-              <point x="-101.5" y="72.375" />
-            </edge>
-            <edge source="Note" target="Trip">
-              <point x="64.5" y="-0.0" />
-              <point x="-106.0" y="-0.0" />
-            </edge>
-            <edge source="Trip" target="Workership">
-              <point x="106.0" y="-48.25" />
-              <point x="1073.0" y="115.05729166666663" />
-              <point x="1285.0" y="115.05729166666663" />
-              <point x="1365.0" y="123.74739583333331" />
-              <point x="-77.0" y="-19.25" />
-            </edge>
-            <edge source="Drivership" target="Trip">
-              <point x="70.0" y="-0.0" />
-              <point x="-106.0" y="64.33333333333331" />
-            </edge>
-            <edge source="Worker" target="User">
-              <point x="106.0" y="54.0" />
-              <point x="-101.5" y="-72.375" />
-            </edge>
-            <edge source="Group" target="User">
-              <point x="64.5" y="-0.0" />
-              <point x="1285.0" y="629.5572916666666" />
-              <point x="-101.5" y="24.125" />
-            </edge>
-            <edge source="Car" target="Driver">
-              <point x="99.0" y="36.75" />
-              <point x="-101.5" y="-0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.6442065491183879" x="383.55131964809385" y="324.55131964809385" />
-          <SelectedNodes>
-            <node>Car</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Association fields</Category>
-            <Category>Migration fields</Category>
-          </Categories>
-        </state>
+        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/users/driver.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="41" selection-start="4324" selection-end="4324" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1153,7 +1008,126 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20121101011516_add_group_id_to_user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="115" selection-end="115" vertical-scroll-proportion="0.15929204">
+        <state line="5" column="36" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/group.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/note.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="6" selection-end="10" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="725" column="4" selection-start="32789" selection-end="32789" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://RailsDependency/#vehicle_scheduling">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>RailsDependency</ID>
+          <OriginalElement>#vehicle_scheduling</OriginalElement>
+          <nodes>
+            <node x="514.2314049586776" y="506.0110623278234">Driver</node>
+            <node x="1365.0" y="388.5">User</node>
+            <node x="162.4090909090909" y="274.74408143939394">Car</node>
+            <node x="1120.574380165289" y="116.15155819559229">Worker</node>
+            <node x="561.0" y="276.0494791666667">Drivership</node>
+            <node x="566.5" y="0.0">Note</node>
+            <node x="781.0" y="73.71614583333331">Trip</node>
+            <node x="566.5" y="118.0">Destination</node>
+            <node x="1114.5" y="378.71354166666663">Group</node>
+            <node x="1077.5" y="496.71354166666663">Admin</node>
+            <node x="1102.4132231404958" y="-28.52352358815429">Workership</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Destination" target="Trip">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Car" target="Drivership">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Admin" target="User">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Worker" target="Workership">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Trip" target="Worker">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Driver" target="Drivership">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Driver" target="User">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Note" target="Trip">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Trip" target="Workership">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Drivership" target="Trip">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Worker" target="User">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Group" target="User">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Car" target="Driver">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6095717884130982" x="383.71900826446284" y="299.0599173553719" />
+          <SelectedNodes>
+            <node>Drivership</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Association fields</Category>
+            <Category>Migration fields</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121127022051_create_driverships.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="39" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/drivership.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
