@@ -7,12 +7,12 @@ class SessionsController < ApplicationController
     user = User.find_by_name(params[:name].downcase)
     if user && user.authenticate(params[:password])
       sign_in user
-      if current_user.admin?
-        redirect_back_or admin_trips_path
-      elsif driver_user?(current_user)
+      if current_user.is_a? Admin
+        redirect_back_or admins_trips_path
+      elsif current_user.is_a? Driver
         redirect_back_or drivers_trip_path
       else
-        redirect_back_or worker_trip_path
+        redirect_back_or workers_trip_path
       end
     else
       flash.now[:error] = '*用户名或密码错误!'
