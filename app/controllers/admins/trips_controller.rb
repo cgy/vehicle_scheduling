@@ -3,12 +3,10 @@ module Admins
     # GET /trips
     # GET /trips.json
     def index
-      @trips = Trip.all
-
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json { render json: @trips }
-      end
+    respond_to do |format|
+      format.html
+      format.json { render json: TripsDatatable.new(view_context) }
+    end
     end
 
     # GET /trips/1

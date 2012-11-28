@@ -26,6 +26,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.4'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'chosen-rails'
+  gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
