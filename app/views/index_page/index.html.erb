@@ -7,6 +7,7 @@
     <th>#</th>
     <th>车型</th>
     <th>车牌</th>
+    <th>限载人数</th>
     <th>司机</th>
   </tr>
   </thead>
@@ -16,6 +17,7 @@
         <td><%= i+1 %></td>
         <td><%= c[:car].model %></td>
         <td><%= link_to c[:car].plate, c[:car] %></td>
+        <td><%= c[:car].limit %></td>
         <% if !c[:driver].nil? %>
             <td><%= c[:driver].name %>(<%= c[:driver].phone %>)</td>
         <% else %>
@@ -48,8 +50,8 @@
         <td><%= c[:car].model %></td>
         <td><%= link_to c[:car].plate, c[:car] %></td>
         <td><%= c[:driver].name %></td>
-        <td><%= c[:trip_members].join('，') %></td>
-        <td><%= c[:destination].name %></td>
+        <td><%= c[:workers_names].join('，') %></td>
+        <td><%= c[:destination] %></td>
         <td><%= c[:departure_time] %></td>
         <td><%= c[:back_time] %></td>
         <td><%= c[:note] %></td>

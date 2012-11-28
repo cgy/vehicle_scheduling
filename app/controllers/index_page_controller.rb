@@ -5,7 +5,6 @@ class IndexPageController < ApplicationController
     redirect_to current_user if signed_in?
 
     cars = Car.all
-    users = User.all
 
     @available_cars = []
     @cars_in_use = []
@@ -13,23 +12,23 @@ class IndexPageController < ApplicationController
       #该车已出差
       if car.current_trip > 0
         @trip = Trip.find(car.current_trip)
-        trip_member = TripMember.find_all_by_trip_id(@trip.id)
-        members = []
-        trip_member.each { |tp| members << User.find(tp.member_id).name } if !trip_member.nil?
+        workerships = Workership.find_all_by_trip_id(@trip.id)
+        workers_names = []
+        workerships.each { |workership| workers_names << Worker.find(workership.worker_id).name } if !workerships.nil?
 
         @cars_in_use << {
             car: car,
-            driver: @trip.user,
-            destination: @trip.destination,
+            driver: @trip.drivership.driver,
+            destination: @trip.destination.name,
             departure_time: @trip.departure_time,
             back_time: @trip.back_time,
-            note: @trip.note,
-            trip_members: members
+            note: @trip.note.name,
+            workers_names: workers_names
         }
       else
         #该车最近一次由谁驾驶？
-        car_driver = CarDriver.where("car_id=?", car.id).order('created_at desc').first
-        if car_driver.nil?
+        drivership = Drivership.where("car_id=?", car.id).order('created_at desc').first
+        if drivership.nil?
           @available_cars << {
               car: car,
               driver: nil
@@ -37,7 +36,7 @@ class IndexPageController < ApplicationController
         else
           @available_cars << {
               car: car,
-              driver: User.find(car_driver.driver_id)
+              driver: Driver.find(drivership.driver_id)
           }
         end
       end
