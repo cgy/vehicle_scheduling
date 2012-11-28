@@ -1,5 +1,5 @@
 class Trip < ActiveRecord::Base
-  attr_accessible :car_id, :user_ids, :destination_id, :back_time, :departure_time, :note
+  attr_accessible :drivership_id, :destination_id, :note_id, :back_time, :departure_time
 
   belongs_to :drivership
   belongs_to :destination

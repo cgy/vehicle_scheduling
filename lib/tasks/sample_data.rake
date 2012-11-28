@@ -843,103 +843,220 @@ namespace :db do
                          departure_time: Date.new(2012,10,1),
                          back_time: Date.new(2012,10,2),
                          note_id: note1.id)
+
+    workerships31 = Workership.create!(trip_id: trip11.id, worker_id: worker29.id)
+    workerships32 = Workership.create!(trip_id: trip11.id, worker_id: worker30.id)
+    workerships33 = Workership.create!(trip_id: trip11.id, worker_id: worker31.id)
+    workerships34 = Workership.create!(trip_id: trip11.id, worker_id: worker32.id)
+
+
     trip12 = Trip.create!(drivership_id: ds2.id,
                          destination_id: dest2.id,
                          departure_time: Date.new(2012,10,1),
                          back_time: Date.new(2012,10,6),
                          note_id: note2.id)
+
+    workerships35 = Workership.create!(trip_id: trip12.id, worker_id: worker33.id)
+    workerships36 = Workership.create!(trip_id: trip12.id, worker_id: worker34.id)
+
+
     trip13 = Trip.create!(drivership_id: ds3.id,
                          destination_id: dest3.id,
                          departure_time: Date.new(2012,10,3),
                          back_time: Date.new(2012,10,5),
                          note_id: note3.id)
+
+    workerships37 = Workership.create!(trip_id: trip13.id, worker_id: worker35.id)
+    workerships38 = Workership.create!(trip_id: trip13.id, worker_id: worker36.id)
+
+
     trip14 = Trip.create!(drivership_id: ds4.id,
                          destination_id: dest4.id,
                          departure_time: Date.new(2012,10,10),
                          back_time: Date.new(2012,10,12),
                          note_id: note4.id)
+
+    workerships39 = Workership.create!(trip_id: trip14.id, worker_id: worker37.id)
+    workerships40 = Workership.create!(trip_id: trip14.id, worker_id: worker38.id)
+
+
     trip15 = Trip.create!(drivership_id: ds5.id,
                          destination_id: dest5.id,
                          departure_time: Date.new(2012,10,11),
                          back_time: Date.new(2012,10,11),
                          note_id: note3.id)
+
+    workerships41 = Workership.create!(trip_id: trip15.id, worker_id: worker39.id)
+    workerships42 = Workership.create!(trip_id: trip15.id, worker_id: worker40.id)
+    workerships43 = Workership.create!(trip_id: trip15.id, worker_id: worker41.id)
+    workerships44 = Workership.create!(trip_id: trip15.id, worker_id: worker42.id)
+    workerships45 = Workership.create!(trip_id: trip15.id, worker_id: worker43.id)
+    workerships46 = Workership.create!(trip_id: trip15.id, worker_id: worker44.id)
+
+
     trip16 = Trip.create!(drivership_id: ds6.id,
                          destination_id: dest6.id,
                          departure_time: Date.new(2012,10,12),
                          back_time: Date.new(2012,10,16),
                          note_id: note1.id)
+
+    workerships47 = Workership.create!(trip_id: trip16.id, worker_id: worker45.id)
+    workerships48 = Workership.create!(trip_id: trip16.id, worker_id: worker46.id)
+    workerships49 = Workership.create!(trip_id: trip16.id, worker_id: worker47.id)
+
+
     trip17 = Trip.create!(drivership_id: ds7.id,
                          destination_id: dest7.id,
                          departure_time: Date.new(2012,10,13),
                          back_time: Date.new(2012,10,15),
                          note_id: note2.id)
+
+
+    workerships50 = Workership.create!(trip_id: trip17.id, worker_id: worker48.id)
+    workerships51 = Workership.create!(trip_id: trip17.id, worker_id: worker49.id)
+
+
     trip18 = Trip.create!(drivership_id: ds8.id,
                          destination_id: dest8.id,
                          departure_time: Date.new(2012,10,17),
                          back_time: Date.new(2012,10,20),
                          note_id: note4.id)
+
+    workerships52 = Workership.create!(trip_id: trip18.id, worker_id: worker50.id)
+    workerships53 = Workership.create!(trip_id: trip18.id, worker_id: worker51.id)
+    workerships54 = Workership.create!(trip_id: trip18.id, worker_id: worker52.id)
+
+
     trip19 = Trip.create!(drivership_id: ds9.id,
                          destination_id: dest9.id,
                          departure_time: Date.new(2012,10,18),
                          back_time: Date.new(2012,10,23),
                          note_id: note1.id)
 
+    workerships55 = Workership.create!(trip_id: trip19.id, worker_id: worker53.id)
+    workerships56 = Workership.create!(trip_id: trip19.id, worker_id: worker54.id)
+    workerships57 = Workership.create!(trip_id: trip19.id, worker_id: worker55.id)
+
+
     trip20 = Trip.create!(drivership_id: ds10.id,
                           destination_id: dest10.id,
                           departure_time: Date.new(2012,10,23),
                           back_time: Date.new(2012,10,25),
                           note_id: note3.id)
+
+    workerships58 = Workership.create!(trip_id: trip20.id, worker_id: worker56.id)
+    workerships59 = Workership.create!(trip_id: trip20.id, worker_id: worker57.id)
+
+
     trip21 = Trip.create!(drivership_id: ds6.id,
                          destination_id: dest6.id,
                          departure_time: Date.new(2012,9,12),
                          back_time: Date.new(2012,9,16),
                          note_id: note1.id)
+
+    workerships60 = Workership.create!(trip_id: trip21.id, worker_id: worker58.id)
+    workerships61 = Workership.create!(trip_id: trip21.id, worker_id: worker59.id)
+
+
     trip22 = Trip.create!(drivership_id: ds7.id,
                          destination_id: dest7.id,
                          departure_time: Date.new(2012,9,13),
                          back_time: Date.new(2012,9,15),
                          note_id: note2.id)
+
+    workerships62 = Workership.create!(trip_id: trip22.id, worker_id: worker60.id)
+    workerships63 = Workership.create!(trip_id: trip22.id, worker_id: worker61.id)
+
+
     trip23 = Trip.create!(drivership_id: ds8.id,
                          destination_id: dest8.id,
                          departure_time: Date.new(2012,8,17),
                          back_time: Date.new(2012,8,20),
                          note_id: note4.id)
+
+    workerships64 = Workership.create!(trip_id: trip23.id, worker_id: worker62.id)
+    workerships65 = Workership.create!(trip_id: trip23.id, worker_id: worker63.id)
+    workerships66 = Workership.create!(trip_id: trip23.id, worker_id: worker64.id)
+    workerships67 = Workership.create!(trip_id: trip23.id, worker_id: worker65.id)
+
+
     trip24 = Trip.create!(drivership_id: ds9.id,
                          destination_id: dest9.id,
                          departure_time: Date.new(2012,8,18),
                          back_time: Date.new(2012,11,23),
                          note_id: note1.id)
 
+    workerships68 = Workership.create!(trip_id: trip24.id, worker_id: worker66.id)
+    workerships69 = Workership.create!(trip_id: trip24.id, worker_id: worker67.id)
+    workerships70 = Workership.create!(trip_id: trip24.id, worker_id: worker68.id)
+
+
     trip25 = Trip.create!(drivership_id: ds10.id,
                           destination_id: dest10.id,
                           departure_time: Date.new(2012,8,23),
                           back_time: Date.new(2012,8,25),
                           note_id: note3.id)
+
+    workerships71 = Workership.create!(trip_id: trip25.id, worker_id: worker69.id)
+    workerships72 = Workership.create!(trip_id: trip25.id, worker_id: worker70.id)
+
+
     trip26 = Trip.create!(drivership_id: ds1.id,
                           destination_id: dest1.id,
                           departure_time: Date.new(2012,7,1),
                           back_time: Date.new(2012,7,2),
                           note_id: note1.id)
+
+    workerships73 = Workership.create!(trip_id: trip26.id, worker_id: worker71.id)
+    workerships74 = Workership.create!(trip_id: trip26.id, worker_id: worker72.id)
+
+
     trip27 = Trip.create!(drivership_id: ds2.id,
                           destination_id: dest2.id,
                           departure_time: Date.new(2012,7,1),
                           back_time: Date.new(2012,7,6),
                           note_id: note2.id)
+
+    workerships75 = Workership.create!(trip_id: trip27.id, worker_id: worker73.id)
+    workerships76 = Workership.create!(trip_id: trip27.id, worker_id: worker74.id)
+
+
+
     trip28 = Trip.create!(drivership_id: ds3.id,
                           destination_id: dest3.id,
                           departure_time: Date.new(2012,7,3),
                           back_time: Date.new(2012,7,5),
                           note_id: note3.id)
+
+    workerships77 = Workership.create!(trip_id: trip28.id, worker_id: worker75.id)
+    workerships78 = Workership.create!(trip_id: trip28.id, worker_id: worker76.id)
+
+
+
     trip29 = Trip.create!(drivership_id: ds4.id,
                           destination_id: dest4.id,
                           departure_time: Date.new(2012,7,10),
                           back_time: Date.new(2012,7,12),
                           note_id: note4.id)
+
+    workerships79 = Workership.create!(trip_id: trip29.id, worker_id: worker77.id)
+    workerships80 = Workership.create!(trip_id: trip29.id, worker_id: worker78.id)
+    workerships81 = Workership.create!(trip_id: trip29.id, worker_id: worker79.id)
+
+
     trip30 = Trip.create!(drivership_id: ds5.id,
                           destination_id: dest5.id,
                           departure_time: Date.new(2012,6,11),
                           back_time: Date.new(2012,6,11),
                           note_id: note3.id)
+
+    workerships82 = Workership.create!(trip_id: trip30.id, worker_id: worker80.id)
+    workerships83 = Workership.create!(trip_id: trip30.id, worker_id: worker81.id)
+    workerships84 = Workership.create!(trip_id: trip30.id, worker_id: worker82.id)
+    workerships85 = Workership.create!(trip_id: trip30.id, worker_id: worker83.id)
+
+
+
 
     #出差中
     trip31 = Trip.create!(drivership_id: ds1.id,
@@ -947,36 +1064,120 @@ namespace :db do
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,27),
                          note_id: note1.id)
+
+    workerships86 = Workership.create!(trip_id: trip31.id, worker_id: worker15.id)
+    workerships87 = Workership.create!(trip_id: trip31.id, worker_id: worker16.id)
+    workerships88 = Workership.create!(trip_id: trip31.id, worker_id: worker17.id)
+
+    ds1.driver.current_trip = trip31.id
+    ds1.car.current_trip = trip31.id
+    worker15.current_trip = trip31.id
+    worker16.current_trip = trip31.id
+    worker17.current_trip = trip31.id
+
+
     trip32 = Trip.create!(drivership_id: ds2.id,
                          destination_id: dest2.id,
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,28),
                          note_id: note2.id)
+
+    workerships89 = Workership.create!(trip_id: trip32.id, worker_id: worker25.id)
+    workerships90 = Workership.create!(trip_id: trip32.id, worker_id: worker26.id)
+    workerships91 = Workership.create!(trip_id: trip32.id, worker_id: worker27.id)
+
+    ds2.driver.current_trip = trip32.id
+    ds2.car.current_trip = trip32.id
+    worker25.current_trip = trip32.id
+    worker26.current_trip = trip32.id
+    worker27.current_trip = trip32.id
+
+
     trip33 = Trip.create!(drivership_id: ds3.id,
                          destination_id: dest3.id,
                          departure_time: Date.new(2012,11,28),
                          back_time: Date.new(2012,11,28),
                          note_id: note3.id)
+
+    workerships92 = Workership.create!(trip_id: trip33.id, worker_id: worker36.id)
+    workerships93 = Workership.create!(trip_id: trip33.id, worker_id: worker37.id)
+
+    ds3.driver.current_trip = trip33.id
+    ds3.car.current_trip = trip33.id
+    worker36.current_trip = trip33.id
+    worker37.current_trip = trip33.id
+
+
     trip34 = Trip.create!(drivership_id: ds4.id,
                          destination_id: dest4.id,
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,28),
                          note_id: note4.id)
+
+    workerships94 = Workership.create!(trip_id: trip34.id, worker_id: worker38.id)
+    workerships95 = Workership.create!(trip_id: trip34.id, worker_id: worker39.id)
+    workerships96 = Workership.create!(trip_id: trip34.id, worker_id: worker40.id)
+    workerships97 = Workership.create!(trip_id: trip34.id, worker_id: worker41.id)
+
+    ds4.driver.current_trip = trip34.id
+    ds4.car.current_trip = trip34.id
+    worker38.current_trip = trip34.id
+    worker39.current_trip = trip34.id
+    worker40.current_trip = trip34.id
+    worker41.current_trip = trip34.id
+
+
     trip35 = Trip.create!(drivership_id: ds5.id,
                          destination_id: dest5.id,
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,29),
                          note_id: note3.id)
+
+    workerships98 = Workership.create!(trip_id: trip35.id, worker_id: worker52.id)
+    workerships99 = Workership.create!(trip_id: trip35.id, worker_id: worker53.id)
+    workerships100 = Workership.create!(trip_id: trip35.id, worker_id: worker54.id)
+
+    ds5.driver.current_trip = trip35.id
+    ds5.car.current_trip = trip35.id
+    worker52.current_trip = trip35.id
+    worker53.current_trip = trip35.id
+    worker54.current_trip = trip35.id
+
+
     trip36 = Trip.create!(drivership_id: ds6.id,
                          destination_id: dest6.id,
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,30),
                          note_id: note1.id)
+
+    workerships101 = Workership.create!(trip_id: trip36.id, worker_id: worker65.id)
+    workerships102 = Workership.create!(trip_id: trip36.id, worker_id: worker66.id)
+
+    ds6.driver.current_trip = trip36.id
+    ds6.car.current_trip = trip36.id
+    worker65.current_trip = trip36.id
+    worker66.current_trip = trip36.id
+
+
     trip37 = Trip.create!(drivership_id: ds7.id,
                          destination_id: dest7.id,
                          departure_time: Date.new(2012,11,28),
                          back_time: Date.new(2012,11,30),
                          note_id: note2.id)
+
+    workerships103 = Workership.create!(trip_id: trip37.id, worker_id: worker77.id)
+    workerships104 = Workership.create!(trip_id: trip37.id, worker_id: worker78.id)
+    workerships105 = Workership.create!(trip_id: trip37.id, worker_id: worker79.id)
+    workerships106 = Workership.create!(trip_id: trip37.id, worker_id: worker80.id)
+
+    ds7.driver.current_trip = trip37.id
+    ds7.car.current_trip = trip37.id
+    worker77.current_trip = trip37.id
+    worker78.current_trip = trip37.id
+    worker79.current_trip = trip37.id
+    worker80.current_trip = trip37.id
+
+
     trip38 = Trip.create!(drivership_id: ds8.id,
                          destination_id: dest8.id,
                          departure_time: Date.new(2012,11,28),
@@ -984,6 +1185,15 @@ namespace :db do
                          note_id: note4.id)
 
 
+    workerships107 = Workership.create!(trip_id: trip38.id, worker_id: worker81.id)
+    workerships108 = Workership.create!(trip_id: trip38.id, worker_id: worker82.id)
+    workerships109 = Workership.create!(trip_id: trip38.id, worker_id: worker83.id)
+
+    ds8.driver.current_trip = trip38.id
+    ds8.car.current_trip = trip38.id
+    worker81.current_trip = trip38.id
+    worker82.current_trip = trip38.id
+    worker83.current_trip = trip38.id
 
 
   end
