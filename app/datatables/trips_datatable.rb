@@ -35,9 +35,12 @@ class TripsDatatable
   end
 
   def fetch_trips
-    # Trip.find_by_sql("SELECT trips.*  FROM trips LEFT OUTER JOIN notes ON trips.note_id=notes.id order by notes.name asc")
+
     # trips = Trip.order("back_time desc")
-    trips = fetch_trips_helper(sort_column, sort_direction)
+    #trips = []
+    #trips_ = Trip.find_by_sql("SELECT trips.* FROM trips LEFT OUTER JOIN notes ON trips.note_id=notes.id ORDER BY notes.name DESC")
+    trips = Trip.joins("LEFT OUTER JOIN notes ON notes.id = trips.note_id").order("notes.name DESC")
+    # trips = fetch_trips_helper(sort_column, sort_direction)
 
     trips = trips.page(page).per_page(per_page)
     if params[:sSearch].present?
