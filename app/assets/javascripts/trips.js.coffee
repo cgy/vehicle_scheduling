@@ -11,6 +11,7 @@ jQuery ->
     bProcessing: true
     bServerSide: true
     sAjaxSource: $('#trips').data('source')
-    "oLanguage": {
-      "sLengthMenu": "_MENU_ records per page"
-    }
+    "sDom": "<'row'<'span3'l><'span2'r><'span4'f>>t<'row'<'span4'i><'span4 offset1'p>>"
+
+
+
