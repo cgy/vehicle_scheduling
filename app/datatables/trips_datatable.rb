@@ -35,14 +35,28 @@ class TripsDatatable
   end
 
   def fetch_trips
+    # Trip.find_by_sql("SELECT trips.*  FROM trips LEFT OUTER JOIN notes ON trips.note_id=notes.id order by notes.name asc")
     # trips = Trip.order("back_time desc")
-    trips = Trip.order("#{sort_column} #{sort_direction}")
+    trips = fetch_trips_helper(sort_column, sort_direction)
+
     trips = trips.page(page).per_page(per_page)
     if params[:sSearch].present?
       trips = trips.where("departure_time like :search or back_time like :search", search: "%#{params[:sSearch]}%")
     end
     trips
   end
+
+  def fetch_trips_helper(sort_column, sort_direction)
+    trips = Trip.order("back_time desc")
+    case sort_column
+      when "departure_time", "back_time"
+        trips = Trip.order("#{sort_column} #{sort_direction}")
+      when "note", "destination"
+        trips = Trip.find_by_sql("SELECT trips.*  FROM trips LEFT OUTER JOIN #{sort_column}s ON trips.#{sort_column}_id=#{sort_column}s.id order by #{sort_column}s.name #{sort_direction}")
+    end
+    trips
+  end
+
 
   def page
     params[:iDisplayStart].to_i/per_page + 1
@@ -53,7 +67,7 @@ class TripsDatatable
   end
 
   def sort_column
-    columns = %w["车牌" "司机" "出差人员" "出差地" departure_time back_time note.name]
+    columns = %w[plate driver workers destinations departure_time back_time notes]
     columns[params[:iSortCol_0].to_i]
   end
 
