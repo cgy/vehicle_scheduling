@@ -19,18 +19,13 @@ class TripsDatatable
   def data
     trips.map do |trip|
       [
-          trip.drivership.car.model,
-          trip.drivership.car.plate,
-          trip.drivership.driver.name,
-          #工作人员
-          trip.destination.name,
-          trip.departure_time,
-          trip.back_time,
-          trip.note.name
-          link_to(product.name, product),
-          h(product.category),
-          h(product.released_on.strftime("%B %e, %Y")),
-          number_to_currency(product.price)
+        trip.drivership.car.plate,
+        trip.drivership.driver.name,
+        trip.workerlist.join('，'),
+        trip.destination.name,
+        trip.departure_time,
+        trip.back_time,
+        trip.note.name
       ]
     end
   end
@@ -40,12 +35,13 @@ class TripsDatatable
   end
 
   def fetch_trips
-    products = Product.order("#{sort_column} #{sort_direction}")
-    products = products.page(page).per_page(per_page)
+    trips = Trip.order("back_time desc")
+   # trips = Trip.order("#{sort_column} #{sort_direction}")
+    trips = trips.page(page).per_page(per_page)
     if params[:sSearch].present?
-      products = products.where("name like :search or category like :search", search: "%#{params[:sSearch]}%")
+      trips = trips.where("name like :search or category like :search", search: "%#{params[:sSearch]}%")
     end
-    products
+    trips
   end
 
   def page
@@ -57,7 +53,7 @@ class TripsDatatable
   end
 
   def sort_column
-    columns = %w["车型" "车牌" "司机" "工作人员" "出差地" "出发时间" "（预计）归来时间" "事由"]
+    columns = %w["车牌" "司机" "出差地" "出发时间" "（预计）归来时间" "事由"]
     columns[params[:iSortCol_0].to_i]
   end
 
