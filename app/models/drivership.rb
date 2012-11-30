@@ -6,4 +6,8 @@ class Drivership < ActiveRecord::Base
 
   has_many :trips
 
+  def driver_name
+    self.driver.name
+  end
+
 end

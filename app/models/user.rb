@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  scope :worker, where(:type => "Worker")
+  scope :driver, where(:type => "Driver")
+
   attr_accessible :name, :phone, :group_id, :password, :password_confirmation, :remember_token, :current_trip
   has_secure_password
 

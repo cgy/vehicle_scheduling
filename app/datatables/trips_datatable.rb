@@ -36,28 +36,52 @@ class TripsDatatable
 
   def fetch_trips
 
-    # trips = Trip.order("back_time desc")
-    #trips = []
-    #trips_ = Trip.find_by_sql("SELECT trips.* FROM trips LEFT OUTER JOIN notes ON trips.note_id=notes.id ORDER BY notes.name DESC")
-    trips = Trip.joins("LEFT OUTER JOIN notes ON notes.id = trips.note_id").order("notes.name DESC")
-    # trips = fetch_trips_helper(sort_column, sort_direction)
-
+    trips = fetch_trips_helper(sort_column, sort_direction)
     trips = trips.page(page).per_page(per_page)
+
     if params[:sSearch].present?
-      trips = trips.where("departure_time like :search or back_time like :search", search: "%#{params[:sSearch]}%")
+
+      trips1 =trips.includes(:workers).where("users.name like :search", search: "%#{params[:sSearch]}%")
+
+      trips2 = trips.includes(:destination, :note, :drivership).includes(:car, :driver).where("
+            departure_time like :search or
+            back_time like :search or
+            notes.name like :search or
+            destinations.name like :search or
+            cars.plate like :search or
+            users.name like :search", search: "%#{params[:sSearch]}%")
+       trips = trips1 + trips2
+
     end
+
     trips
   end
 
   def fetch_trips_helper(sort_column, sort_direction)
+
+    #默认按归来时间排序
     trips = Trip.order("back_time desc")
+
     case sort_column
+
       when "departure_time", "back_time"
         trips = Trip.order("#{sort_column} #{sort_direction}")
       when "note", "destination"
-        trips = Trip.find_by_sql("SELECT trips.*  FROM trips LEFT OUTER JOIN #{sort_column}s ON trips.#{sort_column}_id=#{sort_column}s.id order by #{sort_column}s.name #{sort_direction}")
+        trips = Trip.joins("LEFT OUTER JOIN #{sort_column}s ON #{sort_column}s.id =
+                trips.#{sort_column}_id").order("#{sort_column}s.name #{sort_direction}")
+      when "plate"
+        trips = Trip.joins("LEFT OUTER JOIN driverships ON driverships.id=
+                trips.drivership_id").joins("LEFT OUTER JOIN cars ON cars.id=
+                driverships.car_id").order("cars.plate #{sort_direction}")
+      when "driver"
+        trips = Trip.joins("LEFT OUTER JOIN driverships ON driverships.id=
+                trips.drivership_id").joins("LEFT OUTER JOIN users ON users.id=
+                driverships.driver_id").order("users.name #{sort_direction}")
+
     end
+
     trips
+
   end
 
 
@@ -70,7 +94,7 @@ class TripsDatatable
   end
 
   def sort_column
-    columns = %w[plate driver workers destinations departure_time back_time notes]
+    columns = %w[plate driver workers destination departure_time back_time note]
     columns[params[:iSortCol_0].to_i]
   end
 

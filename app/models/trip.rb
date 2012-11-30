@@ -8,6 +8,9 @@ class Trip < ActiveRecord::Base
   has_many :workerships
   has_many :workers, through: :workerships
 
+  has_one :car, through: :drivership
+  has_one :driver, through: :drivership
+
   def workerlist
     workerlist = []
     self.workers.each do |worker|
