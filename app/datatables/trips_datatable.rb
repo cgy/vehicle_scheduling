@@ -1,5 +1,6 @@
+require 'date'
 class TripsDatatable
-  delegate :params, :h, :link_to, :number_to_currency, to: :@view
+  delegate :params, :h, :link_to, :edit_admins_trip_path, :admins_trip_path, to: :@view
 
   def initialize(view)
     @view = view
@@ -8,7 +9,7 @@ class TripsDatatable
   def as_json(options = {})
     {
         sEcho: params[:sEcho].to_i,
-        iTotalRecords: Trip.count,
+        iTotalRecords: Trip.where("departure_time > ?", Date.today.at_beginning_of_year()).count,
         iTotalDisplayRecords: trips.total_entries,
         aaData: data
     }
@@ -19,13 +20,16 @@ class TripsDatatable
   def data
     trips.map do |trip|
       [
-          trip.drivership.car.plate,
-          trip.drivership.driver.name,
-          trip.workerlist.join('，'),
-          trip.destination.name,
-          trip.departure_time,
-          trip.back_time,
-          trip.note.name
+          h(trip.drivership.car.plate),
+          h(trip.drivership.driver.name),
+          h(trip.workerslist),
+          h(trip.destination.name),
+          h(trip.departure_time),
+          h(trip.back_time),
+          h(trip.note.name),
+          link_to('<i class="icon-edit"></i>'.html_safe, edit_admins_trip_path(trip))+
+              link_to('<i class="icon-remove"></i>'.html_safe, admins_trip_path(trip),
+                      :confirm => "确定要删除这条出差记录吗？", :method=>:delete)
       ]
     end
   end
@@ -41,16 +45,15 @@ class TripsDatatable
 
     if params[:sSearch].present?
 
-      trips1 =trips.includes(:workers).where("users.name like :search", search: "%#{params[:sSearch]}%")
 
-      trips2 = trips.includes(:destination, :note, :drivership).includes(:car, :driver).where("
+      trips = trips.includes(:destination, :note, :drivership).includes(:car, :driver).where("
             departure_time like :search or
             back_time like :search or
+            workerslist like :search or
             notes.name like :search or
             destinations.name like :search or
             cars.plate like :search or
             users.name like :search", search: "%#{params[:sSearch]}%")
-       trips = trips1 + trips2
 
     end
 
@@ -60,23 +63,23 @@ class TripsDatatable
   def fetch_trips_helper(sort_column, sort_direction)
 
     #默认按归来时间排序
-    trips = Trip.order("back_time desc")
+    trips = Trip.where("departure_time > ?", Date.today.at_beginning_of_year()).order("back_time desc")
 
     case sort_column
 
       when "departure_time", "back_time"
-        trips = Trip.order("#{sort_column} #{sort_direction}")
+        trips = Trip.where("departure_time > ?", Date.today.at_beginning_of_year()).order("#{sort_column} #{sort_direction}")
       when "note", "destination"
         trips = Trip.joins("LEFT OUTER JOIN #{sort_column}s ON #{sort_column}s.id =
-                trips.#{sort_column}_id").order("#{sort_column}s.name #{sort_direction}")
+                trips.#{sort_column}_id").where("departure_time > ?", Date.today.at_beginning_of_year()).order("#{sort_column}s.name #{sort_direction}")
       when "plate"
         trips = Trip.joins("LEFT OUTER JOIN driverships ON driverships.id=
                 trips.drivership_id").joins("LEFT OUTER JOIN cars ON cars.id=
-                driverships.car_id").order("cars.plate #{sort_direction}")
+                driverships.car_id").where("departure_time > ?", Date.today.at_beginning_of_year()).order("cars.plate #{sort_direction}")
       when "driver"
         trips = Trip.joins("LEFT OUTER JOIN driverships ON driverships.id=
                 trips.drivership_id").joins("LEFT OUTER JOIN users ON users.id=
-                driverships.driver_id").order("users.name #{sort_direction}")
+                driverships.driver_id").where("departure_time > ?", Date.today.at_beginning_of_year()).order("users.name #{sort_direction}")
 
     end
 

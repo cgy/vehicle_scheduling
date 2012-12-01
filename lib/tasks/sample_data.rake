@@ -733,7 +733,8 @@ namespace :db do
                          destination_id: dest1.id,
                          departure_time: Date.new(2012,11,1),
                          back_time: Date.new(2012,11,2),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker1.name+"，"+worker2.name+"，"+worker3.name)
 
     workerships1 = Workership.create!(trip_id: trip1.id, worker_id: worker1.id)
     workerships2 = Workership.create!(trip_id: trip1.id, worker_id: worker2.id)
@@ -744,7 +745,8 @@ namespace :db do
                          destination_id: dest2.id,
                          departure_time: Date.new(2012,11,1),
                          back_time: Date.new(2012,11,6),
-                         note_id: note2.id)
+                         note_id: note2.id,
+                         workerslist:worker3.name+"，"+worker4.name)
 
     workerships4 = Workership.create!(trip_id: trip2.id, worker_id: worker3.id)
     workerships5 = Workership.create!(trip_id: trip2.id, worker_id: worker4.id)
@@ -754,7 +756,8 @@ namespace :db do
                          destination_id: dest3.id,
                          departure_time: Date.new(2012,11,3),
                          back_time: Date.new(2012,11,5),
-                         note_id: note3.id)
+                         note_id: note3.id,
+                         workerslist:worker5.name+"，"+worker6.name+"，"+worker7.name+"，"+worker8.name)
 
     workerships6 = Workership.create!(trip_id: trip3.id, worker_id: worker5.id)
     workerships7 = Workership.create!(trip_id: trip3.id, worker_id: worker6.id)
@@ -766,7 +769,8 @@ namespace :db do
                          destination_id: dest4.id,
                          departure_time: Date.new(2012,11,10),
                          back_time: Date.new(2012,11,12),
-                         note_id: note4.id)
+                         note_id: note4.id,
+                         workerslist:worker9.name+"，"+worker10.name+"，"+worker11.name+"，"+worker12.name)
 
     workerships10 = Workership.create!(trip_id: trip4.id, worker_id: worker9.id)
     workerships11 = Workership.create!(trip_id: trip4.id, worker_id: worker10.id)
@@ -778,7 +782,8 @@ namespace :db do
                          destination_id: dest5.id,
                          departure_time: Date.new(2012,11,11),
                          back_time: Date.new(2012,11,11),
-                         note_id: note3.id)
+                         note_id: note3.id,
+                         workerslist:worker13.name+"，"+worker14.name+"，"+worker15.name)
 
     workerships14 = Workership.create!(trip_id: trip5.id, worker_id: worker13.id)
     workerships15 = Workership.create!(trip_id: trip5.id, worker_id: worker14.id)
@@ -789,7 +794,8 @@ namespace :db do
                          destination_id: dest6.id,
                          departure_time: Date.new(2012,11,12),
                          back_time: Date.new(2012,11,16),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker15.name+"，"+worker16.name)
 
     workerships18 = Workership.create!(trip_id: trip6.id, worker_id: worker16.id)
     workerships19 = Workership.create!(trip_id: trip6.id, worker_id: worker17.id)
@@ -799,7 +805,8 @@ namespace :db do
                          destination_id: dest7.id,
                          departure_time: Date.new(2012,11,13),
                          back_time: Date.new(2012,11,15),
-                         note_id: note2.id)
+                         note_id: note2.id,
+                         workerslist:worker18.name+"，"+worker19.name)
 
     workerships20 = Workership.create!(trip_id: trip7.id, worker_id: worker18.id)
     workerships21 = Workership.create!(trip_id: trip7.id, worker_id: worker19.id)
@@ -809,7 +816,8 @@ namespace :db do
                          destination_id: dest8.id,
                          departure_time: Date.new(2012,11,17),
                          back_time: Date.new(2012,11,20),
-                         note_id: note4.id)
+                         note_id: note4.id,
+                         workerslist:worker20.name+"，"+worker21.name+"，"+worker22.name+"，"+worker23.name)
 
     workerships22 = Workership.create!(trip_id: trip8.id, worker_id: worker20.id)
     workerships23 = Workership.create!(trip_id: trip8.id, worker_id: worker21.id)
@@ -821,7 +829,8 @@ namespace :db do
                          destination_id: dest9.id,
                          departure_time: Date.new(2012,11,18),
                          back_time: Date.new(2012,11,23),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker24.name+"，"+worker25.name)
 
     workerships26 = Workership.create!(trip_id: trip9.id, worker_id: worker24.id)
     workerships27 = Workership.create!(trip_id: trip9.id, worker_id: worker25.id)
@@ -831,7 +840,8 @@ namespace :db do
                          destination_id: dest10.id,
                          departure_time: Date.new(2012,11,23),
                          back_time: Date.new(2012,11,25),
-                         note_id: note3.id)
+                         note_id: note3.id,
+                         workerslist:worker26.name+"，"+worker27.name+"，"+worker28.name)
 
     workerships28 = Workership.create!(trip_id: trip10.id, worker_id: worker26.id)
     workerships29 = Workership.create!(trip_id: trip10.id, worker_id: worker27.id)
@@ -842,7 +852,8 @@ namespace :db do
                          destination_id: dest1.id,
                          departure_time: Date.new(2012,10,1),
                          back_time: Date.new(2012,10,2),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker29.name+"，"+worker30.name+"，"+worker31.name+"，"+worker32.name)
 
     workerships31 = Workership.create!(trip_id: trip11.id, worker_id: worker29.id)
     workerships32 = Workership.create!(trip_id: trip11.id, worker_id: worker30.id)
@@ -854,7 +865,8 @@ namespace :db do
                          destination_id: dest2.id,
                          departure_time: Date.new(2012,10,1),
                          back_time: Date.new(2012,10,6),
-                         note_id: note2.id)
+                         note_id: note2.id,
+                         workerslist:worker33.name+"，"+worker34.name)
 
     workerships35 = Workership.create!(trip_id: trip12.id, worker_id: worker33.id)
     workerships36 = Workership.create!(trip_id: trip12.id, worker_id: worker34.id)
@@ -864,7 +876,8 @@ namespace :db do
                          destination_id: dest3.id,
                          departure_time: Date.new(2012,10,3),
                          back_time: Date.new(2012,10,5),
-                         note_id: note3.id)
+                         note_id: note3.id,
+                         workerslist:worker35.name+"，"+worker36.name)
 
     workerships37 = Workership.create!(trip_id: trip13.id, worker_id: worker35.id)
     workerships38 = Workership.create!(trip_id: trip13.id, worker_id: worker36.id)
@@ -874,7 +887,8 @@ namespace :db do
                          destination_id: dest4.id,
                          departure_time: Date.new(2012,10,10),
                          back_time: Date.new(2012,10,12),
-                         note_id: note4.id)
+                         note_id: note4.id,
+                         workerslist:worker37.name+"，"+worker38.name)
 
     workerships39 = Workership.create!(trip_id: trip14.id, worker_id: worker37.id)
     workerships40 = Workership.create!(trip_id: trip14.id, worker_id: worker38.id)
@@ -884,7 +898,9 @@ namespace :db do
                          destination_id: dest5.id,
                          departure_time: Date.new(2012,10,11),
                          back_time: Date.new(2012,10,11),
-                         note_id: note3.id)
+                         note_id: note3.id,
+                         workerslist:worker39.name+"，"+worker40.name+
+                             "，"+worker41.name+"，"+worker42.name+"，"+worker43.name+"，"+worker44.name)
 
     workerships41 = Workership.create!(trip_id: trip15.id, worker_id: worker39.id)
     workerships42 = Workership.create!(trip_id: trip15.id, worker_id: worker40.id)
@@ -898,7 +914,8 @@ namespace :db do
                          destination_id: dest6.id,
                          departure_time: Date.new(2012,10,12),
                          back_time: Date.new(2012,10,16),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker45.name+"，"+worker46.name+"，"+worker47.name)
 
     workerships47 = Workership.create!(trip_id: trip16.id, worker_id: worker45.id)
     workerships48 = Workership.create!(trip_id: trip16.id, worker_id: worker46.id)
@@ -909,7 +926,8 @@ namespace :db do
                          destination_id: dest7.id,
                          departure_time: Date.new(2012,10,13),
                          back_time: Date.new(2012,10,15),
-                         note_id: note2.id)
+                         note_id: note2.id,
+                         workerslist:worker48.name+"，"+worker49.name)
 
 
     workerships50 = Workership.create!(trip_id: trip17.id, worker_id: worker48.id)
@@ -920,7 +938,8 @@ namespace :db do
                          destination_id: dest8.id,
                          departure_time: Date.new(2012,10,17),
                          back_time: Date.new(2012,10,20),
-                         note_id: note4.id)
+                         note_id: note4.id,
+                         workerslist:worker50.name+"，"+worker51.name+"，"+worker52.name)
 
     workerships52 = Workership.create!(trip_id: trip18.id, worker_id: worker50.id)
     workerships53 = Workership.create!(trip_id: trip18.id, worker_id: worker51.id)
@@ -931,7 +950,8 @@ namespace :db do
                          destination_id: dest9.id,
                          departure_time: Date.new(2012,10,18),
                          back_time: Date.new(2012,10,23),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker53.name+"，"+worker54.name+"，"+worker55.name)
 
     workerships55 = Workership.create!(trip_id: trip19.id, worker_id: worker53.id)
     workerships56 = Workership.create!(trip_id: trip19.id, worker_id: worker54.id)
@@ -942,7 +962,8 @@ namespace :db do
                           destination_id: dest10.id,
                           departure_time: Date.new(2012,10,23),
                           back_time: Date.new(2012,10,25),
-                          note_id: note3.id)
+                          note_id: note3.id,
+                          workerslist:worker56.name+"，"+worker57.name)
 
     workerships58 = Workership.create!(trip_id: trip20.id, worker_id: worker56.id)
     workerships59 = Workership.create!(trip_id: trip20.id, worker_id: worker57.id)
@@ -952,7 +973,8 @@ namespace :db do
                          destination_id: dest6.id,
                          departure_time: Date.new(2012,9,12),
                          back_time: Date.new(2012,9,16),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker58.name+"，"+worker59.name)
 
     workerships60 = Workership.create!(trip_id: trip21.id, worker_id: worker58.id)
     workerships61 = Workership.create!(trip_id: trip21.id, worker_id: worker59.id)
@@ -962,7 +984,8 @@ namespace :db do
                          destination_id: dest7.id,
                          departure_time: Date.new(2012,9,13),
                          back_time: Date.new(2012,9,15),
-                         note_id: note2.id)
+                         note_id: note2.id,
+                         workerslist:worker60.name+"，"+worker61.name)
 
     workerships62 = Workership.create!(trip_id: trip22.id, worker_id: worker60.id)
     workerships63 = Workership.create!(trip_id: trip22.id, worker_id: worker61.id)
@@ -972,7 +995,8 @@ namespace :db do
                          destination_id: dest8.id,
                          departure_time: Date.new(2012,8,17),
                          back_time: Date.new(2012,8,20),
-                         note_id: note4.id)
+                         note_id: note4.id,
+                         workerslist:worker62.name+"，"+worker63.name+"，"+worker64.name+"，"+worker65.name)
 
     workerships64 = Workership.create!(trip_id: trip23.id, worker_id: worker62.id)
     workerships65 = Workership.create!(trip_id: trip23.id, worker_id: worker63.id)
@@ -984,7 +1008,8 @@ namespace :db do
                          destination_id: dest9.id,
                          departure_time: Date.new(2012,8,18),
                          back_time: Date.new(2012,11,23),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker66.name+"，"+worker67.name+"，"+worker68.name)
 
     workerships68 = Workership.create!(trip_id: trip24.id, worker_id: worker66.id)
     workerships69 = Workership.create!(trip_id: trip24.id, worker_id: worker67.id)
@@ -995,7 +1020,8 @@ namespace :db do
                           destination_id: dest10.id,
                           departure_time: Date.new(2012,8,23),
                           back_time: Date.new(2012,8,25),
-                          note_id: note3.id)
+                          note_id: note3.id,
+                          workerslist:worker69.name+"，"+worker70.name)
 
     workerships71 = Workership.create!(trip_id: trip25.id, worker_id: worker69.id)
     workerships72 = Workership.create!(trip_id: trip25.id, worker_id: worker70.id)
@@ -1005,7 +1031,8 @@ namespace :db do
                           destination_id: dest1.id,
                           departure_time: Date.new(2012,7,1),
                           back_time: Date.new(2012,7,2),
-                          note_id: note1.id)
+                          note_id: note1.id,
+                          workerslist:worker71.name+"，"+worker72.name)
 
     workerships73 = Workership.create!(trip_id: trip26.id, worker_id: worker71.id)
     workerships74 = Workership.create!(trip_id: trip26.id, worker_id: worker72.id)
@@ -1015,7 +1042,8 @@ namespace :db do
                           destination_id: dest2.id,
                           departure_time: Date.new(2012,7,1),
                           back_time: Date.new(2012,7,6),
-                          note_id: note2.id)
+                          note_id: note2.id,
+                          workerslist:worker73.name+"，"+worker74.name)
 
     workerships75 = Workership.create!(trip_id: trip27.id, worker_id: worker73.id)
     workerships76 = Workership.create!(trip_id: trip27.id, worker_id: worker74.id)
@@ -1026,7 +1054,8 @@ namespace :db do
                           destination_id: dest3.id,
                           departure_time: Date.new(2012,7,3),
                           back_time: Date.new(2012,7,5),
-                          note_id: note3.id)
+                          note_id: note3.id,
+                          workerslist:worker75.name+"，"+worker76.name)
 
     workerships77 = Workership.create!(trip_id: trip28.id, worker_id: worker75.id)
     workerships78 = Workership.create!(trip_id: trip28.id, worker_id: worker76.id)
@@ -1037,7 +1066,8 @@ namespace :db do
                           destination_id: dest4.id,
                           departure_time: Date.new(2012,7,10),
                           back_time: Date.new(2012,7,12),
-                          note_id: note4.id)
+                          note_id: note4.id,
+                          workerslist:worker77.name+"，"+worker78.name+"，"+worker79.name)
 
     workerships79 = Workership.create!(trip_id: trip29.id, worker_id: worker77.id)
     workerships80 = Workership.create!(trip_id: trip29.id, worker_id: worker78.id)
@@ -1048,7 +1078,8 @@ namespace :db do
                           destination_id: dest5.id,
                           departure_time: Date.new(2012,6,11),
                           back_time: Date.new(2012,6,11),
-                          note_id: note3.id)
+                          note_id: note3.id,
+                          workerslist:worker80.name+"，"+worker81.name+"，"+worker82.name+"，"+worker83.name)
 
     workerships82 = Workership.create!(trip_id: trip30.id, worker_id: worker80.id)
     workerships83 = Workership.create!(trip_id: trip30.id, worker_id: worker81.id)
@@ -1056,6 +1087,30 @@ namespace :db do
     workerships85 = Workership.create!(trip_id: trip30.id, worker_id: worker83.id)
 
 
+    trip40 = Trip.create!(drivership_id: ds6.id,
+                          destination_id: dest6.id,
+                          departure_time: Date.new(2011,12,31),
+                          back_time: Date.new(2012,1,3),
+                          note_id: note2.id,
+                          workerslist:worker80.name+"，"+worker81.name+"，"+worker82.name+"，"+worker83.name)
+
+    workerships40 = Workership.create!(trip_id: trip40.id, worker_id: worker84.id)
+    workerships40 = Workership.create!(trip_id: trip40.id, worker_id: worker85.id)
+    workerships40 = Workership.create!(trip_id: trip40.id, worker_id: worker86.id)
+    workerships40 = Workership.create!(trip_id: trip40.id, worker_id: worker87.id)
+
+
+    trip41 = Trip.create!(drivership_id: ds7.id,
+                         destination_id: dest7.id,
+                          departure_time: Date.new(2012,1,2),
+                          back_time: Date.new(2012,1,4),
+                          note_id: note5.id,
+                          workerslist:worker80.name+"，"+worker81.name+"，"+worker82.name+"，"+worker83.name)
+
+    workerships41 = Workership.create!(trip_id: trip40.id, worker_id: worker88.id)
+    workerships41 = Workership.create!(trip_id: trip40.id, worker_id: worker89.id)
+    workerships41 = Workership.create!(trip_id: trip40.id, worker_id: worker90.id)
+    workerships41 = Workership.create!(trip_id: trip40.id, worker_id: worker91.id)
 
 
     #出差中
@@ -1063,7 +1118,8 @@ namespace :db do
                          destination_id: dest1.id,
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,27),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker15.name+"，"+worker16.name+"，"+worker17.name)
 
     workerships86 = Workership.create!(trip_id: trip31.id, worker_id: worker15.id)
     workerships87 = Workership.create!(trip_id: trip31.id, worker_id: worker16.id)
@@ -1090,7 +1146,8 @@ namespace :db do
                          destination_id: dest2.id,
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,28),
-                         note_id: note2.id)
+                         note_id: note2.id,
+                         workerslist:worker25.name+"，"+worker26.name+"，"+worker27.name)
 
     workerships89 = Workership.create!(trip_id: trip32.id, worker_id: worker25.id)
     workerships90 = Workership.create!(trip_id: trip32.id, worker_id: worker26.id)
@@ -1117,7 +1174,8 @@ namespace :db do
                          destination_id: dest3.id,
                          departure_time: Date.new(2012,11,28),
                          back_time: Date.new(2012,11,28),
-                         note_id: note3.id)
+                         note_id: note3.id,
+                         workerslist:worker36.name+"，"+worker37.name)
 
     workerships92 = Workership.create!(trip_id: trip33.id, worker_id: worker36.id)
     workerships93 = Workership.create!(trip_id: trip33.id, worker_id: worker37.id)
@@ -1141,7 +1199,8 @@ namespace :db do
                          destination_id: dest4.id,
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,28),
-                         note_id: note4.id)
+                         note_id: note4.id,
+                         workerslist:worker38.name+"，"+worker39.name+"，"+worker40.name+"，"+worker41.name)
 
     workerships94 = Workership.create!(trip_id: trip34.id, worker_id: worker38.id)
     workerships95 = Workership.create!(trip_id: trip34.id, worker_id: worker39.id)
@@ -1171,7 +1230,8 @@ namespace :db do
                          destination_id: dest5.id,
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,29),
-                         note_id: note3.id)
+                         note_id: note3.id,
+                         workerslist:worker52.name+"，"+worker53.name+"，"+worker54.name)
 
     workerships98 = Workership.create!(trip_id: trip35.id, worker_id: worker52.id)
     workerships99 = Workership.create!(trip_id: trip35.id, worker_id: worker53.id)
@@ -1198,7 +1258,8 @@ namespace :db do
                          destination_id: dest6.id,
                          departure_time: Date.new(2012,11,27),
                          back_time: Date.new(2012,11,30),
-                         note_id: note1.id)
+                         note_id: note1.id,
+                         workerslist:worker65.name+"，"+worker66.name)
 
     workerships101 = Workership.create!(trip_id: trip36.id, worker_id: worker65.id)
     workerships102 = Workership.create!(trip_id: trip36.id, worker_id: worker66.id)
@@ -1222,7 +1283,8 @@ namespace :db do
                          destination_id: dest7.id,
                          departure_time: Date.new(2012,11,28),
                          back_time: Date.new(2012,11,30),
-                         note_id: note2.id)
+                         note_id: note2.id,
+                         workerslist:worker77.name+"，"+worker78.name+"，"+worker79.name+"，"+worker80.name)
 
     workerships103 = Workership.create!(trip_id: trip37.id, worker_id: worker77.id)
     workerships104 = Workership.create!(trip_id: trip37.id, worker_id: worker78.id)
@@ -1252,7 +1314,8 @@ namespace :db do
                          destination_id: dest8.id,
                          departure_time: Date.new(2012,11,28),
                          back_time: Date.new(2012,12,6),
-                         note_id: note4.id)
+                         note_id: note4.id,
+                         workerslist:worker81.name+"，"+worker82.name+"，"+worker83.name)
 
 
     workerships107 = Workership.create!(trip_id: trip38.id, worker_id: worker81.id)

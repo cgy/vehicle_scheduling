@@ -1,8 +1,38 @@
 .content {
-  margin-left: -3px;
+  margin-left: -15px;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.span4 {
+  width: 335px;
+}
+
+.span9 {
+  width: 735px;
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #b9e9bb;
+}
+
+.dataTables_scroll {
+  margin-bottom: 8px;
 }
 
 .chzn-select-deselect {
   width: 250px;
 }
+
+.icon-edit {
+  margin-top: 5px;
+}
+
+.icon-remove {
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+
 

@@ -12,9 +12,6 @@ class IndexPageController < ApplicationController
       #该车已出差
       if car.current_trip > 0
         @trip = Trip.find(car.current_trip)
-        workerships = Workership.find_all_by_trip_id(@trip.id)
-        workers_names = []
-        workerships.each { |workership| workers_names << Worker.find(workership.worker_id).name } if !workerships.nil?
 
         @cars_in_use << {
             car: car,
@@ -23,7 +20,7 @@ class IndexPageController < ApplicationController
             departure_time: @trip.departure_time,
             back_time: @trip.back_time,
             note: @trip.note.name,
-            workers_names: workers_names
+            workerslist: @trip.workerslist
         }
       else
         #该车最近一次由谁驾驶？
