@@ -1,3 +1,7 @@
+/*
+ *= require jquery.ui.datepicker
+ */
+
 .content {
   margin-left: -15px;
   padding-right: 0;
@@ -12,6 +16,8 @@
   width: 735px;
 }
 
+/*表格*/
+
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
   background-color: #b9e9bb;
@@ -21,6 +27,16 @@
   margin-bottom: 8px;
 }
 
+.icon-edit {
+  margin-top: 5px;
+}
+
+.icon-remove {
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+/*表单*/
 #chzn-car-select {
   width: 250px;
 }
@@ -41,16 +57,25 @@
   width: 135px;
 }
 
-
-.icon-edit {
-  margin-top: 5px;
+#inputDeparture_time {
+  width: 100px;
 }
 
-.icon-remove {
-  margin-top: 5px;
-  margin-left: 3px;
+#inputBack_time {
+  width: 100px;
 }
 
+#chzn-note-select {
+  width: 145px;
+}
+
+
+.cancle {
+  margin-left: 5px;
+}
+
+
+/*附页标题*/
 #title {
   margin-bottom: 20px;
   font-size: 1.1em;
@@ -59,6 +84,16 @@
 .span8 {
   margin-left: -10px;
   margin-top: 2px;
+}
+
+
+/*日期选择图标*/
+.icon-calendar {
+  margin-top: 7px;
+}
+
+.controls-row [class*="span"] + [class*="span"]{
+  margin-left: 3px;
 }
 
 

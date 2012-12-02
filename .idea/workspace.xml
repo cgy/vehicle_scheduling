@@ -23,132 +23,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="bootstrap-chosen.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-chosen.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5414" column="28" selection-start="132233" selection-end="132243" vertical-scroll-proportion="-10.931034">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admins/trips/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="61" selection-start="4568" selection-end="4568" vertical-scroll-proportion="-20.107143">
-              <folding>
-                <marker date="1354449800560" expanded="true" signature="93:4899" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="113:178" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="137:169" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="198:348" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="222:292" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="368:4891" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="392:4882" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="429:4871" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="466:1245" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="567:1230" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="600:1213" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="715:1194" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="1281:1985" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="1385:1970" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="1418:1953" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="1536:1934" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="2021:2739" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="2127:2724" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="2160:2707" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="2279:2688" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="2775:3490" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="2881:3475" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="2914:3458" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="3034:3439" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="3526:4236" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="3631:4221" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="3664:4204" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="3787:4185" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="4273:4468" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="4379:4453" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="4505:4695" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="4611:4680" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="4732:4857" placeholder="..." />
-                <marker date="1354449800560" expanded="true" signature="4765:4842" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_assets.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/trips/_assets.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="39" selection-start="281" selection-end="281" vertical-scroll-proportion="0.15795724">
+            <state line="133" column="35" selection-start="4829" selection-end="4842" vertical-scroll-proportion="-16.714285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DT_bootstrap.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/DT_bootstrap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="48" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smoothness_datepick.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/smoothness_datepick.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trips.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="trips.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/trips.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="12" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
+            <state line="35" column="16" selection-start="408" selection-end="408" vertical-scroll-proportion="0.575419">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery_datepick.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery_datepick.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1095" column="21" selection-start="45654" selection-end="45654" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_assets.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/index_page/_assets.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="30" selection-start="61" selection-end="66" vertical-scroll-proportion="-0.6785714">
-              <folding>
-                <marker date="1353840723142" expanded="true" signature="139:205" placeholder="..." />
-                <marker date="1353840723142" expanded="true" signature="160:196" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/trips/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding>
-                <marker date="1354376839706" expanded="true" signature="57:585" placeholder="..." />
-                <marker date="1354376839706" expanded="true" signature="183:578" placeholder="..." />
-                <marker date="1354376839706" expanded="true" signature="269:542" placeholder="..." />
-                <marker date="1354376839706" expanded="true" signature="307:529" placeholder="..." />
-                <marker date="1354376839706" expanded="true" signature="326:337" placeholder="..." />
-                <marker date="1354376839706" expanded="true" signature="364:375" placeholder="..." />
-                <marker date="1354376839706" expanded="true" signature="402:414" placeholder="..." />
-                <marker date="1354376839706" expanded="true" signature="554:567" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -156,7 +53,7 @@
       <file leaf-file-name="trips.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/trips.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
+            <state line="33" column="21" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -172,9 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/index_page/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/index_page/_header.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/application/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admins/trips/_side.html.erb" />
         <option value="$PROJECT_DIR$/app/datatables/trips_datatable.rb" />
         <option value="$PROJECT_DIR$/app/views/admins/trips/index.html.erb" />
@@ -183,11 +77,14 @@
         <option value="$PROJECT_DIR$/app/helpers/users_helper.rb" />
         <option value="$PROJECT_DIR$/app/helpers/drivership_helper.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-chosen.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/trips.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/jquery_datepick.js" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery_datechooser.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/admins/trips/_assets.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admins/trips/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/trips.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/jquery_datepick.js" />
-        <option value="$PROJECT_DIR$/app/views/admins/trips/_assets.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/trips.css.scss" />
       </list>
     </option>
   </component>
@@ -850,13 +747,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../269-template-inheritance-master/store-after" />
     <property name="FullScreen" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1037,13 +934,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -1075,6 +965,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -1234,7 +1131,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.670045" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20342612" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23608138" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33167702" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -1305,20 +1202,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-chosen.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5330" column="84" selection-start="129978" selection-end="129978" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/drivers/trip/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="568" selection-end="568" vertical-scroll-proportion="-13.571428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/common.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1326,23 +1209,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/base/_header.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/DT_bootstrap.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/base/_content.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="35" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/datatables/trips_datatable.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="12" selection-start="1302" selection-end="1316" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/destinations.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/DT_bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="48" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/groups.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1350,118 +1263,55 @@
     <entry file="file://$PROJECT_DIR$/app/views/admins/trips/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1354376839706" expanded="true" signature="57:585" placeholder="..." />
-            <marker date="1354376839706" expanded="true" signature="183:578" placeholder="..." />
-            <marker date="1354376839706" expanded="true" signature="269:542" placeholder="..." />
-            <marker date="1354376839706" expanded="true" signature="307:529" placeholder="..." />
-            <marker date="1354376839706" expanded="true" signature="326:337" placeholder="..." />
-            <marker date="1354376839706" expanded="true" signature="364:375" placeholder="..." />
-            <marker date="1354376839706" expanded="true" signature="402:414" placeholder="..." />
-            <marker date="1354376839706" expanded="true" signature="554:567" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/trips/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="61" selection-start="4568" selection-end="4568" vertical-scroll-proportion="-20.107143">
-          <folding>
-            <marker date="1354449800560" expanded="true" signature="93:4899" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="113:178" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="137:169" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="198:348" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="222:292" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="368:4891" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="392:4882" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="429:4871" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="466:1245" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="567:1230" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="600:1213" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="715:1194" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="1281:1985" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="1385:1970" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="1418:1953" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="1536:1934" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="2021:2739" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="2127:2724" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="2160:2707" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="2279:2688" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="2775:3490" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="2881:3475" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="2914:3458" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="3034:3439" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="3526:4236" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="3631:4221" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="3664:4204" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="3787:4185" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="4273:4468" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="4379:4453" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="4505:4695" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="4611:4680" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="4732:4857" placeholder="..." />
-            <marker date="1354449800560" expanded="true" signature="4765:4842" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/trips.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/smoothness_datepick.css">
+    <entry file="file://$PROJECT_DIR$/app/views/drivers/trip/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/trips.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="12" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index_page/_assets.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="30" selection-start="61" selection-end="66" vertical-scroll-proportion="-0.6785714">
-          <folding>
-            <marker date="1353840723142" expanded="true" signature="139:205" placeholder="..." />
-            <marker date="1353840723142" expanded="true" signature="160:196" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/DT_bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="48" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/index.js">
+    <entry file="file://$PROJECT_DIR$/app/views/drivers/trip/_side.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery_datepick.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-chosen.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1095" column="21" selection-start="45654" selection-end="45654" vertical-scroll-proportion="0.0">
+        <state line="5414" column="28" selection-start="132233" selection-end="132243" vertical-scroll-proportion="-10.931034">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admins/trips/_assets.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="39" selection-start="281" selection-end="281" vertical-scroll-proportion="0.15795724">
+        <state line="6" column="42" selection-start="234" selection-end="234" vertical-scroll-proportion="-4.071429">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/trips/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="35" selection-start="4829" selection-end="4842" vertical-scroll-proportion="-16.714285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/trips.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="21" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/trips.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="16" selection-start="408" selection-end="408" vertical-scroll-proportion="0.575419">
           <folding />
         </state>
       </provider>

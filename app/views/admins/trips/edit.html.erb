@@ -1,6 +1,6 @@
 <% provide(:title, '出差管理') %>
 
-<div class="content span9" xmlns="http://www.w3.org/1999/html">
+<div class="content span9" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
   <div class="row">
     <div class="span9">
       <h4>出差管理 </h4>
@@ -77,11 +77,11 @@
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label" for="inputPassword">工作人员</label>
+          <label class="control-label" for="inputPassword">工作人员(多选)</label>
 
           <div class="controls">
             <div class="chosen">
-              <select data-placeholder="请选择工作人员..." class="chzn-select" multiple id="chzn-worker-select" tabindex="30">
+              <select data-placeholder="请选择工作人员..." class="chzn-select" multiple id="chzn-worker-select" tabindex="40">
                 <option value=""></option>
                 <option>刘军农</option>
                 <option>杨润根</option>
@@ -101,7 +101,7 @@
 
           <div class="controls">
             <div class="chosen">
-              <select data-placeholder="请选择司机..." class="chzn-select-deselect" id="chzn-destination-select" tabindex="20">
+              <select data-placeholder="请选择司机..." class="chzn-select-deselect" id="chzn-destination-select" tabindex="50">
                 <option value=""></option>
                 <option>唐振军</option>
                 <option>钱家意</option>
@@ -120,22 +120,47 @@
         <div class="control-group">
           <label class="control-label" for="inputPassword">出发时间</label>
 
-          <div class="controls">
-            <input type="date" id="inputDeparture_time">
+          <div class="controls controls-row">
+            <input class="span4" type="text" id="inputDeparture_time">
+            <i class="icon-calendar span1"></i>
           </div>
         </div>
 
         <div class="control-group">
           <label class="control-label" for="inputPassword">归来时间</label>
 
+          <div class="controls controls-row">
+            <input class="span4" type="text" id="inputBack_time">
+            <i class="icon-calendar span1"></i>
+          </div>
+
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">事由</label>
+
           <div class="controls">
-            <input type="date" id="inputBack_time">
+            <div class="chosen">
+              <select data-placeholder="请选择出差事由..." class="chzn-select-deselect" id="chzn-note-select" tabindex="90">
+                <option value=""></option>
+                <option>抢修</option>
+                <option>消缺</option>
+                <option>邹睿</option>
+                <option>临检</option>
+                <option>定检</option>
+                <option>魏群敏</option>
+                <option>孟建忠</option>
+                <option>谈建军</option>
+                <option>张建新</option>
+              </select>
+            </div>
           </div>
         </div>
 
         <div class="control-group">
           <div class="controls">
             <button type="submit" class="btn">保存修改</button>
+            <a href="/admins/trips" class="btn cancle">取消</a>
           </div>
         </div>
       </form>

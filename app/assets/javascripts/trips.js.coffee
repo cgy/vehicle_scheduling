@@ -31,12 +31,34 @@ jQuery ->
       { "sWidth": "65px", "aTargets": [ 4 ] },
       { "sWidth": "65px", "aTargets": [ 5 ] },
       { "sWidth": "45px", "aTargets": [ 6 ] },
-      { "sWidth": "25px", "aTargets": [ 7 ] },
+      { "sWidth": "28px", "aTargets": [ 7 ] },
     ]
 
-  $('#inputDeparture_time').datepick({dateFormat: 'yyyy-mm-dd'})
+  $.datepicker.regional['zh-CN'] = {
+    closeText: '关闭',
+    prevText: '<上月',
+    nextText: '下月>',
+    currentText: '今天',
+    monthNames: ['一月','二月','三月','四月','五月','六月',
+      '七月','八月','九月','十月','十一月','十二月'],
+    monthNamesShort: ['一','二','三','四','五','六',
+      '七','八','九','十','十一','十二'],
+    dayNames: ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'],
+    dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+    dayNamesMin: ['日','一','二','三','四','五','六'],
+    weekHeader: '周',
+    dateFormat: 'yy-mm-dd',
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: true,
+    yearSuffix: '年'
+  }
 
-  $('#inputBack_time').datepick({dateFormat: 'yyyy-mm-dd'})
+  $.datepicker.setDefaults($.datepicker.regional['zh-CN'])
+
+  $('#inputDeparture_time').datepicker()
+
+  $('#inputBack_time').datepicker()
 
 
 
