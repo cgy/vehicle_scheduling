@@ -1,8 +1,146 @@
 <% provide(:title, '出差管理') %>
 
-<div class="content span9">
-  <h4>出差管理 </h4>
+<div class="content span9" xmlns="http://www.w3.org/1999/html">
+  <div class="row">
+    <div class="span9">
+      <h4>出差管理 </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span1">
+      <a href="/admins/trips" class="btn btn-mini">«返回</a>
+    </div>
+    <div id="title" class="span8">出差信息更改</div>
+  </div>
+  <div class="row">
+    <div class="span9">
+      <form class="form-horizontal">
 
+        <div class="control-group">
+          <label class="control-label" for="inputEmail">车辆</label>
+
+          <div class="controls">
+            <div class="chosen">
+              <select data-placeholder="请选择车辆..." class="chzn-select-deselect" id="chzn-car-select" tabindex="10">
+                <option value=""></option>
+                <option>途胜|赣M96036</option>
+                <option>全顺|赣M99665</option>
+                <option>风行|赣M87711</option>
+                <option>瑞风|赣M71479</option>
+                <option>全顺工程车|赣AC0325</option>
+                <option>瑞风|赣A0T567</option>
+                <option>依维柯|赣AT0062</option>
+                <option>25米高空作业车|赣M05899</option>
+                <option>14米高空作业车赣|M03717</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">司机</label>
+
+          <div class="controls">
+            <div class="chosen">
+              <select data-placeholder="请选择司机..." class="chzn-select-deselect" id="chzn-driver-select" tabindex="20">
+                <option value=""></option>
+                <option>唐振军</option>
+                <option>钱家意</option>
+                <option>邹睿</option>
+                <option>黄明辕</option>
+                <option>程鹏</option>
+                <option>魏群敏</option>
+                <option>孟建忠</option>
+                <option>谈建军</option>
+                <option>张建新</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">工作班组</label>
+
+          <div class="controls">
+            <div class="chosen">
+              <select data-placeholder="请选择工作班组..." class="chzn-select-deselect" id="chzn-group-select" tabindex="30">
+                <option value=""></option>
+                <option>二次一班</option>
+                <option>二次二班</option>
+                <option>二次三班</option>
+                <option>二次四班</option>
+                <option>开关一班</option>
+                <option>开关二班</option>
+                <option>开关三班</option>
+                <option>开关四班</option>
+                <option>变压器班</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">工作人员</label>
+
+          <div class="controls">
+            <div class="chosen">
+              <select data-placeholder="请选择工作人员..." class="chzn-select" multiple id="chzn-worker-select" tabindex="30">
+                <option value=""></option>
+                <option>刘军农</option>
+                <option>杨润根</option>
+                <option>张敏</option>
+                <option>二次四班</option>
+                <option>开关一班</option>
+                <option>开关二班</option>
+                <option>开关三班</option>
+                <option>开关四班</option>
+                <option>变压器班</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">出差地</label>
+
+          <div class="controls">
+            <div class="chosen">
+              <select data-placeholder="请选择司机..." class="chzn-select-deselect" id="chzn-destination-select" tabindex="20">
+                <option value=""></option>
+                <option>唐振军</option>
+                <option>钱家意</option>
+                <option>邹睿</option>
+                <option>黄明辕</option>
+                <option>程鹏</option>
+                <option>魏群敏</option>
+                <option>孟建忠</option>
+                <option>谈建军</option>
+                <option>张建新</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">出发时间</label>
+
+          <div class="controls">
+            <input type="date" id="inputDeparture_time">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">归来时间</label>
+
+          <div class="controls">
+            <input type="date" id="inputBack_time">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn">保存修改</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 
 </div>
 

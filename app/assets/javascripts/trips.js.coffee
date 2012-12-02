@@ -34,6 +34,10 @@ jQuery ->
       { "sWidth": "25px", "aTargets": [ 7 ] },
     ]
 
+  $('#inputDeparture_time').datepick({dateFormat: 'yyyy-mm-dd'})
+
+  $('#inputBack_time').datepick({dateFormat: 'yyyy-mm-dd'})
+
 
 
 

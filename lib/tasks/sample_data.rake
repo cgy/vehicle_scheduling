@@ -1107,10 +1107,10 @@ namespace :db do
                           note_id: note5.id,
                           workerslist:worker80.name+"，"+worker81.name+"，"+worker82.name+"，"+worker83.name)
 
-    workerships41 = Workership.create!(trip_id: trip40.id, worker_id: worker88.id)
-    workerships41 = Workership.create!(trip_id: trip40.id, worker_id: worker89.id)
-    workerships41 = Workership.create!(trip_id: trip40.id, worker_id: worker90.id)
-    workerships41 = Workership.create!(trip_id: trip40.id, worker_id: worker91.id)
+    workerships41 = Workership.create!(trip_id: trip41.id, worker_id: worker88.id)
+    workerships41 = Workership.create!(trip_id: trip41.id, worker_id: worker89.id)
+    workerships41 = Workership.create!(trip_id: trip41.id, worker_id: worker90.id)
+    workerships41 = Workership.create!(trip_id: trip41.id, worker_id: worker91.id)
 
 
     #出差中

@@ -21,9 +21,26 @@
   margin-bottom: 8px;
 }
 
-.chzn-select-deselect {
+#chzn-car-select {
   width: 250px;
 }
+
+#chzn-driver-select {
+  width: 120px;
+}
+
+#chzn-group-select {
+  width: 135px;
+}
+
+#chzn-worker-select {
+  width: 250px;
+}
+
+#chzn-destination-select {
+  width: 135px;
+}
+
 
 .icon-edit {
   margin-top: 5px;
@@ -32,6 +49,16 @@
 .icon-remove {
   margin-top: 5px;
   margin-left: 3px;
+}
+
+#title {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.span8 {
+  margin-left: -10px;
+  margin-top: 2px;
 }
 
 
