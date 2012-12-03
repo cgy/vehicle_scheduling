@@ -12,7 +12,9 @@ module Admins
     # GET /trips/1
     # GET /trips/1.json
     def show
+
       @trip = Trip.find(params[:id])
+
 
       respond_to do |format|
         format.html # show.html.erb
@@ -34,6 +36,8 @@ module Admins
     # GET /trips/1/edit
     def edit
       @trip = Trip.find(params[:id])
+      @destinations = Destination.all
+      @notes = Note.all
     end
 
     # POST /trips
