@@ -36,8 +36,7 @@ module Admins
     # GET /trips/1/edit
     def edit
       @trip = Trip.find(params[:id])
-      @destinations = Destination.all
-      @notes = Note.all
+      @drivership = @trip.drivership
     end
 
     # POST /trips

@@ -7,4 +7,8 @@ class Car < ActiveRecord::Base
   validates :plate, presence: true, Length: { maximum: 50 }, uniqueness: { case_sensitive: false }
   validates :model, presence: true, Length: { maximum: 50 }
 
+  def model_plate
+    self.model + "|" + self.plate
+  end
+
 end

@@ -21,18 +21,9 @@
 
           <div class="controls">
             <div class="chosen">
-              <select data-placeholder="请选择车辆..." class="chzn-select-deselect" id="chzn-car-select" tabindex="10">
-                <option value=""></option>
-                <option>途胜|赣M96036</option>
-                <option>全顺|赣M99665</option>
-                <option>风行|赣M87711</option>
-                <option>瑞风|赣M71479</option>
-                <option>全顺工程车|赣AC0325</option>
-                <option>瑞风|赣A0T567</option>
-                <option>依维柯|赣AT0062</option>
-                <option>25米高空作业车|赣M05899</option>
-                <option>14米高空作业车赣|M03717</option>
-              </select>
+              <%= collection_select(:drivership, :car_id, Car.all, :id, :model_plate, {:include_blank => true},
+                                    {:class => "chzn-select-deselect", :id => "chzn-car-select",
+                                     :'data-placeholder' => "请选择车辆..."}) %>
             </div>
           </div>
         </div>
@@ -42,18 +33,9 @@
           <div class="controls">
             <div class="chosen">
 
-              <select data-placeholder="请选择司机..." class="chzn-select-deselect" id="chzn-driver-select"
-                      tabindex="20" data-remote=true>
-                <option id="111">唐振军</option>
-                <option>钱家意</option>
-                <option>邹睿</option>
-                <option>黄明辕</option>
-                <option>程鹏</option>
-                <option>魏群敏</option>
-                <option>孟建忠</option>
-                <option>谈建军</option>
-                <option>张建新</option>
-              </select>
+              <%= collection_select(:drivership, :driver_id, Driver.all, :id, :name, {:include_blank => true},
+                                    {:class => "chzn-select-deselect", :id => "chzn-driver-select",
+                                     :'data-placeholder' => "请选择司机..."}) %>
 
 
             </div>
@@ -64,18 +46,9 @@
 
           <div class="controls">
             <div class="chosen">
-              <select data-placeholder="请选择工作班组..." class="chzn-select-deselect" id="chzn-group-select" tabindex="30">
-                <option value=""></option>
-                <option>二次一班</option>
-                <option>二次二班</option>
-                <option>二次三班</option>
-                <option>二次四班</option>
-                <option>开关一班</option>
-                <option>开关二班</option>
-                <option>开关三班</option>
-                <option>开关四班</option>
-                <option>变压器班</option>
-              </select>
+              <%= collection_select(:trip, :note_id, Note.all, :id, :name, {:include_blank => true},
+                                    {:class => "chzn-select-deselect", :id => "chzn-group-select",
+                                     :'data-placeholder' => "请选择工作班组..."}) %>
             </div>
           </div>
         </div>
@@ -104,20 +77,9 @@
 
           <div class="controls">
             <div class="chosen">
-              <%= collection_select(:trip, :note_id, Note.all, :id, :name, {:include_blank => true},
-                                    {:class => "chzn-select-deselect", :id => "chzn-note-select",
-                                     :'data-placeholder' => "请选择出差事由..."}) %>
-              <select data-placeholder="请选择出差地..." class="chzn-select-deselect" id="chzn-destination-select" tabindex="50">
-                <option value=""></option>
-                <option>唐振军</option>
-                <option>钱家意</option>
-                <option>邹睿</option>
-                <option>黄明辕</option>
-                <option>程鹏</option>
-                <option>魏群敏</option>
-                <option>孟建忠</option>
-                <option>谈建军</option>
-                <option>张建新</option>
+              <%= collection_select(:trip, :destination_id, Destination.all, :id, :name, {:include_blank => true},
+                                    {:class => "chzn-select-deselect", :id => "chzn-destination-select",
+                                     :'data-placeholder' => "请选择出差地..."}) %>
               </select>
             </div>
           </div>
@@ -149,7 +111,7 @@
             <div class="chosen">
               <%= collection_select(:trip, :note_id, Note.all, :id, :name, {:include_blank => true},
                                     {:class => "chzn-select-deselect", :id => "chzn-note-select",
-                                                    :'data-placeholder' => "请选择出差事由..."}) %>
+                                    :'data-placeholder' => "请选择出差事由..."}) %>
             </div>
           </div>
         </div>
