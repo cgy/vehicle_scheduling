@@ -37,6 +37,7 @@ module Admins
     def edit
       @trip = Trip.find(params[:id])
       @drivership = @trip.drivership
+      @selected_key = @trip.workers_ids.split(",")
     end
 
     # POST /trips

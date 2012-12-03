@@ -21,7 +21,7 @@
 
           <div class="controls">
             <div class="chosen">
-              <%= collection_select(:drivership, :car_id, Car.all, :id, :model_plate, {:include_blank => true},
+              <%= collection_select(:drivership, :car_id, Car.order("model").all, :id, :model_plate, {:include_blank => true},
                                     {:class => "chzn-select-deselect", :id => "chzn-car-select",
                                      :'data-placeholder' => "请选择车辆..."}) %>
             </div>
@@ -33,7 +33,7 @@
           <div class="controls">
             <div class="chosen">
 
-              <%= collection_select(:drivership, :driver_id, Driver.all, :id, :name, {:include_blank => true},
+              <%= collection_select(:drivership, :driver_id, Driver.order("group_id").all, :id, :name, {:include_blank => true},
                                     {:class => "chzn-select-deselect", :id => "chzn-driver-select",
                                      :'data-placeholder' => "请选择司机..."}) %>
 
@@ -46,9 +46,10 @@
 
           <div class="controls">
             <div class="chosen">
-              <%= collection_select(:trip, :note_id, Note.all, :id, :name, {:include_blank => true},
-                                    {:class => "chzn-select-deselect", :id => "chzn-group-select",
-                                     :'data-placeholder' => "请选择工作班组..."}) %>
+              <select data-placeholder="请选择工作班组进行人员筛选..." class="chzn-select-deselect" id="chzn-group-select" tabindex="30">
+                <option value=""></option>
+                <%= options_from_collection_for_select(Group.all, 'id', 'name') %>
+              </select>
             </div>
           </div>
         </div>
@@ -59,15 +60,7 @@
             <div class="chosen">
               <select data-placeholder="请选择工作人员..." class="chzn-select" multiple id="chzn-worker-select" tabindex="40">
                 <option value=""></option>
-                <option>刘军农</option>
-                <option>杨润根</option>
-                <option>张敏</option>
-                <option>二次四班</option>
-                <option>开关一班</option>
-                <option>开关二班</option>
-                <option>开关三班</option>
-                <option>开关四班</option>
-                <option>变压器班</option>
+                <%= option_groups_from_collection_for_select(Group.all, :workers, :name, :id, :name, @selected_key) %>
               </select>
             </div>
           </div>
