@@ -60,16 +60,14 @@ jQuery ->
 
   $('#inputBack_time').datepicker()
 
-
+  #根据所选班组对optgroup重排
   $("#chzn-group-select").chosen().change ->
-    alert $("#chzn-worker-select").val()
-    $("#chzn-worker-select").trigger("liszt:updated")
-
-
-
-
-
-
-
-
-
+    #alert $("#chzn-worker-select").val()
+    $sel = $("#chzn-worker-select")
+    val = $(this).val()
+    group =  $('option:selected', this).text();
+    $('span > optgroup', $sel).unwrap()
+    if val isnt '%'
+      $('optgroup:not([label="' + group + '"])', $sel).appendTo($sel)
+    #chosen属性 选项更新
+    $sel.trigger("liszt:updated")
