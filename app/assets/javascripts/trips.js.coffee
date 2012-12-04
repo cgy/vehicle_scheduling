@@ -61,6 +61,13 @@ jQuery ->
   $('#inputBack_time').datepicker()
 
 
+  $("#chzn-group-select").chosen().change ->
+    alert $("#chzn-worker-select").val()
+    $("#chzn-worker-select").trigger("liszt:updated")
+
+
+
+
 
 
 
