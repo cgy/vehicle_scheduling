@@ -1,6 +1,6 @@
 <% provide(:title, '出差管理') %>
 
-<div class="content span9" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<div class="content span9">
   <div class="row">
     <div class="span9">
       <h4>出差管理 </h4>
@@ -14,8 +14,15 @@
   </div>
   <div class="row">
     <div class="span9">
-      <form class="form-horizontal" action="<%= admins_trip_path %>" method="post">
-
+      <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span9">
+      <%= form_for @trip, :as => :trip, :url => admins_trip_path(@trip), :method => :put,
+                   :html => { :class => "form-horizontal"} do %>
         <div class="control-group">
           <label class="control-label" for="chzn-car-select">车辆</label>
 
@@ -23,7 +30,7 @@
             <div class="chosen">
               <%= collection_select(:drivership, :car_id, Car.order("model").all, :id, :model_plate, {:include_blank => true},
                                     {:class => "chzn-select-deselect", :id => "chzn-car-select",
-                                     :'data-placeholder' => "请选择车辆..."}) %>
+                                     :'data-placeholder' => "请选择车辆...", :name => "car_id"}) %>
             </div>
           </div>
         </div>
@@ -35,7 +42,7 @@
 
               <%= collection_select(:drivership, :driver_id, Driver.order("group_id").all, :id, :name, {:include_blank => true},
                                     {:class => "chzn-select-deselect", :id => "chzn-driver-select",
-                                     :'data-placeholder' => "请选择司机..."}) %>
+                                     :'data-placeholder' => "请选择司机...", :name => "driver_id"}) %>
 
 
             </div>
@@ -58,7 +65,8 @@
 
           <div class="controls">
             <div class="chosen">
-              <select data-placeholder="请选择工作人员..." class="chzn-select" multiple id="chzn-worker-select" tabindex="40">
+              <select data-placeholder="请选择工作人员..." class="chzn-select" multiple
+                      id="chzn-worker-select" name="workers_ids[]" tabindex="40">
                 <option value=""></option>
                 <%= option_groups_from_collection_for_select(Group.all, :workers, :name, :id, :name, @selected_key) %>
               </select>
@@ -72,7 +80,7 @@
             <div class="chosen">
               <%= collection_select(:trip, :destination_id, Destination.all, :id, :name, {:include_blank => true},
                                     {:class => "chzn-select-deselect", :id => "chzn-destination-select",
-                                     :'data-placeholder' => "请选择出差地..."}) %>
+                                     :'data-placeholder' => "请选择出差地...", :name => "destination_id"}) %>
               </select>
             </div>
           </div>
@@ -82,7 +90,8 @@
           <label class="control-label" for="inputDeparture_time">出发时间</label>
 
           <div class="controls controls-row">
-            <input class="span4" type="text" id="inputDeparture_time" value="<%= @trip.departure_time %>">
+            <input class="span4" type="text" id="inputDeparture_time"
+                   value="<%= @trip.departure_time %>" name="departure_time">
             <i class="icon-calendar span1"></i>
           </div>
         </div>
@@ -91,7 +100,8 @@
           <label class="control-label" for="inputBack_time">归来时间</label>
 
           <div class="controls controls-row">
-            <input class="span4" type="text" id="inputBack_time" value="<%= @trip.back_time %>">
+            <input class="span4" type="text" id="inputBack_time"
+                   value="<%= @trip.back_time %>" name="back_time">
             <i class="icon-calendar span1"></i>
           </div>
 
@@ -104,7 +114,7 @@
             <div class="chosen">
               <%= collection_select(:trip, :note_id, Note.all, :id, :name, {:include_blank => true},
                                     {:class => "chzn-select-deselect", :id => "chzn-note-select",
-                                    :'data-placeholder' => "请选择出差事由..."}) %>
+                                    :'data-placeholder' => "请选择出差事由...", :name => "note_id"}) %>
             </div>
           </div>
         </div>
@@ -115,7 +125,7 @@
             <a href="/admins/trips" class="btn cancle">取消</a>
           </div>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 

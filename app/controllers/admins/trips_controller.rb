@@ -59,8 +59,10 @@ module Admins
     # PUT /trips/1
     # PUT /trips/1.json
     def update
-      #@trip = Trip.find(params[:id])
-      #
+      @trip = Trip.find(params[:id])
+
+      params[:workers_ids].join(',')
+
       #respond_to do |format|
       #  if @trip.update_attributes(params[:trip])
       #    format.html { redirect_to @trip, notice: 'Trip was successfully updated.' }
