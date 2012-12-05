@@ -59,17 +59,17 @@ module Admins
     # PUT /trips/1
     # PUT /trips/1.json
     def update
-      @trip = Trip.find(params[:id])
-
-      respond_to do |format|
-        if @trip.update_attributes(params[:trip])
-          format.html { redirect_to @trip, notice: 'Trip was successfully updated.' }
-          format.json { head :no_content }
-        else
-          format.html { render action: "edit" }
-          format.json { render json: @trip.errors, status: :unprocessable_entity }
-        end
-      end
+      #@trip = Trip.find(params[:id])
+      #
+      #respond_to do |format|
+      #  if @trip.update_attributes(params[:trip])
+      #    format.html { redirect_to @trip, notice: 'Trip was successfully updated.' }
+      #    format.json { head :no_content }
+      #  else
+      #    format.html { render action: "edit" }
+      #    format.json { render json: @trip.errors, status: :unprocessable_entity }
+      #  end
+      #end
     end
 
     # DELETE /trips/1
