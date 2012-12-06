@@ -1063,7 +1063,8 @@ namespace :db do
                           destination_id: dest1.id,
                           departure_time: Date.new(2012,11,27),
                           back_time: Date.new(2012,11,27),
-                          note_id: note1.id)
+                          note_id: note1.id,
+                          ing: true)
 
     workerships86 = Workership.create!(trip_id: trip31.id, worker_id: worker15.id)
     workerships87 = Workership.create!(trip_id: trip31.id, worker_id: worker16.id)
@@ -1090,7 +1091,8 @@ namespace :db do
                           destination_id: dest2.id,
                           departure_time: Date.new(2012,11,27),
                           back_time: Date.new(2012,11,28),
-                          note_id: note2.id)
+                          note_id: note2.id,
+                          ing: true)
 
     workerships89 = Workership.create!(trip_id: trip32.id, worker_id: worker25.id)
     workerships90 = Workership.create!(trip_id: trip32.id, worker_id: worker26.id)
@@ -1117,7 +1119,8 @@ namespace :db do
                           destination_id: dest3.id,
                           departure_time: Date.new(2012,11,28),
                           back_time: Date.new(2012,11,28),
-                          note_id: note3.id)
+                          note_id: note3.id,
+                          ing: true)
 
     workerships92 = Workership.create!(trip_id: trip33.id, worker_id: worker36.id)
     workerships93 = Workership.create!(trip_id: trip33.id, worker_id: worker37.id)
@@ -1141,7 +1144,8 @@ namespace :db do
                           destination_id: dest4.id,
                           departure_time: Date.new(2012,11,27),
                           back_time: Date.new(2012,11,28),
-                          note_id: note4.id)
+                          note_id: note4.id,
+                          ing: true)
 
     workerships94 = Workership.create!(trip_id: trip34.id, worker_id: worker38.id)
     workerships95 = Workership.create!(trip_id: trip34.id, worker_id: worker39.id)
@@ -1171,7 +1175,8 @@ namespace :db do
                           destination_id: dest5.id,
                           departure_time: Date.new(2012,11,27),
                           back_time: Date.new(2012,11,29),
-                          note_id: note3.id)
+                          note_id: note3.id,
+                          ing: true)
 
     workerships98 = Workership.create!(trip_id: trip35.id, worker_id: worker52.id)
     workerships99 = Workership.create!(trip_id: trip35.id, worker_id: worker53.id)
@@ -1198,7 +1203,8 @@ namespace :db do
                           destination_id: dest6.id,
                           departure_time: Date.new(2012,11,27),
                           back_time: Date.new(2012,11,30),
-                          note_id: note1.id)
+                          note_id: note1.id,
+                          ing: true)
 
     workerships101 = Workership.create!(trip_id: trip36.id, worker_id: worker65.id)
     workerships102 = Workership.create!(trip_id: trip36.id, worker_id: worker66.id)
@@ -1222,7 +1228,8 @@ namespace :db do
                           destination_id: dest7.id,
                           departure_time: Date.new(2012,11,28),
                           back_time: Date.new(2012,11,30),
-                          note_id: note2.id)
+                          note_id: note2.id,
+                          ing: true)
 
     workerships103 = Workership.create!(trip_id: trip37.id, worker_id: worker77.id)
     workerships104 = Workership.create!(trip_id: trip37.id, worker_id: worker78.id)
@@ -1252,7 +1259,8 @@ namespace :db do
                           destination_id: dest8.id,
                           departure_time: Date.new(2012,11,28),
                           back_time: Date.new(2012,12,6),
-                          note_id: note4.id)
+                          note_id: note4.id,
+                          ing: true)
 
 
     workerships107 = Workership.create!(trip_id: trip38.id, worker_id: worker81.id)
@@ -1276,6 +1284,19 @@ namespace :db do
     worker82.save
     worker83.save
 
+
+    car = Car.first
+    car.current_trip = 963852741
+    car.save
+
+    driver = Driver.first
+    driver.current_trip = 123
+    driver.save
+
+    worker = Worker.first
+    worker.current_trip = 123456789
+    worker.save
+
     #s = "%d,%d,%d"%[worker81.id,worker82.id,worker83.id]
     #
     #trip38.workers_ids = s
@@ -1290,6 +1311,8 @@ namespace :db do
       }
       trip.workers_ids = workers_ids.join(",")
       trip.save
+
+
     }
 
   end

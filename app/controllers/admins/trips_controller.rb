@@ -36,6 +36,12 @@ module Admins
     # GET /trips/1/edit
     def edit
       @trip = Trip.find(params[:id])
+      @cars = Car.order("model").all
+      @drivers = Driver.order("group_id").all
+      if @trip.ing
+        @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
+        @drivers = Driver.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("group_id").all
+      end
       @drivership = @trip.drivership
       @selected_key = @trip.workers_ids.split(",")
     end

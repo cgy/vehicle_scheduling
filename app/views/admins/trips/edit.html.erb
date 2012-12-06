@@ -28,7 +28,7 @@
 
           <div class="controls">
             <div class="chosen">
-              <%= collection_select(:drivership, :car_id, Car.order("model").all, :id, :model_plate, {:include_blank => true},
+              <%= collection_select(:drivership, :car_id, @cars, :id, :model_plate, {:include_blank => true},
                                     {:class => "chzn-select-deselect", :id => "chzn-car-select",
                                      :'data-placeholder' => "请选择车辆...", :name => "car_id"}) %>
             </div>
@@ -40,7 +40,7 @@
           <div class="controls">
             <div class="chosen">
 
-              <%= collection_select(:drivership, :driver_id, Driver.order("group_id").all, :id, :name, {:include_blank => true},
+              <%= collection_select(:drivership, :driver_id, @drivers, :id, :name, {:include_blank => true},
                                     {:class => "chzn-select-deselect", :id => "chzn-driver-select",
                                      :'data-placeholder' => "请选择司机...", :name => "driver_id"}) %>
 
@@ -68,7 +68,14 @@
               <select data-placeholder="请选择工作人员..." class="chzn-select" multiple
                       id="chzn-worker-select" name="workers_ids_[]" tabindex="40">
                 <option value=""></option>
-                <%= option_groups_from_collection_for_select(Group.all, :workers, :name, :id, :name, @selected_key) %>
+                <%
+                  if @trip.ing
+                    option_groups_from_collection_for_select(Group.joins(:workers).where("current_trip = ? OR current_trip = ?", @trip.id, 0),
+                                                           :workers, :name, :id, :name, @selected_key)
+                  else
+                    option_groups_from_collection_for_select(Group.all, :workers, :name, :id, :name, @selected_key)
+                  end
+                %>
               </select>
             </div>
           </div>
