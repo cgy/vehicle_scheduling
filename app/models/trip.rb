@@ -11,12 +11,12 @@ class Trip < ActiveRecord::Base
   has_one :car, through: :drivership
   has_one :driver, through: :drivership
 
-  def workerslist
-    workerslist = []
+  def workers_names
+    workers_names = []
     self.workers.each do |worker|
-      workerslist << worker.name
+      workers_names << worker.name
     end
-    workerslist.join("，")
+    workers_names.join("，")
   end
 
 end

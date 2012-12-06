@@ -20,7 +20,7 @@ class IndexPageController < ApplicationController
             departure_time: @trip.departure_time,
             back_time: @trip.back_time,
             note: @trip.note.name,
-            workerslist: @trip.workerslist
+            workers_names: @trip.workers_names
         }
       else
         #该车最近一次由谁驾驶？

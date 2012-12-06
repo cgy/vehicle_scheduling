@@ -66,7 +66,7 @@
           <div class="controls">
             <div class="chosen">
               <select data-placeholder="请选择工作人员..." class="chzn-select" multiple
-                      id="chzn-worker-select" name="workers_ids[]" tabindex="40">
+                      id="chzn-worker-select" name="workers_ids_[]" tabindex="40">
                 <option value=""></option>
                 <%= option_groups_from_collection_for_select(Group.all, :workers, :name, :id, :name, @selected_key) %>
               </select>

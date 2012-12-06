@@ -59,10 +59,76 @@ module Admins
     # PUT /trips/1
     # PUT /trips/1.json
     def update
+
+      isOnTrip = false
+
       @trip = Trip.find(params[:id])
 
-      params[:workers_ids].join(',')
+      drivership = @trip.drivership
+      car = drivership.car
+      driver = drivership.driver
 
+      isOnTrip = car.current_trip.equal? @trip.id
+
+      ##车辆或司机被改动
+      #unless params[:car_id].equal? car.id and params[:driver_id].equal? driver.id
+      #  #drivership是否存在 不存在就创建
+      #  ds = Drivership.where("car_id = ? AND driver_id = ?",
+      #                        params[:car_id], params[:driver_id]).first_or_create
+      #  @trip.drivership_id = ds.id
+      #
+      #  #如果该出差还没结束 更新车辆和司机的出差状态
+      #  if isOnTrip
+      #    if params[:driver_id].equal? driver.id
+      #      car = Car.find(params[:car_id])
+      #      car.current_trip = @trip.id
+      #      car.save
+      #    else
+      #      driver = Driver.find(params[:driver_id])
+      #      driver.current_trip = @trip.id
+      #      driver.save
+      #    end
+      #  end
+      #
+      #end
+      #
+      #
+      ##修改出差人员
+      origin_workers_ids = @trip.workers_ids.split(',')
+      workers_ids_ = params[:workers_ids_]
+      @trip.workers_ids = workers_ids_.join(',')
+      #删除被删除的工作人员
+      origin_workers_ids.each { |owi|
+        if workers_ids_.index(owi).nil?
+          wss = Workership.where("trip_id = ? AND worker_id = ?", @trip.id, owi.to_i)
+          unless wss.nil?
+            if isOnTrip
+              worker = Worker.find(owi.to_i)
+              worker.current_trip = 0
+              worker.save
+            end
+            ws = wss.first
+            ws.destroy
+          end
+        else
+          workers_ids_.delete(owi)
+        end
+      }
+      #增加被添加的工作人员
+      workers_ids_.each { |wi|
+        Workership.create!(trip_id: @trip.id, worker_id: wi.to_i)
+        if isOnTrip
+          worker = Worker.find(wi.to_i)
+          worker.current_trip = @trip.id
+          worker.save
+        end
+      }
+
+      @trip.destination_id = params[:destination_id]
+      @trip.departure_time = params[:departure_time]
+      @trip.back_time = params[:back_time]
+      @trip.note_id = params[:note_id]
+      @trip.save
       #respond_to do |format|
       #  if @trip.update_attributes(params[:trip])
       #    format.html { redirect_to @trip, notice: 'Trip was successfully updated.' }

@@ -22,7 +22,7 @@ class TripsDatatable
       [
           h(trip.drivership.car.plate),
           h(trip.drivership.driver.name),
-          h(trip.workerslist),
+          h(trip.workers_names),
           h(trip.destination.name),
           h(trip.departure_time),
           h(trip.back_time),
