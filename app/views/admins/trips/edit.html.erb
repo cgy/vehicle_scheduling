@@ -73,7 +73,7 @@
                           <optgroup label="<%= group.name %>">
                             <% group.workers.where("current_trip = ? OR current_trip = ?", @trip.id, 0).each do |worker| %>
                                 <option value="<%= worker.id %>"
-                                <% if worker.current_trip == @trip.id %>
+                                <% if @trip.workers.exists? worker %>
                                    selected="selected"
                                 <% end %>
                                 ><%= worker.name %></option>

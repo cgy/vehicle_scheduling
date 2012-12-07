@@ -105,11 +105,8 @@ module Admins
       origin_workers_ids.each { |owi|
         if workers_ids_.index(owi).nil?
           @worker = Worker.find(owi)
+          @worker.update_attribute(:current_trip, 0) if @trip.ing
           @trip.workers.delete(@worker)
-          if @trip.ing
-            @worker.update_attributes(:current_trip => 0)
-            @worker.save
-          end
         else
           workers_ids_.delete(owi)
         end
@@ -118,10 +115,7 @@ module Admins
       workers_ids_.each { |wi|
         @worker = Worker.find(wi.to_i)
         @trip.workers << @worker
-        if @trip.ing
-          @worker.current_trip = @trip.id
-          @worker.save
-        end
+        @worker.update_attribute(:current_trip, @trip.id) if @trip.ing
       }
 
       @trip.destination_id = params[:destination_id]
