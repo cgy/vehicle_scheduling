@@ -66,7 +66,6 @@ module Admins
     # PUT /trips/1.json
     def update
 
-      isOnTrip = false
 
       @trip = Trip.find(params[:id])
 
@@ -74,7 +73,6 @@ module Admins
       car = drivership.car
       driver = drivership.driver
 
-      isOnTrip = car.current_trip.equal? @trip.id
 
       ##车辆或司机被改动
       #unless params[:car_id].equal? car.id and params[:driver_id].equal? driver.id
@@ -106,15 +104,11 @@ module Admins
       #删除被删除的工作人员
       origin_workers_ids.each { |owi|
         if workers_ids_.index(owi).nil?
-          wss = Workership.where("trip_id = ? AND worker_id = ?", @trip.id, owi.to_i)
-          unless wss.nil?
-            if isOnTrip
-              worker = Worker.find(owi.to_i)
-              worker.current_trip = 0
-              worker.save
-            end
-            ws = wss.first
-            ws.destroy
+          @worker = Worker.find(owi)
+          @trip.workers.delete(@worker)
+          if @trip.ing
+            @worker.update_attributes(:current_trip => 0)
+            @worker.save
           end
         else
           workers_ids_.delete(owi)
@@ -122,11 +116,11 @@ module Admins
       }
       #增加被添加的工作人员
       workers_ids_.each { |wi|
-        Workership.create!(trip_id: @trip.id, worker_id: wi.to_i)
-        if isOnTrip
-          worker = Worker.find(wi.to_i)
-          worker.current_trip = @trip.id
-          worker.save
+        @worker = Worker.find(wi.to_i)
+        @trip.workers << @worker
+        if @trip.ing
+          @worker.current_trip = @trip.id
+          @worker.save
         end
       }
 
