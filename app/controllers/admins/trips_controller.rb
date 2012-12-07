@@ -68,54 +68,50 @@ module Admins
 
 
       @trip = Trip.find(params[:id])
+      car = @trip.car
+      driver = @trip.driver
 
-      drivership = @trip.drivership
-      car = drivership.car
-      driver = drivership.driver
+      #车辆或司机被改动
+      unless params[:car_id] == car.id and params[:driver_id] == driver.id
+        #drivership是否存在 不存在就创建
+        drivership = Drivership.where(:car_id => params[:car_id],
+                                      :driver_id => params[:driver_id]).first_or_create
+        @trip.drivership_id = drivership.id
+        ##如果该出差还没结束 更新车辆和司机的出差状态
+        if @trip.ing
+          if params[:car_id] != car.id
+            new_car = Car.find(params[:car_id])
+            new_car.update_attribute(:current_trip, @trip.id)
+            car.update_attribute(:current_trip, 0)
+          end
+          if params[:driver_id] != driver.id
+            new_driver = Driver.find(params[:driver_id])
+            new_driver.update_attribute(:current_trip, @trip.id)
+            driver.update_attribute(:current_trip, 0)
+          end
+        end
+      end
 
 
-      ##车辆或司机被改动
-      #unless params[:car_id].equal? car.id and params[:driver_id].equal? driver.id
-      #  #drivership是否存在 不存在就创建
-      #  ds = Drivership.where("car_id = ? AND driver_id = ?",
-      #                        params[:car_id], params[:driver_id]).first_or_create
-      #  @trip.drivership_id = ds.id
-      #
-      #  #如果该出差还没结束 更新车辆和司机的出差状态
-      #  if isOnTrip
-      #    if params[:driver_id].equal? driver.id
-      #      car = Car.find(params[:car_id])
-      #      car.current_trip = @trip.id
-      #      car.save
-      #    else
-      #      driver = Driver.find(params[:driver_id])
-      #      driver.current_trip = @trip.id
-      #      driver.save
-      #    end
-      #  end
-      #
-      #end
-      #
-      #
-      ##修改出差人员
+      #修改出差人员
       origin_workers_ids = @trip.workers_ids.split(',')
       workers_ids_ = params[:workers_ids_]
       @trip.workers_ids = workers_ids_.join(',')
       #删除被删除的工作人员
       origin_workers_ids.each { |owi|
         if workers_ids_.index(owi).nil?
-          @worker = Worker.find(owi)
-          @worker.update_attribute(:current_trip, 0) if @trip.ing
-          @trip.workers.delete(@worker)
+          worker = Worker.find(owi)
+          worker.update_attribute(:current_trip, 0) if @trip.ing
+          @trip.workers.delete(worker)
         else
           workers_ids_.delete(owi)
         end
       }
       #增加被添加的工作人员
       workers_ids_.each { |wi|
-        @worker = Worker.find(wi.to_i)
-        @trip.workers << @worker
-        @worker.update_attribute(:current_trip, @trip.id) if @trip.ing
+        worker = Worker.find(wi.to_i)
+        @trip.workers << worker
+        worker.update_attribute(:current_trip, @trip.id) if @trip.ing
       }
 
       @trip.destination_id = params[:destination_id]

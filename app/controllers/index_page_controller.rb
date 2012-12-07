@@ -15,7 +15,7 @@ class IndexPageController < ApplicationController
 
         @cars_in_use << {
             car: car,
-            driver: @trip.drivership.driver,
+            driver: @trip.driver.name,
             destination: @trip.destination.name,
             departure_time: @trip.departure_time,
             back_time: @trip.back_time,
