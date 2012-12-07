@@ -122,6 +122,7 @@ module Admins
       @trip.departure_time = params[:departure_time]
       @trip.back_time = params[:back_time]
       @trip.note_id = params[:note_id]
+      @trip.workers_names = @trip.generate_workers_names
       @trip.save
       #respond_to do |format|
       #  if @trip.update_attributes(params[:trip])

@@ -49,7 +49,7 @@ class TripsDatatable
       trips = trips.includes(:destination, :note, :drivership).includes(:car, :driver).where("
             departure_time like :search or
             back_time like :search or
-            workerslist like :search or
+            workers_names like :search or
             notes.name like :search or
             destinations.name like :search or
             cars.plate like :search or

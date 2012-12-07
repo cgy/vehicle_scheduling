@@ -1288,10 +1288,13 @@ namespace :db do
     @trips = Trip.all
     @trips.each { |trip|
       workers_ids = []
+      workers_names = []
       trip.workers.each { |worker|
         workers_ids.push(worker.id)
+        workers_names.push(worker.name)
       }
       trip.workers_ids = workers_ids.join(",")
+      trip.workers_names = workers_names.join("，")
       trip.save
     }
 

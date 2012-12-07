@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121206133452) do
+ActiveRecord::Schema.define(:version => 20121207131352) do
 
   create_table "cars", :force => true do |t|
     t.string   "model"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20121206133452) do
     t.integer  "drivership_id"
     t.string   "workers_ids"
     t.boolean  "ing",            :default => false
+    t.string   "workers_names"
   end
 
   create_table "users", :force => true do |t|

@@ -1,5 +1,5 @@
 class Trip < ActiveRecord::Base
-  attr_accessible :drivership_id, :destination_id, :note_id, :back_time, :departure_time, :workers_ids, :ing
+  attr_accessible :drivership_id, :destination_id, :note_id, :back_time, :departure_time, :workers_ids, :ing, :workers_names
 
   belongs_to :drivership
   belongs_to :destination
@@ -11,7 +11,7 @@ class Trip < ActiveRecord::Base
   has_one :car, through: :drivership
   has_one :driver, through: :drivership
 
-  def workers_names
+  def generate_workers_names
     workers_names = []
     self.workers.each do |worker|
       workers_names << worker.name
