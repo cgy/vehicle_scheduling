@@ -57,8 +57,10 @@ jQuery ->
   $.datepicker.setDefaults($.datepicker.regional['zh-CN'])
 
   $('#inputDeparture_time').datepicker()
+  $('#inputDeparture_time').attr( 'readOnly', 'true' );
 
   $('#inputBack_time').datepicker()
+  $('#inputBack_time').attr( 'readOnly', 'true' );
 
   #根据所选班组对optgroup重排
   $("#chzn-group-select").chosen().change ->

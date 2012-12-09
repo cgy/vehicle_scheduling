@@ -755,7 +755,7 @@ namespace :db do
     trip5 = Trip.create!(drivership_id: ds5.id,
                          destination_id: dest5.id,
                          departure_time: Date.new(2012,11,11),
-                         back_time: Date.new(2012,11,11),
+                         back_time: Date.new(2012,11,12),
                          note_id: note3.id)
 
     workerships14 = Workership.create!(trip_id: trip5.id, worker_id: worker13.id)
@@ -861,7 +861,7 @@ namespace :db do
     trip15 = Trip.create!(drivership_id: ds5.id,
                           destination_id: dest5.id,
                           departure_time: Date.new(2012,10,11),
-                          back_time: Date.new(2012,10,11),
+                          back_time: Date.new(2012,10,12),
                           note_id: note3.id)
 
     workerships41 = Workership.create!(trip_id: trip15.id, worker_id: worker39.id)
@@ -1025,7 +1025,7 @@ namespace :db do
     trip30 = Trip.create!(drivership_id: ds5.id,
                           destination_id: dest5.id,
                           departure_time: Date.new(2012,6,11),
-                          back_time: Date.new(2012,6,11),
+                          back_time: Date.new(2012,6,12),
                           note_id: note3.id)
 
     workerships82 = Workership.create!(trip_id: trip30.id, worker_id: worker80.id)
@@ -1062,7 +1062,7 @@ namespace :db do
     trip31 = Trip.create!(drivership_id: ds1.id,
                           destination_id: dest1.id,
                           departure_time: Date.new(2012,11,27),
-                          back_time: Date.new(2012,11,27),
+                          back_time: Date.new(2012,11,28),
                           note_id: note1.id,
                           ing: true)
 
@@ -1116,7 +1116,7 @@ namespace :db do
     trip33 = Trip.create!(drivership_id: ds3.id,
                           destination_id: dest3.id,
                           departure_time: Date.new(2012,11,28),
-                          back_time: Date.new(2012,11,28),
+                          back_time: Date.new(2012,11,29),
                           note_id: note3.id,
                           ing: true)
 
@@ -1221,7 +1221,7 @@ namespace :db do
     trip37 = Trip.create!(drivership_id: ds7.id,
                           destination_id: dest7.id,
                           departure_time: Date.new(2012,11,28),
-                          back_time: Date.new(2012,11,30),
+                          back_time: Date.new(2012,11,28),
                           note_id: note2.id,
                           ing: true)
 

@@ -1,5 +1,16 @@
+require "date"
 class Trip < ActiveRecord::Base
   attr_accessible :drivership_id, :destination_id, :note_id, :back_time, :departure_time, :workers_ids, :ing, :workers_names
+
+  validates :drivership_id, presence: true
+  validates :destination_id, :presence => { :message => '目的地不能为空' }
+  validates :note_id, presence: true
+  validates :departure_time, presence: true
+  validates :back_time, presence: true
+  validate :departure_time_is_date?
+  validate :back_time_is_date?
+  validates :back_time, :date => {:after_or_equal_to => :departure_time, :message => '归来时间必须在出发时间之后' }
+
 
   belongs_to :drivership
   belongs_to :destination
@@ -17,6 +28,20 @@ class Trip < ActiveRecord::Base
       workers_names << worker.name
     end
     workers_names.join("，")
+  end
+
+  private
+
+  def departure_time_is_date?
+    if !departure_time.is_a?(Date)
+      errors.add(:departure_time, '出发时间必须为有效值')
+    end
+  end
+
+  def back_time_is_date?
+    if !back_time.is_a?(Date)
+      errors.add(:back_time, '归来时间必须为有效值')
+    end
   end
 
 end

@@ -119,16 +119,25 @@ module Admins
       @trip.back_time = params[:back_time]
       @trip.note_id = params[:note_id]
       @trip.workers_names = @trip.generate_workers_names
-      @trip.save
-      #respond_to do |format|
-      #  if @trip.update_attributes(params[:trip])
-      #    format.html { redirect_to @trip, notice: 'Trip was successfully updated.' }
-      #    format.json { head :no_content }
-      #  else
-      #    format.html { render action: "edit" }
-      #    format.json { render json: @trip.errors, status: :unprocessable_entity }
-      #  end
-      #end
+
+      respond_to do |format|
+        format.html do
+          if @trip.save
+
+          else
+            @cars = Car.order("model").all
+            @drivers = Driver.order("group_id").all
+            if @trip.ing
+              @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
+              @drivers = Driver.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("group_id").all
+            end
+            @drivership = @trip.drivership
+            @selected_key = @trip.workers_ids.split(",")
+            render 'edit'
+          end
+        end
+        format.js
+      end
     end
 
     # DELETE /trips/1

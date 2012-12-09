@@ -22,7 +22,10 @@
   <div class="row">
     <div class="span9">
       <%= form_for @trip, :as => :trip, :url => admins_trip_path(@trip), :method => :put,
-                   :html => {:class => "form-horizontal"} do %>
+                   :html => {:class => "form-horizontal"} do |f| %>
+
+          <%= render 'shared/error_messages' , object: f.object %>
+
           <div class="control-group">
             <label class="control-label" for="chzn-car-select">车辆</label>
 
@@ -106,7 +109,7 @@
 
             <div class="controls controls-row">
               <input class="span4" type="text" id="inputDeparture_time"
-                     value="<%= @trip.departure_time %>" name="departure_time">
+                     value="<%= @trip.departure_time %>" name="departure_time" style="cursor:pointer;">
               <i class="icon-calendar span1"></i>
             </div>
           </div>
@@ -116,7 +119,7 @@
 
             <div class="controls controls-row">
               <input class="span4" type="text" id="inputBack_time"
-                     value="<%= @trip.back_time %>" name="back_time">
+                     value="<%= @trip.back_time %>" name="back_time" style="cursor:pointer;">
               <i class="icon-calendar span1"></i>
             </div>
 
