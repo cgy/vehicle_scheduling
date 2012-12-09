@@ -26,11 +26,8 @@
       <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admins/trips/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="43" selection-start="736" selection-end="750" vertical-scroll-proportion="-16.285715">
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="19" column="17" selection-start="494" selection-end="494" vertical-scroll-proportion="-12.892858">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trip.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="trip.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/trip.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="46" selection-start="364" selection-end="364" vertical-scroll-proportion="0.15287356">
+            <state line="34" column="2" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -74,7 +71,7 @@
       <file leaf-file-name="_assets.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/application/_assets.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,28 +86,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/application/_header.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trips_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="trips_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/admins/trips_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="26" selection-start="4127" selection-end="4127" vertical-scroll-proportion="0.0">
+            <state line="170" column="41" selection-start="5052" selection-end="5052" vertical-scroll-proportion="0.69425285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/trips/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="16" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+            <state line="10" column="8" selection-start="265" selection-end="265" vertical-scroll-proportion="-6.785714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trips_datatable.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/datatables/trips_datatable.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="78" selection-start="779" selection-end="800" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,8 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/workership.rb" />
         <option value="$PROJECT_DIR$/app/models/drivership.rb" />
         <option value="$PROJECT_DIR$/app/models/destination.rb" />
@@ -137,11 +132,13 @@
         <option value="$PROJECT_DIR$/app/views/application/_error_messages.html.erb" />
         <option value="$PROJECT_DIR$/lib/tasks/sample_data.rake" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/admins/trips_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/admins/trips/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_error_messages.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/common.css.scss" />
         <option value="$PROJECT_DIR$/app/models/trip.rb" />
+        <option value="$PROJECT_DIR$/app/views/admins/trips/update.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/trips/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/admins/trips_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/admins/trips/index.html.erb" />
       </list>
     </option>
   </component>
@@ -224,7 +221,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -703,18 +699,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settings.ide.settings.notifications" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settings.ide.settings.notifications" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../136-jquery-ajax-revised/checklist-before" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -895,6 +892,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -926,13 +930,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -1043,12 +1040,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: vehicle_scheduling" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: vehicle_scheduling" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="5" class="java.lang.String" itemvalue="Ruby.sessions_helper" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="1" class="java.lang.String" itemvalue="Ruby.sessions_helper" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Production: vehicle_scheduling" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Development: vehicle_scheduling" />
     </list>
     <recent_temporary>
       <list size="2">
@@ -1092,10 +1089,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.670045" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21788009" sideWeight="0.66883117" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22055675" sideWeight="0.6691892" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33116883" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33081082" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949308" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1163,46 +1160,19 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1223" column="54" selection-start="53313" selection-end="53313" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/trips_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="42" selection-start="628" selection-end="628" vertical-scroll-proportion="0.72068965">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/datatables/trips_datatable.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="78" selection-start="779" selection-end="800" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admins/notes_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admins/groups_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
@@ -1215,13 +1185,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/application/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admins/trips_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="26" selection-start="4127" selection-end="4127" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1247,19 +1210,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/trips/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/trips/update.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="43" selection-start="736" selection-end="750" vertical-scroll-proportion="-16.285715">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="6" column="26" selection-start="0" selection-end="117" vertical-scroll-proportion="-4.071429">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_error_messages.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="11" selection-start="223" selection-end="223" vertical-scroll-proportion="-4.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/datatables/trips_datatable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="78" selection-start="779" selection-end="800" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/trip.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="2" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1271,9 +1243,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/trip.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/trips/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46" selection-start="364" selection-end="364" vertical-scroll-proportion="0.15287356">
+        <state line="19" column="17" selection-start="494" selection-end="494" vertical-scroll-proportion="-12.892858">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/trips/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="8" selection-start="265" selection-end="265" vertical-scroll-proportion="-6.785714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admins/trips_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="41" selection-start="5052" selection-end="5052" vertical-scroll-proportion="0.69425285">
           <folding />
         </state>
       </provider>
