@@ -1,5 +1,0 @@
-<% if @trip.errors.present? %>
-$(".content").find("form").prepend("<%= escape_javascript error_messages_for(@trip) %>");
-<% else %>
-$("#<%= dom_id(@comment) %>").replaceWith("<%= escape_javascript render(@comment) %>");
-<% end %>

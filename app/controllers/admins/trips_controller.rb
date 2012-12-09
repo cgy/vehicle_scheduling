@@ -96,6 +96,7 @@ module Admins
         end
       end
 
+      #出差人员改动
       if params[:workers_ids_] and params[:workers_ids_].size
         #修改出差人员
         origin_workers_ids = @trip.workers_ids.split(',')
@@ -119,6 +120,7 @@ module Admins
         }
       end
 
+      #其它改动
       @trip.destination_id = params[:destination_id]
       @trip.departure_time = params[:departure_time]
       @trip.back_time = params[:back_time]

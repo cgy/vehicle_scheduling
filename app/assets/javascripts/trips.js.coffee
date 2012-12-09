@@ -57,17 +57,17 @@ jQuery ->
   $.datepicker.setDefaults($.datepicker.regional['zh-CN'])
 
   $('#inputDeparture_time').datepicker()
-  $('#inputDeparture_time').attr( 'readOnly', 'true' );
+  $('#inputDeparture_time').attr( 'readOnly', 'true' )
 
   $('#inputBack_time').datepicker()
-  $('#inputBack_time').attr( 'readOnly', 'true' );
+  $('#inputBack_time').attr( 'readOnly', 'true' )
 
   #根据所选班组对optgroup重排
   $("#chzn-group-select").chosen().change ->
     #alert $("#chzn-worker-select").val()
     $sel = $("#chzn-worker-select")
     val = $(this).val()
-    group =  $('option:selected', this).text();
+    group =  $('option:selected', this).text()
     $('span > optgroup', $sel).unwrap()
     if val isnt '%'
       $('optgroup:not([label="' + group + '"])', $sel).appendTo($sel)
