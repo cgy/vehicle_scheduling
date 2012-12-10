@@ -17,7 +17,7 @@
         <td><%= i+1 %></td>
         <td><%= c[:car].model %></td>
         <td><%= link_to c[:car].plate, c[:car] %></td>
-        <td><%= c[:car].limit %></td>
+        <td><%= c[:car].load %></td>
         <% if !c[:driver].nil? %>
             <td><%= c[:driver].name %>(<%= c[:driver].phone %>)</td>
         <% else %>

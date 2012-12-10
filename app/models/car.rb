@@ -1,5 +1,5 @@
 class Car < ActiveRecord::Base
-  attr_accessible :model, :plate, :limit, :current_trip
+  attr_accessible :model, :plate, :load, :current_trip
 
   has_many :driverships
   has_many :drivers, through: :driverships
@@ -9,6 +9,12 @@ class Car < ActiveRecord::Base
 
   def model_plate
     self.model + "|" + self.plate
+  end
+
+  def self.page(page)
+    paginate :per_page => 10, :page => page,
+             :order => 'model'
+
   end
 
 end

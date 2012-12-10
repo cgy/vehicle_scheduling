@@ -31,7 +31,7 @@ jQuery ->
       { "sWidth": "65px", "aTargets": [ 4 ] },
       { "sWidth": "65px", "aTargets": [ 5 ] },
       { "sWidth": "45px", "aTargets": [ 6 ] },
-      { "sWidth": "28px", "aTargets": [ 7 ] },
+      { "sWidth": "28px", "aTargets": [ 7 ] }
     ]
 
   $.datepicker.regional['zh-CN'] = {

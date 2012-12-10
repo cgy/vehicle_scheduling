@@ -11,52 +11,52 @@ namespace :db do
 
     car1 = Car.create!(model: "风行",
                        plate:"赣M87711",
-                       limit:7)
+                       load:7)
     car2 = Car.create!(model: "瑞风",
                        plate:"赣M71479",
-                       limit:7)
+                       load:7)
     car3 = Car.create!(model: "全顺工程车",
                        plate:"赣AC0325",
-                       limit:10)
+                       load:10)
     car4 = Car.create!(model: "全顺工程车",
                        plate:"赣AC1767",
-                       limit:10)
+                       load:10)
     car5 = Car.create!(model: "瑞风",
                        plate:"赣A0T567",
-                       limit:7)
+                       load:7)
     car6 = Car.create!(model: "全顺",
                        plate:"赣M71806",
-                       limit:7)
+                       load:7)
     car7 = Car.create!(model: "依维柯",
                        plate:"赣AT0062",
-                       limit:7)
+                       load:7)
     car8 = Car.create!(model: "猎豹",
                        plate:"赣M91691",
-                       limit:0)
+                       load:0)
     car9 = Car.create!(model: "瑞风",
                        plate:"赣A0T123",
-                       limit:0)
+                       load:0)
     car10 = Car.create!(model: "风行",
                        plate:"赣M86360",
-                       limit:0)
+                       load:0)
     car11 = Car.create!(model: "风行",
                        plate:"赣A9J223",
-                       limit:0)
+                       load:0)
     car12 = Car.create!(model: "全顺V348",
                        plate:"赣M71801",
-                       limit:0)
+                       load:0)
     car13 = Car.create!(model: "全顺",
                        plate:"赣M96016",
-                       limit:0)
+                       load:0)
     car14 = Car.create!(model: "宝威",
                        plate:"赣A2D973",
-                       limit:0)
+                       load:0)
     car15 = Car.create!(model: "依维柯",
                        plate:"赣M06627",
-                       limit:11)
+                       load:11)
     car16 = Car.create!(model: "全顺工程车",
                        plate:"赣M05231",
-                       limit:10)
+                       load:10)
 
 
     dest1 = Destination.create!(name:"南昌变")

@@ -1,3 +1,68 @@
 // Place all the styles related to the Cars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content {
+  margin-left: -15px;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+#cars_wrapper .span6 {
+  margin-left: 0px;
+}
+
+.span4 {
+  width: 335px;
+}
+
+.span9 {
+  width: 735px;
+}
+
+.table {
+  margin-left: 0px;
+}
+
+/*表格*/
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #b9e9bb;
+}
+
+.dataTables_scroll {
+  margin-bottom: 8px;
+}
+
+.icon-edit {
+  margin-top: 5px;
+}
+
+.icon-remove {
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+.dataTables_filter input {
+  width: 75px
+}
+
+.dataTables_info {
+  margin-top: 5px;
+}
+
+.form-horizontal {
+  margin-top: 165px;
+}
+
+.form-horizontal .control-label {
+  width: 65px;
+}
+.form-horizontal .controls {
+  *padding-left: 10px;
+  margin-left: 75px;
+}
+.form-horizontal .controls:first-child {
+  *padding-left: 75px;
+}

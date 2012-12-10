@@ -3,11 +3,9 @@ module Admins
     # GET /cars
     # GET /cars.json
     def index
-      @cars = Car.all
-
       respond_to do |format|
-        format.html # index.html.erb
-        format.json { render json: @cars }
+        format.html
+        format.json { render json: CarsDatatable.new(view_context) }
       end
     end
   end

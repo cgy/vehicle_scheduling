@@ -2,8 +2,6 @@ class IndexPageController < ApplicationController
 
   def index
 
-    redirect_to current_user if signed_in?
-
     cars = Car.all
 
     @available_cars = []

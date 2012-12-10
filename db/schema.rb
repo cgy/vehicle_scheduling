@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121207131352) do
+ActiveRecord::Schema.define(:version => 20121210064031) do
 
   create_table "cars", :force => true do |t|
     t.string   "model"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20121207131352) do
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.integer  "current_trip", :default => 0
-    t.integer  "limit"
+    t.integer  "load"
   end
 
   create_table "destinations", :force => true do |t|
