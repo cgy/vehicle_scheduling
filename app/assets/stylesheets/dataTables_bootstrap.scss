@@ -1,3 +1,4 @@
+
 div.dataTables_length label {
 	float: left;
 	text-align: left;
@@ -12,6 +13,7 @@ div.dataTables_filter label {
 }
 
 div.dataTables_info {
+	padding-top: 8px;
 }
 
 div.dataTables_paginate {
@@ -86,7 +88,7 @@ div.dataTables_scrollFoot table {
 
 .table tbody tr.active:hover td,
 .table tbody tr.active:hover th {
-	background-color: #b9e9bb !important;
+	background-color: #0075b0 !important;
 }
 
 .table-striped tbody tr.active:nth-child(odd) td,
@@ -111,6 +113,10 @@ div.DTTT .btn:hover {
 
 ul.DTTT_dropdown.dropdown-menu a {
 	color: #333 !important; /* needed only when demo_page.css is included */
+}
+
+ul.DTTT_dropdown.dropdown-menu li {
+	position: relative;
 }
 
 ul.DTTT_dropdown.dropdown-menu li:hover a {
@@ -174,4 +180,5 @@ div.DTFC_LeftBodyWrapper tbody tr:first-child td {
 div.DTFC_LeftFootWrapper table {
 	border-top: none;
 }
+
 

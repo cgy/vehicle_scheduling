@@ -31,6 +31,10 @@
   background-color: #b9e9bb;
 }
 
+.table-hover tbody .selected {
+  background-color: #b9e9bb;
+}
+
 .dataTables_scroll {
   margin-bottom: 8px;
 }
@@ -41,7 +45,7 @@
 
 .icon-remove {
   margin-top: 5px;
-  margin-left: 3px;
+  margin-left: 5px;
 }
 
 .dataTables_filter input {
@@ -52,17 +56,27 @@
   margin-top: 5px;
 }
 
+
+.left-form {
+  margin-left: 5px;
+}
+
+.add-btn {
+  margin-top: 40px;
+}
+
 .form-horizontal {
-  margin-top: 165px;
+
+  margin-top: 15px;
 }
 
 .form-horizontal .control-label {
   width: 65px;
 }
 .form-horizontal .controls {
-  *padding-left: 10px;
-  margin-left: 75px;
+  *padding-left: 16px;
+  margin-left: 81px;
 }
 .form-horizontal .controls:first-child {
-  *padding-left: 75px;
+  *padding-left: 81px;
 }

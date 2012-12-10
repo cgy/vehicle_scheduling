@@ -20,29 +20,29 @@ jQuery ->
     "bAutoWidth": false,
     "sScrollX": "100%",
 
-
-  giRedraw = false
-
-  # Add a click handler to the rows - this could be used as a callback
-  $("#example tbody").click ->
-    $(oTable.fnSettings().aoData).each ->
-      $(this.nTr).removeClass('row_selected')
-
-    $(event.target.parentNode).addClass('row_selected')
-
-    # Add a click handler for the delete row
-    $('#delete').click ->
-      anSelected = fnGetSelected( oTable )
-      oTable.fnDeleteRow( anSelected[0] )
-
-    # Init the table
-    oTable = $('#example').dataTable( )
-
-    # Get the rows which are currently selected
-    fnGetSelected: (oTableLocal) ->
-      aReturn = new Array()
-      aTrs = oTableLocal.fnGetNodes()
-      for i in [0..(aTrs.length -1)]
-        if $(aTrs[i]).hasClass('row_selected')
-          aReturn.push( aTrs[i] )
-      aReturn
+#  giRedraw = false
+#
+#  $(document).ready ->
+#    # Add a click handler to the rows - this could be used as a callback
+#    $("#cars tbody").click ->
+#      $(oTable.fnSettings().aoData).each ->
+#        $(this.nTr).removeClass('row_selected')
+#
+#      $(event.target.parentNode).addClass('row_selected')
+#
+#      # Add a click handler for the delete row
+#    $('#delete').click ->
+#      anSelected = fnGetSelected( oTable )
+#      oTable.fnDeleteRow( anSelected[0] )
+#
+#    # Init the table
+#    oTable = $('#cars').dataTable()
+#
+#    # Get the rows which are currently selected
+#  fnGetSelected: (oTableLocal) ->
+#    aReturn = new Array()
+#    aTrs = oTableLocal.fnGetNodes()
+#    for i in [0..(aTrs.length -1)]
+#      if $(aTrs[i]).hasClass('row_selected')
+#        aReturn.push( aTrs[i] )
+#    aReturn
