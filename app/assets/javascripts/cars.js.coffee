@@ -19,7 +19,7 @@ jQuery ->
 
     "bAutoWidth": false,
     "sScrollX": "100%",
-
+  $(".form-horizontal").hide()
 #  giRedraw = false
 #
 #  $(document).ready ->

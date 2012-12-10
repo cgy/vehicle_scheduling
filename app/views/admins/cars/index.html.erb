@@ -27,24 +27,25 @@
       </table>
     </div>
     <div class="left-form span3">
-      <a href="/admins/trips" class="btn add-btn">新增车辆</a>
-      <form class="form-horizontal">
+      <%= link_to "新增车辆", new_admins_car_path, class: "btn add-btn", id: "new_admins_car", remote: true %>
+      <%= form_for @car, :as => :car, :url => new_admins_car_path, :method => :post,
+                   :html => {:class => "form-horizontal"} do |f| %>
         <div class="control-group">
           <label class="control-label" for="inputModel">车型</label>
           <div class="controls">
-            <input class="input-medium" type="text" id="inputModel" placeholder="车型">
+            <input class="input-medium" type="text" id="inputModel" placeholder="车型" name="model">
           </div>
         </div>
         <div class="control-group">
           <label class="control-label" for="inputPlate">车牌</label>
           <div class="controls">
-            <input class="input-medium" type="text" id="inputPlate" placeholder="车牌">
+            <input class="input-medium" type="text" id="inputPlate" placeholder="车牌" name="plate">
           </div>
         </div>
         <div class="control-group">
           <label class="control-label" for="inputLoad">限载人数</label>
           <div class="controls">
-            <input class="input-medium" type="text" id="inputLoad" placeholder="限载人数">
+            <input class="input-medium" type="text" id="inputLoad" placeholder="限载人数" name="load">
           </div>
         </div>
         <div class="control-group">
@@ -53,7 +54,7 @@
             <button type="cancle" class="btn">取消</button>
           </div>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 </div>
