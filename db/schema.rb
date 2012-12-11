@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20121210064031) do
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.integer  "current_trip", :default => 0
-    t.integer  "load"
+    t.integer  "load", :default => 0
   end
 
   create_table "destinations", :force => true do |t|

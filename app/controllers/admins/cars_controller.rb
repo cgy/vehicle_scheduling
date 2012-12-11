@@ -15,15 +15,16 @@ module Admins
 
     def create
 
-      @car = Car.new(params[:car])
-
+      @car = Car.create!(model: params[:model],
+                         plate: params[:plate],
+                         load:  params[:load])
       respond_to do |format|
         if @car.save
-          format.html { redirect_to @car, notice: '车辆已新增' }
-          format.js
+          flash[:success] = "车辆已新增！"
+          format.html
+          format.json { render json: CarsDatatable.new(view_context) }
         else
-          format.html { render action: "new" }
-          format.js { render json: @car.errors, status: :unprocessable_entity }
+          render "new"
         end
       end
     end

@@ -6,6 +6,7 @@ class Car < ActiveRecord::Base
 
   validates :plate, presence: true, Length: { maximum: 50 }, uniqueness: { case_sensitive: false }
   validates :model, presence: true, Length: { maximum: 50 }
+  validates_numericality_of :load, :allow_nil => true
 
   def model_plate
     self.model + "|" + self.plate

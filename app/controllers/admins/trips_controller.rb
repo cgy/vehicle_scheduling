@@ -57,6 +57,7 @@ module Admins
           format.json { render json: @trip, status: :created, location: @trip }
         else
           format.html { render action: "new" }
+
           format.json { render json: @trip.errors, status: :unprocessable_entity }
         end
       end
