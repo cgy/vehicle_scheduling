@@ -17,10 +17,8 @@ $.extend( true, $.fn.dataTable.defaults, {
             "sNext":     "下页",
             "sLast":     "末页"
         }
-	},
-    "oTableTools":{
-        "sRowSelect":"single"
-    }
+	}
+
 } );
 
 

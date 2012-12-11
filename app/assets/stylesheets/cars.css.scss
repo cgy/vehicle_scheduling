@@ -1,8 +1,6 @@
 // Place all the styles related to the Cars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-*= require dataTables/jquery.dataTables.TableTools
-
 .content {
   margin-left: -15px;
   padding-right: 0;
@@ -27,14 +25,31 @@
 
 /*表格*/
 
-.table-hover tbody tr:hover td,
-.table-hover tbody tr:hover th {
+#cars_length {
+  width: 155px;
+}
+
+.DTTT.btn-group {
+  margin-left: 5px;
+}
+
+.table tbody tr.active td,
+.table tbody tr.active th {
+  background-color: #B9E9BB;
+  color: #000000;
+}
+
+
+.table tbody tr.active:hover td,
+.table tbody tr.active:hover th {
+  background-color: #b9e9bb !important;
+}
+
+.table-striped tbody tr.active:nth-child(odd) td,
+.table-striped tbody tr.active:nth-child(odd) th {
   background-color: #b9e9bb;
 }
 
-.table-hover tbody .selected {
-  background-color: #b9e9bb;
-}
 
 .dataTables_scroll {
   margin-bottom: 8px;
@@ -54,7 +69,7 @@
 }
 
 .dataTables_info {
-  margin-top: 5px;
+  margin-top: -3px;
 }
 
 
@@ -66,18 +81,7 @@
   margin-top: 40px;
 }
 
-.form-horizontal {
-
-  margin-top: 15px;
-}
-
-.form-horizontal .control-label {
-  width: 65px;
-}
-.form-horizontal .controls {
-  *padding-left: 16px;
-  margin-left: 81px;
-}
-.form-horizontal .controls:first-child {
-  *padding-left: 81px;
+.well-form {
+  margin-top: 14px;
+  padding-left: 0px;
 }

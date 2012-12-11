@@ -1,2 +1,2 @@
 jQuery ->
-  $(".form-horizontal").show()
+  $(".form-wapper").show()

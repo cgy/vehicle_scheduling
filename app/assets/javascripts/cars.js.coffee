@@ -10,11 +10,8 @@ jQuery ->
     bServerSide: true
     sAjaxSource: $('#cars').data('source')
     #排版
-    "sDom": "<'span6'<'row'<'span3'l><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
-    #禁用第三、七列排序
-    "aoColumnDefs": [
-      { "bSortable": false, "aTargets": [ 3 ] }
-    ]
+    #"sDom": "<'span6'<'row'<'span3'l><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
+    "sDom": "<'span6'<'row'<'span2'l><'span1'T><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
 
     #首次打开默认以第六列排序
     "aaSorting": [[ 0, "asc" ]]
@@ -22,8 +19,18 @@ jQuery ->
     "bAutoWidth": false
     "sScrollX": "100%"
     "oTableTools": {
-      "sRowSelect": "multi"
+      "sRowSelect": "single"
+      "aButtons": [
+        {
+          "sExtends":    "xls",
+          "sButtonText": "导出"
+        }
+      ]
     }
 
 
-  $(".form-horizontal").hide()
+
+  $(".form-wapper").hide()
+
+  $(".cancle").click ->
+    $(".form-wapper").hide()

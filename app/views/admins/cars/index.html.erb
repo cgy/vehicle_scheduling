@@ -13,13 +13,12 @@
   <div class="row">
     <div class="span6">
       <table id="cars" class="table table-bordered" cellpadding="0" cellspacing="0"
-             border="0" data-source="<%= admins_cars_url(format: "json") %>" >
+             border="0" data-source="<%= admins_cars_url(format: "json") %>">
         <thead>
         <tr class="alert alert-success">
           <th>车型</th>
           <th>车牌</th>
           <th>限载人数</th>
-          <th>更改</th>
         </tr>
         </thead>
         <tbody>
@@ -27,34 +26,33 @@
       </table>
     </div>
     <div class="left-form span3">
-      <%= link_to "新增车辆", new_admins_car_path, class: "btn add-btn", id: "new_admins_car", remote: true %>
-      <%= form_for @car, :as => :car, :url => new_admins_car_path, :method => :post,
-                   :html => {:class => "form-horizontal"} do |f| %>
-        <div class="control-group">
-          <label class="control-label" for="inputModel">车型</label>
-          <div class="controls">
-            <input class="input-medium" type="text" id="inputModel" placeholder="车型" name="model">
-          </div>
+      <div class="row">
+        <div class="span1">
+          <p><%= link_to "新增", new_admins_car_path, class: "btn add-btn", id: "new_admins_car", remote: true %></p>
+
+          <p><%= link_to "修改", new_admins_car_path, class: "btn edit-btn", id: "new_admins_car", remote: true %></p>
+
+          <p><%= link_to "删除", new_admins_car_path, class: "btn remove-btn", id: "new_admins_car", remote: true %></p>
         </div>
-        <div class="control-group">
-          <label class="control-label" for="inputPlate">车牌</label>
-          <div class="controls">
-            <input class="input-medium" type="text" id="inputPlate" placeholder="车牌" name="plate">
-          </div>
+        <div class="span2 form-wapper">
+          <%= form_for @car, :as => :car, :url => new_admins_car_path, :method => :post,
+                       :html => {:class => "well-form"} do |f| %>
+              <label class="control-label" for="inputModel">车型</label>
+              <input class="input-medium" type="text" id="inputModel" name="model">
+              <label class="control-label" for="inputPlate">车牌</label>
+              <input class="input-medium" type="text" id="inputPlate" name="plate">
+              <label class="control-label" for="inputLoad">限载人数</label>
+              <input class="input-medium" type="text" id="inputLoad" name="load">
+
+              <div class="control-group">
+                <div class="controls">
+                  <button type="submit" class="btn">确定</button>
+                  <%= link_to "取消", "#", class: "btn cancle" %>
+                </div>
+              </div>
+          <% end %>
         </div>
-        <div class="control-group">
-          <label class="control-label" for="inputLoad">限载人数</label>
-          <div class="controls">
-            <input class="input-medium" type="text" id="inputLoad" placeholder="限载人数" name="load">
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="controls">
-            <button type="submit" class="btn">确定</button>
-            <button type="cancle" class="btn">取消</button>
-          </div>
-        </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

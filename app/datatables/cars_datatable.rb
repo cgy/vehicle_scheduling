@@ -21,10 +21,7 @@ class CarsDatatable
       [
           h(car.model),
           h(car.plate),
-          h(car.load),
-          link_to('<i class="icon-edit"></i>'.html_safe, edit_admins_car_path(car))+
-              link_to('<i class="icon-remove"></i>'.html_safe, admins_car_path(car),
-                      :confirm => "确定要删除这辆车吗？", :method=>:delete)
+          h(car.load)
       ]
     end
   end
