@@ -15,5 +15,6 @@
 //= require bootstrap
 //= require chosen-jquery
 //= require dataTables/jquery.dataTables
+//= require dataTables/jquery.dataTables.TableTools
 //= require jquery.ui.datepicker
 
