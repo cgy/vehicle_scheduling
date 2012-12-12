@@ -30,7 +30,8 @@ jQuery ->
 
 
 
-  $(".form-wapper").hide()
-
   $(".cancle").click ->
-    $(".form-wapper").hide()
+    $("#form-wapper").hide()
+
+
+  $("#alert-info").html('')

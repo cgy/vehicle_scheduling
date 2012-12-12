@@ -5,6 +5,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-sass', '2.0.0'
+gem 'coffee-rails'
 gem 'date_validator', '0.6.3'
 
 
@@ -25,7 +26,6 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'
-  gem 'coffee-rails', '~> 3.2.2'
   gem 'chosen-rails'
   gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
