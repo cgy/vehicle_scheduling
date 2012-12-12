@@ -37,6 +37,7 @@
         <div class="span2 form-wapper">
           <%= form_for @car, :as => :car, :url => admins_cars_path, :method => :post,
                        :html => {:class => "well-form"} do |f| %>
+              <%= render 'shared/error_messages' , object: f.object %>
               <label class="control-label" for="inputModel">车型</label>
               <input class="input-medium" type="text" id="inputModel" name="model">
               <label class="control-label" for="inputPlate">车牌</label>
@@ -46,7 +47,7 @@
 
               <div class="control-group">
                 <div class="controls">
-                  <%= f.submit "确定", class: "btn"%>
+                  <%= f.submit "确定", class: "btn" %>
                   <%= link_to "取消", "#", class: "btn cancle" %>
                 </div>
               </div>

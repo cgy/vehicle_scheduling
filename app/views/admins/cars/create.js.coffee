@@ -1,0 +1,2 @@
+jQuery ->
+  $(".form-wapper").show()

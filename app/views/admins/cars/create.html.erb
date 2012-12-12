@@ -37,12 +37,12 @@
         <div class="span2 form-wapper">
           <%= form_for @car, :as => :car, :url => admins_cars_path, :method => :post,
                        :html => {:class => "well-form"} do |f| %>
-              <label class="control-label" for="inputModel">车型</label>
-              <input class="input-medium" type="text" id="inputModel" name="model">
-              <label class="control-label" for="inputPlate">车牌</label>
-              <input class="input-medium" type="text" id="inputPlate" name="plate">
-              <label class="control-label" for="inputLoad">限载人数</label>
-              <input class="input-medium" type="text" id="inputLoad" name="load">
+              <%= f.label :model, "车型", :class=>"control-label" %>
+              <%= f.text_field :model, :class=>"input-medium" %>
+              <%= f.label :plate, "车牌", :class=>"control-label" %>
+              <%= f.text_field :plate, :class=>"input-medium" %>
+              <%= f.label :load, "限载人数", :class=>"control-label" %>
+              <%= f.text_field :load, :class=>"input-medium" %>
 
               <div class="control-group">
                 <div class="controls">
