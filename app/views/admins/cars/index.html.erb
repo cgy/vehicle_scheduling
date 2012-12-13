@@ -28,10 +28,10 @@
         <div class="span1">
           <p><%= link_to "新增", new_admins_car_path, class: "btn add-btn", id: "new_admins_car", remote: true %></p>
 
-          <p><%= link_to "修改", new_admins_car_path, class: "btn edit-btn", id: "edit_admins_car", remote: true %></p>
+          <p><%= link_to "修改", '#', class: "btn edit-btn", id: "edit_admins_car", remote: true %></p>
 
-          <p><%= link_to "删除", new_admins_car_path, class: "btn remove-btn", id: "delete_admins_car",
-                 :confirm => "确定要删除这辆车吗？", :method=>:delete%></p>
+          <p><%= link_to "删除", '#', class: "btn remove-btn", id: "delete_admins_car",
+                 :confirm => "确定要删除这辆车吗？", :method=>:delete, remote: true %></p>
         </div>
         <div class="span2" id="form-wapper">
 

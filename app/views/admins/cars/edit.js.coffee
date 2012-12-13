@@ -1,7 +1,7 @@
 jQuery ->
-  $("#form-wapper").html("<%= j render(:partial => 'form', :locals => {:car => @car}) %>")
+  $("#form-wapper").html("<%= j render(:partial => 'edit_form', :locals => {:car => @car}) %>")
   $("#form-wapper").show()
-  $("#new_car").enableClientSideValidations()
+  $("#edit_car").enableClientSideValidations()
   $(".cancle").click ->
     $("#form-wapper").hide()
 

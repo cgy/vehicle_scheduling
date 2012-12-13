@@ -12,19 +12,47 @@ class CarsDatatable
         iTotalDisplayRecords: cars.total_entries,
         aaData: data
     }
+
+    #Jbuilder.encode do |json|
+    #{
+    #    sEcho: params[:sEcho].to_i,
+    #    iTotalRecords:3,
+    #    iTotalDisplayRecords:3,
+    #    aaData:[
+    #      {
+    #        DT_RowId:0,
+    #        model:"Trident",
+    #        plate:"Internet Explorer 4.0",
+    #        load:"4"
+    #      },
+    #      {
+    #        DT_RowId:1,
+    #        model:"Trident",
+    #        plate:"Internet Explorer 5.0",
+    #        load:"5"
+    #      },
+    #      {
+    #        DT_RowId:2,
+    #        model:"Trident",
+    #        plate:"Internet Explorer 5.5",
+    #        load:"Win 95+",
+    #      }
+    #   ]
+    #}
   end
 
   private
 
-  #def data
-  #  cars.map do |car|
-  #    [
-  #        h(car.model),
-  #        h(car.plate),
-  #        h(car.load)
-  #    ]
-  #  end
-  #end
+  def data
+    cars.map do |car|
+      {
+          DT_RowId: car.id,   #行id
+          model: h(car.model),
+          plate: h(car.plate),
+          load: h(car.load)
+      }
+    end
+  end
 
   def cars
     @cars ||= fetch_cars
@@ -57,7 +85,6 @@ class CarsDatatable
     cars
 
   end
-
 
 
   def page

@@ -4,12 +4,11 @@
 
 jQuery ->
 
-  $('#cars').dataTable
+  oTable = $('#cars').dataTable
     sPaginationType: "bootstrap"
     "bProcessing": true
     "bServerSide": true
     "bStateSave": true
-    "DT_RowId": true
     sAjaxSource: $('#cars').data('source')
     #排版
     #"sDom": "<'span6'<'row'<'span3'l><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
@@ -20,8 +19,19 @@ jQuery ->
 
     "bAutoWidth": false
     "sScrollX": "100%"
+    "aoColumns": [
+      { "mData": "model" },
+      { "mData": "plate" },
+      { "mData": "load" }
+    ]
     "oTableTools": {
       "sRowSelect": "single"
+      "fnRowSelected": ( node ) ->
+        $('#edit_admins_car').attr('href','/admins/cars/'+node.id+'/edit')
+        $('#delete_admins_car').attr('href','/admins/cars/'+node.id)
+      "fnRowDeselected": (node) ->
+        $('#edit_admins_car').attr('href','#')
+        $('#delete_admins_car').attr('href','#')
       "aButtons": [
         {
           "sExtends":    "xls",
@@ -35,3 +45,5 @@ jQuery ->
 
 
   $("#alert-info").html('')
+
+

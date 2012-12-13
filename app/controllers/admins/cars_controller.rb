@@ -13,8 +13,25 @@ module Admins
       @car = Car.new
     end
 
+    def update
+      @car = Car.find(params[:id])
+      if @car.update_attributes(params[:car])
+        respond_to do |format|
+          format.html
+          format.js
+        end
+      else
+        render 'edit'
+      end
+
+    end
+
     def edit
       @car = Car.find(params[:id])
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
 
 
@@ -24,6 +41,18 @@ module Admins
 
       respond_to do |format|
         format.html { redirect_to admins_cars_path }
+        format.js
+      end
+
+    end
+
+    def destroy
+
+      @car = Car.find(params[:id])
+
+      @car.destroy
+      respond_to do |format|
+        format.html
         format.js
       end
 
