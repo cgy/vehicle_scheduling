@@ -6,8 +6,10 @@ jQuery ->
 
   $('#cars').dataTable
     sPaginationType: "bootstrap"
-    bProcessing: true
-    bServerSide: true
+    "bProcessing": true
+    "bServerSide": true
+    "bStateSave": true
+    "DT_RowId": true
     sAjaxSource: $('#cars').data('source')
     #排版
     #"sDom": "<'span6'<'row'<'span3'l><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
@@ -27,8 +29,6 @@ jQuery ->
         }
       ]
     }
-
-
 
   $(".cancle").click ->
     $("#form-wapper").hide()

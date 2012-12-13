@@ -16,15 +16,15 @@ class CarsDatatable
 
   private
 
-  def data
-    cars.map do |car|
-      [
-          h(car.model),
-          h(car.plate),
-          h(car.load)
-      ]
-    end
-  end
+  #def data
+  #  cars.map do |car|
+  #    [
+  #        h(car.model),
+  #        h(car.plate),
+  #        h(car.load)
+  #    ]
+  #  end
+  #end
 
   def cars
     @cars ||= fetch_cars

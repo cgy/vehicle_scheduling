@@ -10,9 +10,11 @@ jQuery ->
     sPaginationType: "bootstrap"
     bProcessing: true
     bServerSide: true
+    "bStateSave": true
     sAjaxSource: $('#trips').data('source')
     #排版
     "sDom": "<'row'<'span3'l><'span2'r><'span4'f>>t<'row'<'span5'i><'span4'p>>"
+    "aLengthMenu": [[10, 25, 50, 100, 200, 500, 1000, -1], [10, 25, 50, 100, 200, 500, 1000, "所有"]]
     #禁用第三、七列排序
     "aoColumnDefs": [
       { "bSortable": false, "aTargets": [ 2 ] },

@@ -13,6 +13,11 @@ module Admins
       @car = Car.new
     end
 
+    def edit
+      @car = Car.find(params[:id])
+    end
+
+
     def create
 
       @car = Car.create!(params[:car])
