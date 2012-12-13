@@ -7,6 +7,7 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-sass', '2.0.0'
 gem 'coffee-rails'
 gem 'date_validator', '0.6.3'
+gem 'client_side_validations'
 
 
 group :development do

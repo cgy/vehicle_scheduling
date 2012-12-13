@@ -1,4 +1,4 @@
-<%= form_for @car, :as => :car, :url => admins_cars_path, :method => :post, :remote => true,
+<%= form_for @car, :as => :car, :url => admins_cars_path, :method => :post, :remote => true, :validate => true,
              :html => {:class => "well-form"} do |f| %>
     <%= f.label :model, "车型", :class=>"control-label" %>
     <%= f.text_field :model, :class=>"input-medium" %>

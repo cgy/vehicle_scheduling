@@ -16,4 +16,5 @@
 //= require chosen-jquery
 //= require dataTables/jquery.dataTables
 //= require jquery.ui.datepicker
+//= require rails.validations
 
