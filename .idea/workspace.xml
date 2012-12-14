@@ -24,52 +24,79 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="_side.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_side.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/notes/_side.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="7" selection-start="404" selection-end="404" vertical-scroll-proportion="-5.3333335">
+            <state line="11" column="66" selection-start="674" selection-end="674" vertical-scroll-proportion="-7.464286">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="create.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/create.js.coffee">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/notes/create.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="49" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+            <state line="3" column="10" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="destroy.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/destroy.js.coffee">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/notes/destroy.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="63" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+            <state line="3" column="10" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="edit.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/edit.js.coffee">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/notes/edit.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="14" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+            <state line="8" column="40" selection-start="265" selection-end="265" vertical-scroll-proportion="-2.6206896">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/notes/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="504" selection-end="504" vertical-scroll-proportion="-5.3333335">
+            <state line="16" column="20" selection-start="478" selection-end="478" vertical-scroll-proportion="-3.139535">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+      <file leaf-file-name="new.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/notes/new.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="21" selection-start="155" selection-end="155" vertical-scroll-proportion="-0.98275864">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/notes/update.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="23" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workers_history.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/workers_history.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trips.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/trips.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -77,37 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="trips.css.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/trips.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="89" selection-start="335" selection-end="335" vertical-scroll-proportion="0.4778761">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/new.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="16" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/update.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/drivers/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="48" selection-start="732" selection-end="732" vertical-scroll-proportion="-10.0">
+            <state line="28" column="18" selection-start="335" selection-end="335" vertical-scroll-proportion="-1.162069">
               <folding />
             </state>
           </provider>
@@ -123,30 +123,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/admins/workers_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/workers.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/workers.js.coffee" />
-        <option value="$PROJECT_DIR$/app/models/users/worker.rb" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/_assets.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/_edit_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admins/drivers/_new_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/_new_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/_side.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/create.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/destroy.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/edit.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/new.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/admins/workers/update.js.coffee" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/notes.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/notes.css.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/admins/notes_controller.rb" />
+        <option value="$PROJECT_DIR$/app/datatables/notes_datatable.rb" />
+        <option value="$PROJECT_DIR$/app/models/note.rb" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/_assets.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/_edit_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/_new_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/_side.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/create.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/destroy.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/edit.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/new.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/admins/notes/update.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/workers_history.js.coffee" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -220,7 +220,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -280,160 +280,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drivers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vehicle_scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -468,6 +314,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drivers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,27 +447,27 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../136-jquery-ajax-revised/checklist-before" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\railsprojects\vehicle_scheduling\app\views\admins\workers" />
       <recent name="C:\railsprojects\vehicle_scheduling\app\assets\javascripts" />
-      <recent name="C:\railsprojects\vehicle_scheduling\app\assets\stylesheets" />
+      <recent name="C:\railsprojects\vehicle_scheduling\app\views\admins\notes" />
       <recent name="C:\railsprojects\vehicle_scheduling\app\datatables" />
-      <recent name="C:\railsprojects\vehicle_scheduling\app\views\admins\drivers" />
+      <recent name="C:\railsprojects\vehicle_scheduling\app\assets\stylesheets" />
+      <recent name="C:\railsprojects\vehicle_scheduling\app\views\admins\destinations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\railsprojects\vehicle_scheduling\app\assets\stylesheets" />
@@ -750,6 +640,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -781,13 +678,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -940,14 +830,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815847" sideWeight="0.670045" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10866261" sideWeight="0.33405405" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22036473" sideWeight="0.99893045" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2232334" sideWeight="0.99893045" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33081082" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -1018,114 +908,120 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/users/worker.rb">
+    <entry file="file://$PROJECT_DIR$/app/datatables/notes_datatable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+        <state line="12" column="29" selection-start="333" selection-end="333" vertical-scroll-proportion="-3.9310346">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_assets.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/destination.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="251" selection-end="251" vertical-scroll-proportion="-4.6666665">
+        <state line="7" column="0" selection-start="182" selection-end="364" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_edit_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/note.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="188" selection-end="407" vertical-scroll-proportion="-0.44444445">
+        <state line="12" column="28" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/drivers/_edit_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/_assets.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="380" selection-end="380" vertical-scroll-proportion="-3.3333333">
+        <state line="7" column="32" selection-start="242" selection-end="246" vertical-scroll-proportion="-1.5465117">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/drivers/_new_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/_edit_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="59" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
+        <state line="2" column="26" selection-start="202" selection-end="202" vertical-scroll-proportion="-0.44186047">
+          <folding>
+            <marker date="1355491397771" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1355491397771" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/_new_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="60" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1355491412824" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1355491412824" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/_side.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="66" selection-start="674" selection-end="674" vertical-scroll-proportion="-7.464286">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_new_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/create.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="82" selection-start="400" selection-end="400" vertical-scroll-proportion="-3.3333333">
+        <state line="3" column="10" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_side.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/destroy.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="404" selection-end="404" vertical-scroll-proportion="-5.3333335">
+        <state line="3" column="10" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/create.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/edit.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="49" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+        <state line="8" column="40" selection-start="265" selection-end="265" vertical-scroll-proportion="-2.6206896">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/destroy.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="63" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+        <state line="16" column="20" selection-start="478" selection-end="478" vertical-scroll-proportion="-3.139535">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/edit.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/new.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="14" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+        <state line="3" column="21" selection-start="155" selection-end="155" vertical-scroll-proportion="-0.98275864">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/new.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/notes/update.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+        <state line="3" column="23" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/update.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/workers_history.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+        <state line="26" column="0" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/drivers/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="48" selection-start="732" selection-end="732" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="504" selection-end="504" vertical-scroll-proportion="-5.3333335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/trips.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/trips.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="89" selection-start="335" selection-end="335" vertical-scroll-proportion="0.4778761">
+        <state line="28" column="18" selection-start="335" selection-end="335" vertical-scroll-proportion="-1.162069">
           <folding />
         </state>
       </provider>
