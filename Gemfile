@@ -8,7 +8,6 @@ gem 'bootstrap-sass', '2.0.0'
 gem 'coffee-rails'
 gem 'date_validator', '0.6.3'
 gem 'client_side_validations'
-gem 'jbuilder'
 
 
 group :development do

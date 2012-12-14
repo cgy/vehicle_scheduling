@@ -1,0 +1,14 @@
+<%= form_for @drvier, :as => :drvier, :url => admins_drviers_path, :method => :post, :remote => true, :validate => true,
+             :html => {:class => "well-form"} do |f| %>
+    <%= f.label :name, "姓名", :class=>"control-label" %>
+    <%= f.text_field :name, :class=>"input-medium" %>
+    <%= f.label :phone, "联系方式", :class=>"control-label" %>
+    <%= f.text_field :phone, :class=>"input-medium" %>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit "确定", class: "btn"%>
+        <%= link_to "取消", "#", class: "btn cancle" %>
+      </div>
+    </div>
+<% end %>

@@ -50,10 +50,13 @@ module Admins
 
       @car = Car.find(params[:id])
 
-      @car.destroy
-      respond_to do |format|
-        format.html
-        format.js
+      if @car.destroy
+        respond_to do |format|
+          format.html
+          format.js
+        end
+      else
+        redirect_to :back
       end
 
     end

@@ -23,80 +23,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cars_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/admins/cars_controller.rb">
+      <file leaf-file-name="_side.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_side.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cars.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="2" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.js.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/cars/new.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="4" selection-start="287" selection-end="327" vertical-scroll-proportion="0.2122905">
+            <state line="8" column="7" selection-start="404" selection-end="404" vertical-scroll-proportion="-5.3333335">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="create.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/cars/create.js.coffee">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/create.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="27" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/cars/update.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="2" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0">
+            <state line="3" column="49" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="destroy.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/cars/destroy.js.coffee">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/destroy.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+            <state line="2" column="63" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/edit.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="14" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admins/cars/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="47" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-23.142857">
+            <state line="17" column="16" selection-start="504" selection-end="504" vertical-scroll-proportion="-5.3333335">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trips_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/admins/trips_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="9" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -104,10 +77,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="872" selection-end="1071" vertical-scroll-proportion="0.0">
+            <state line="18" column="89" selection-start="335" selection-end="335" vertical-scroll-proportion="0.4778761">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/new.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="16" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/workers/update.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admins/drivers/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="48" selection-start="732" selection-end="732" vertical-scroll-proportion="-10.0">
               <folding />
             </state>
           </provider>
@@ -123,30 +123,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admins/trips/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_error_messages.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/cars.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/trips.js.coffee" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/datatables/cars_datatable.rb" />
-        <option value="$PROJECT_DIR$/app/views/admins/cars/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admins/cars/_edit_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admins/cars/edit.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/admins/cars/update.js.coffee" />
-        <option value="$PROJECT_DIR$/app/controllers/admins/cars_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/admins/cars/delete.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/admins/cars/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admins/cars/destroy.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/admins/cars/new.js.coffee" />
+        <option value="$PROJECT_DIR$/app/controllers/admins/workers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/workers.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/workers.js.coffee" />
+        <option value="$PROJECT_DIR$/app/models/users/worker.rb" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/_assets.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/_edit_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/drivers/_new_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/_new_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/_side.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/create.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/destroy.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/edit.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/new.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/admins/workers/update.js.coffee" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -220,6 +220,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -350,7 +351,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trips" />
+              <option name="myItemId" value="workers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,7 +377,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cars" />
+              <option name="myItemId" value="drivers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,6 +396,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -487,6 +510,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -510,9 +537,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -529,11 +573,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\railsprojects\vehicle_scheduling\app\views\admins\cars" />
+      <recent name="C:\railsprojects\vehicle_scheduling\app\views\admins\workers" />
       <recent name="C:\railsprojects\vehicle_scheduling\app\assets\javascripts" />
       <recent name="C:\railsprojects\vehicle_scheduling\app\assets\stylesheets" />
       <recent name="C:\railsprojects\vehicle_scheduling\app\datatables" />
-      <recent name="C:\railsprojects\vehicle_scheduling\app\views\admins\trips" />
+      <recent name="C:\railsprojects\vehicle_scheduling\app\views\admins\drivers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\railsprojects\vehicle_scheduling\app\assets\stylesheets" />
@@ -896,14 +940,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815847" sideWeight="0.670045" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10866261" sideWeight="0.33405405" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25535333" sideWeight="0.99893045" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22036473" sideWeight="0.99893045" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33081082" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -974,114 +1018,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/admins/cars/_new_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/users/worker.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="56" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
+        <state line="10" column="20" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/trips/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_assets.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="81" selection-start="706" selection-end="706" vertical-scroll-proportion="-14.928572">
+        <state line="7" column="35" selection-start="251" selection-end="251" vertical-scroll-proportion="-4.6666665">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/cars/_edit_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_edit_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="76" selection-start="508" selection-end="508" vertical-scroll-proportion="-5.428571">
+        <state line="2" column="4" selection-start="188" selection-end="407" vertical-scroll-proportion="-0.44444445">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/cars/edit.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/drivers/_edit_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="10" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
+        <state line="5" column="27" selection-start="380" selection-end="380" vertical-scroll-proportion="-3.3333333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/trips/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/admins/drivers/_new_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="59" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_new_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="82" selection-start="400" selection-end="400" vertical-scroll-proportion="-3.3333333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/_side.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="404" selection-end="404" vertical-scroll-proportion="-5.3333335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/create.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="49" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/destroy.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="63" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/edit.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="14" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/new.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/update.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/drivers/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="48" selection-start="732" selection-end="732" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admins/workers/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="16" selection-start="504" selection-end="504" vertical-scroll-proportion="-5.3333335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/trips_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admins/trips_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="9" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="872" selection-end="1071" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/cars/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="47" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-23.142857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admins/cars_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="2" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/cars/destroy.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/cars/update.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="2" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/cars/create.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="27" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/cars/new.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="287" selection-end="327" vertical-scroll-proportion="0.2122905">
+        <state line="18" column="89" selection-start="335" selection-end="335" vertical-scroll-proportion="0.4778761">
           <folding />
         </state>
       </provider>

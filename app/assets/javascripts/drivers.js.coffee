@@ -4,12 +4,12 @@
 
 jQuery ->
 
-  $('#cars').dataTable
+  $('#drivers').dataTable
     sPaginationType: "bootstrap"
     "bProcessing": true
     "bServerSide": true
     "bStateSave": true
-    sAjaxSource: $('#cars').data('source')
+    sAjaxSource: $('#drivers').data('source')
     #排版
     #"sDom": "<'span6'<'row'<'span3'l><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
     "sDom": "<'span6'<'row'<'span2'l><'span1'T><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
@@ -20,19 +20,18 @@ jQuery ->
     "bAutoWidth": false
     "sScrollX": "100%"
     "aoColumns": [
-      { "mData": "model" },
-      { "mData": "plate" },
-      { "mData": "load" }
+      { "mData": "name" },
+      { "mData": "phone" },
     ]
     "oTableTools": {
       "sRowSelect": "single"
       "fnRowSelected": ( node ) ->
-        $('#edit_admins_car').attr('href','/admins/cars/'+node.id+'/edit')
-        $('#delete_admins_car').attr('href','/admins/cars/'+node.id)
+        $('#edit_admins_driver').attr('href','/admins/drivers/'+node.id+'/edit')
+        $('#delete_admins_driver').attr('href','/admins/drivers/'+node.id)
         $("#alert-info").html('')
       "fnRowDeselected": (node) ->
-        $('#edit_admins_car').attr('href','#')
-        $('#delete_admins_car').attr('href','#')
+        $('#edit_admins_driver').attr('href','#')
+        $('#delete_admins_driver').attr('href','#')
         $("#alert-info").html('')
       "aButtons": [
         {

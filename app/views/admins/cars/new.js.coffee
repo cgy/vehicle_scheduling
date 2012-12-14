@@ -7,5 +7,3 @@ jQuery ->
 
   $("#alert-info").html('')
 
-  $('form').submit ->
-    $('div.dataTables_filter input').keyup()

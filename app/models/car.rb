@@ -8,6 +8,8 @@ class Car < ActiveRecord::Base
   validates :model, presence: true, Length: { maximum: 50 }
   validates_numericality_of :load, :allow_nil => true
 
+  before_destroy :confirm_car_not_in_trip
+
   def model_plate
     self.model + "|" + self.plate
   end
@@ -15,7 +17,14 @@ class Car < ActiveRecord::Base
   def self.page(page)
     paginate :per_page => 10, :page => page,
              :order => 'model'
+  end
 
+  private
+  def confirm_car_not_in_trip
+    unless self.driverships.empty?
+      errors.add(:base, "该车有出差记录，无法删除！")
+      return false
+    end
   end
 
 end

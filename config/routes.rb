@@ -13,6 +13,7 @@ VehicleScheduling::Application.routes.draw do
     resources :trips
     resources :cars
     resources :drivers
+    resources :workers
     resources :groups
     resources :destinations
     resources :notes

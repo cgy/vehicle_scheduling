@@ -13,7 +13,7 @@ jQuery ->
     "bStateSave": true
     sAjaxSource: $('#trips').data('source')
     #排版
-    "sDom": "<'row'<'span3'l><'span2'r><'span4'f>>t<'row'<'span5'i><'span4'p>>"
+    "sDom": "<'span9'<'row'<'span3'l><'span1'T><'span1'r><'span4'f>>><'span9't><'span9'<'row'<'span5'i><'span4'p>>>"
     "aLengthMenu": [[10, 25, 50, 100, 200, 500, 1000, -1], [10, 25, 50, 100, 200, 500, 1000, "所有"]]
     #禁用第三、七列排序
     "aoColumnDefs": [
@@ -35,6 +35,14 @@ jQuery ->
       { "sWidth": "45px", "aTargets": [ 6 ] },
       { "sWidth": "28px", "aTargets": [ 7 ] }
     ]
+    "oTableTools": {
+      "aButtons": [
+        {
+          "sExtends":    "xls",
+          "sButtonText": "导出"
+        }
+      ]
+    }
 
   $.datepicker.regional['zh-CN'] = {
     closeText: '关闭',
@@ -75,3 +83,5 @@ jQuery ->
       $('optgroup:not([label="' + group + '"])', $sel).appendTo($sel)
     #chosen属性 选项更新
     $sel.trigger("liszt:updated")
+
+
