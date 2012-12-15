@@ -7,3 +7,9 @@ jQuery ->
 
   $("#alert-info").html('')
 
+  $("#worker_password").val("000000")
+  $("#worker_password_confirmation").val("000000")
+
+  $("#password-group").hide()
+  $("#password-confirmation-group").hide()
+

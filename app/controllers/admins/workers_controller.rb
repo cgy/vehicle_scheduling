@@ -13,14 +13,23 @@ module Admins
     end
 
     def update
+
       @worker = Worker.find(params[:id])
-      if @worker.update_attributes(params[:worker])
+
+      if params[:reset] and params[:reset] == 'on'
+        @worker.update_attributes(params[:worker])
+      else
+        @worker.update_attribute(:name, params[:worker][:name])
+        @worker.update_attribute(:group_id, params[:worker][:group_id])
+      end
+
+      if @worker.errors.present?
+        render 'edit'
+      else
         respond_to do |format|
           format.html
           format.js
         end
-      else
-        render 'edit'
       end
 
     end

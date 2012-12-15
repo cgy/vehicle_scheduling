@@ -55,7 +55,7 @@ module Admins
         format.html do
           if @trip.save
             flash[:success] = "修改已保存！"
-            redirect_to '/drivers-history/'+@trip.id.to_s+'/edit'
+            redirect_to '/admins/workers-history/'+@trip.id.to_s+'/edit'
           else
             @selected_key = @trip.workers_ids.split(",")
             render 'edit'

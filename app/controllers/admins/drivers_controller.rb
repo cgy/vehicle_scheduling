@@ -13,14 +13,23 @@ module Admins
     end
 
     def update
+
       @driver = Driver.find(params[:id])
-      if @driver.update_attributes(params[:driver])
+
+      if params[:reset] and params[:reset] == 'on'
+        @driver.update_attributes(params[:driver])
+      else
+        @driver.update_attribute(:name, params[:driver][:name])
+        @driver.update_attribute(:phone, params[:driver][:phone])
+      end
+
+      if @driver.errors.present?
+        render 'edit'
+      else
         respond_to do |format|
           format.html
           format.js
         end
-      else
-        render 'edit'
       end
 
     end

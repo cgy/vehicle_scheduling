@@ -21,7 +21,7 @@
   </div>
   <div class="row">
     <div class="span9">
-      <%= form_for @trip, :as => :trip, :url => '/workers-history/'+@trip.id.to_s, :method => :put,
+      <%= form_for @trip, :as => :trip, :url => '/admins/workers-history/'+@trip.id.to_s, :method => :put,
                    :html => {:class => "form-horizontal"} do |f| %>
 
           <%= render 'shared/error_messages' , object: f.object %>
