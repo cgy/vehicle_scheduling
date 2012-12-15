@@ -156,16 +156,14 @@ module Admins
       @trip = Trip.find(params[:id])
 
       if @trip.ing
-
         @trip.driver.update_attribute(:current_trip, 0)
         @trip.car.update_attribute(:current_trip, 0)
         @trip.workers.each do |worker|
           worker.update_attribute(:current_trip, 0)
         end
-
-        @trip.workers.clear
-
       end
+
+      @trip.workers.clear
 
       @trip.destroy
 

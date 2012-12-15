@@ -27,6 +27,7 @@ module Admins
 
     def edit
       @worker = Worker.find(params[:id])
+      @group = @worker.group
       respond_to do |format|
         format.html
         format.js

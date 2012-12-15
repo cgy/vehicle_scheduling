@@ -36,7 +36,7 @@ class WorkersDatatable
     workers = workers.page(page).per_page(per_page)
 
     if params[:sSearch].present?
-      workers = workers.includes(:group).where("name like :search or group.name like :search", search: "%#{params[:sSearch]}%")
+      workers = workers.includes(:group).where("users.name like :search or groups.name like :search", search: "%#{params[:sSearch]}%")
     end
 
     workers
@@ -54,7 +54,7 @@ class WorkersDatatable
         workers = Worker.order("#{sort_column} #{sort_direction}")
       when "group"
         workers = Worker.joins("LEFT OUTER JOIN #{sort_column}s ON #{sort_column}s.id =
-                workers.#{sort_column}_id").order("#{sort_column}s.name #{sort_direction}")
+                users.#{sort_column}_id").order("#{sort_column}s.name #{sort_direction}")
     end
 
     workers

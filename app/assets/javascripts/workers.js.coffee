@@ -14,7 +14,7 @@ jQuery ->
     #"sDom": "<'span6'<'row'<'span3'l><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
     "sDom": "<'span6'<'row'<'span2'l><'span1'T><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
 
-    "aaSorting": [[ 0, "asc" ]]
+    "aaSorting": [[ 1, "asc" ]]
 
     "bAutoWidth": false
     "sScrollX": "100%"

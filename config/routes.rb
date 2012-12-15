@@ -1,5 +1,4 @@
 VehicleScheduling::Application.routes.draw do
-  resources :members
 
   resources :groups
 
@@ -10,6 +9,7 @@ VehicleScheduling::Application.routes.draw do
   resources :cars
 
   namespace :admins do
+
     resources :trips
     resources :cars
     resources :drivers
@@ -17,10 +17,17 @@ VehicleScheduling::Application.routes.draw do
     resources :groups
     resources :destinations
     resources :notes
-    match '/workers',         to:"workers#index"
-    match '/drivers',         to:"drivers#index"
+
     match '/workers-history', to:"workers_history#index"
+    match '/workers-history/:id/edit' => 'workers_history#edit'
+    match '/workers-history/:id' => 'workers_history#update', :via => :put
+    match '/workers-history/:id' => 'workers_history#destroy', :via => :delete
+
     match '/drivers-history', to:"drivers_history#index"
+    match '/drivers-history/:id/edit' => 'drivers_history#edit'
+    match '/drivers-history/:id' => 'drivers_history#update', :via => :put
+    match '/drivers-history/:id' => 'drivers_history#destroy', :via => :delete
+
   end
 
   namespace :drivers do
