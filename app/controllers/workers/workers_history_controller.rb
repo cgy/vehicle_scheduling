@@ -1,5 +1,5 @@
 module Workers
-  class HistoryController < BaseController
+  class WorkersHistoryController < BaseController
     # GET /trips
     # GET /trips.json
     def index

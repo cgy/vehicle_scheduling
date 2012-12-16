@@ -1,5 +1,5 @@
 module Drivers
-  class HistoryController < BaseController
+  class DriversHistoryController < BaseController
     # GET /trips
     # GET /trips.json
     def index

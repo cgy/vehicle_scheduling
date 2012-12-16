@@ -31,13 +31,20 @@ VehicleScheduling::Application.routes.draw do
   end
 
   namespace :drivers do
-    match '/trip',            to:"trip#index"
-    match '/drivers-history', to:"history#index"
+
+    match '/start',           to:"status#start"
+    match '/tour',           to:"status#tour"
+
+    resources :trips
+
+    match '/drivers-history', to:"drivers_history#index"
   end
 
   namespace :workers do
-    match '/trip',            to:"trip#index"
-    match '/workers-history', to:"history#index"
+    match '/start',           to:"status#start"
+    match '/tour',            to:"status#tour"
+    match '/trips',            to:"trips#index"
+    match '/workers-history', to:"workers_history#index"
   end
 
   # The priority is based upon order of creation:
@@ -58,6 +65,8 @@ VehicleScheduling::Application.routes.draw do
   match '/signup',  to:'users#new'
   match '/signin',  to:'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

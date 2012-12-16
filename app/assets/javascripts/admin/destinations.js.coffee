@@ -4,12 +4,12 @@
 
 jQuery ->
 
-  $('#notes').dataTable
+  $('#destinations').dataTable
     sPaginationType: "bootstrap"
     "bProcessing": true
     "bServerSide": true
     "bStateSave": true
-    sAjaxSource: $('#notes').data('source')
+    sAjaxSource: $('#destinations').data('source')
     #排版
     #"sDom": "<'span6'<'row'<'span3'l><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
     "sDom": "<'span6'<'row'<'span2'l><'span1'T><'span1'r><'span2'f>>><'span6't><'span6'<'row'<'span3'i><'span3'p>>>"
@@ -18,19 +18,18 @@ jQuery ->
     "aaSorting": [[ 0, "asc" ]]
 
     "bAutoWidth": false
-    "sScrollX": "100%"
     "aoColumns": [
       { "mData": "name" }
     ]
     "oTableTools": {
       "sRowSelect": "single"
       "fnRowSelected": ( node ) ->
-        $('#edit_admins_note').attr('href','/admins/notes/'+node.id+'/edit')
-        $('#delete_admins_note').attr('href','/admins/notes/'+node.id)
+        $('#edit_admins_destination').attr('href','/admins/destinations/'+node.id+'/edit')
+        $('#delete_admins_destination').attr('href','/admins/destinations/'+node.id)
         $("#alert-info").html('')
       "fnRowDeselected": (node) ->
-        $('#edit_admins_note').attr('href','#')
-        $('#delete_admins_note').attr('href','#')
+        $('#edit_admins_destination').attr('href','#')
+        $('#delete_admins_destination').attr('href','#')
         $("#alert-info").html('')
       "aButtons": [
         {

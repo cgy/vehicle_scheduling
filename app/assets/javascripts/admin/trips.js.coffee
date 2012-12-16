@@ -24,7 +24,6 @@ jQuery ->
     "aaSorting": [[ 5, "desc" ]]
 
     "bAutoWidth": false,
-    "sScrollX": "100%",
     "aoColumns": [
       { "sWidth": "65px", "aTargets": [ 0 ] },
       { "sWidth": "40px", "aTargets": [ 1 ] },

@@ -1,0 +1,23 @@
+/*
+ *= require jquery.ui.datepicker
+ */
+
+.content {
+  margin-left: -15px;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+
+.form-horizontal .control-label {
+  width: 210px;
+}
+.form-horizontal .controls {
+  *padding-left: 15px;
+  margin-left: 225px;
+}
+.form-horizontal .controls:first-child {
+  *padding-left: 225px;
+}
+
+
