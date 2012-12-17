@@ -18,7 +18,6 @@ module Drivers
       @selected_key = ""
 
 
-
       respond_to do |format|
         format.html # new.html.erb
         format.json { render json: @trip }
@@ -36,7 +35,7 @@ module Drivers
       if params[:car_id] and params[:car_id].size
 
         drivership = Drivership.where(:car_id => params[:car_id],
-                                    :driver_id => driver.id).first_or_create
+                                      :driver_id => driver.id).first_or_create
         @trip.drivership_id = drivership.id
 
       end
@@ -86,8 +85,99 @@ module Drivers
         format.js
       end
 
-
     end
+
+    # PUT /trips/1
+    # PUT /trips/1.json
+    def update
+
+      @trip = Trip.find(params[:id])
+      car = @trip.car
+      driver = @trip.driver
+
+      #车辆或司机被改动
+      unless params[:car_id] == car.id.to_s
+
+        if params[:car_id] == ""
+          @trip.drivership_id = ""
+        else
+          #drivership是否存在 不存在就创建
+          drivership = Drivership.where(:car_id => params[:car_id],
+                                        :driver_id => driver.id).first_or_create
+          @trip.drivership_id = drivership.id
+
+          if params[:car_id] != car.id.to_s
+            new_car = Car.find(params[:car_id])
+            new_car.update_attribute(:current_trip, @trip.id)
+            car.update_attribute(:current_trip, 0)
+          end
+
+        end
+
+      end
+
+      #出差人员改动
+      if params[:workers_ids_] and params[:workers_ids_].size
+        #修改出差人员
+        origin_workers_ids = @trip.workers_ids.split(',')
+        workers_ids_ = params[:workers_ids_]
+        @trip.workers_ids = workers_ids_.join(',')
+        #删除被删除的工作人员
+        origin_workers_ids.each { |owi|
+          if workers_ids_.index(owi).nil?
+            worker = Worker.find(owi)
+            worker.update_attribute(:current_trip, 0)
+            @trip.workers.delete(worker)
+          else
+            workers_ids_.delete(owi)
+          end
+        }
+        #增加被添加的工作人员
+        workers_ids_.each { |wi|
+          worker = Worker.find(wi)
+          @trip.workers << worker
+          worker.update_attribute(:current_trip, @trip.id)
+        }
+      end
+
+      #其它改动
+      @trip.destination_id = params[:destination_id]
+      @trip.departure_time = params[:departure_time]
+      @trip.back_time = params[:back_time]
+      @trip.note_id = params[:note_id]
+      @trip.workers_names = @trip.generate_workers_names
+
+
+      respond_to do |format|
+        format.html do
+          if @trip.save
+            #如果为出差结束 提交信息
+            if params[:commit]
+              @trip.ing = false
+              @trip.car.update_attribute(:current_trip, 0)
+              current_user.update_attribute(:current_trip, 0)
+              @trip.workers.each { |worker|
+                worker.update_attribute(:current_trip, 0)
+              }
+              @trip.save
+              sign_in(current_user)
+              redirect_to '/drivers/start'
+            else
+              #submit为保存修改
+              flash[:success] = "修改已保存！"
+              redirect_to '/drivers/tour'
+            end
+          else
+            @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
+            @drivership = @trip.drivership
+            @selected_key = @trip.workers_ids.split(",")
+            render '/drivers/status/tour'
+          end
+        end
+        format.js
+      end
+    end
+
 
   end
 

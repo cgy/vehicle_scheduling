@@ -67,8 +67,7 @@ module VehicleScheduling
 
     # Load Subfolder Models
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
-
-    config.autoload_paths += Dir[Rails.root.join('datatables', '{**}')]
+    config.autoload_paths += Dir[Rails.root.join('app', 'datatables', '{**}')]
 
   end
 end
