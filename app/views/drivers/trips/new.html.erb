@@ -58,17 +58,17 @@
                 <select data-placeholder="请选择工作人员..." class="chzn-select" multiple
                         id="chzn-worker-select" name="workers_ids_[]" tabindex="40">
                   <option value=""></option>
-                      <% Group.all.each do |group| %>
+                  <% Group.all.each do |group| %>
                           <optgroup label="<%= group.name %>">
-                            <% group.workers.where("current_trip = ?", 0).each do |worker| %>
+                            <% group.workers.where("current_trip = ? OR current_trip = ?", 0, @trip.id).each do |worker| %>
                                 <option value="<%= worker.id %>"
-                                <% if @trip.workers.exists? worker %>
+                                <% if @selected_key and @selected_key.include? worker.id.to_s %>
                                    selected="selected"
                                 <% end %>
                                 ><%= worker.name %></option>
                             <% end %>
                           </optgroup>
-                      <% end %>
+                  <% end %>
                 </select>
               </div>
             </div>

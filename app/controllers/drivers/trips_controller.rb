@@ -41,43 +41,44 @@ module Drivers
 
       end
 
-      @selected_key = ""
-
       if params[:workers_ids_] and params[:workers_ids_].size
         workers_ids_ = params[:workers_ids_]
         @trip.workers_ids = workers_ids_.join(',')
-        workers_ids_.each { |wi|
-          worker = Worker.find(wi)
-          @trip.workers << worker
-        }
-
-        @selected_key = @trip.workers_ids.split(",")
-
       end
 
       @trip.destination_id = params[:destination_id]
       @trip.departure_time = params[:departure_time]
       @trip.back_time = params[:back_time]
       @trip.note_id = params[:note_id]
-      @trip.workers_names = @trip.generate_workers_names
+      @trip.ing = true
 
       respond_to do |format|
         format.html do
-          if @trip.save
+          if params[:workers_ids_] and params[:workers_ids_].size and @trip.save
 
+            #此处解决Trip.new之后未保存没有生成id产生的问题
             @trip.car.update_attribute(:current_trip, @trip.id)
             driver.update_attribute(:current_trip, @trip.id)
-            @trip.workers.each { |worker|
+            workers_ids_.each { |wi|
+              worker = Worker.find(wi)
+              @trip.workers << worker
               worker.update_attribute(:current_trip, @trip.id)
             }
+            @trip.workers_names = @trip.generate_workers_names
+            @trip.save
 
-            flash[:success] = "出差记录已添加！"
+            sign_in(current_user)
             redirect_to '/drivers/tour'
+
           else
 
             @cars = Car.where("current_trip = ?", 0).order("model").all
             @drivership = @trip.drivership
+            @selected_key = @trip.workers_ids.split(",") if @trip.workers_ids
 
+            @trip.errors.add(:workers, "工作人员不能为空") unless params[:workers_ids_] and params[:workers_ids_].size
+
+            sign_in(current_user)
             render 'new'
 
           end
