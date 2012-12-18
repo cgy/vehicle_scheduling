@@ -2,11 +2,13 @@
   <div id="header" class="row">
     <div class="span12">
       <ul class="nav-right-top">
-        <li class="active"><%= link_to "首页", root_path %></li>
+
         <% if signed_in? %>
             <li><%= current_user.name %>，您好！</li>
+            <li class="active"><%= link_to "首页", root_path %></li>
             <li><%= link_to "注销", signout_path, method: "delete" %></li>
         <% else %>
+            <li class="active"><%= link_to "首页", root_path %></li>
             <li><a href="#myModal" data-toggle="modal">登录</a></li>
         <% end %>
       </ul>
@@ -16,25 +18,31 @@
   <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h3 id="myModalLabel">登录车辆管理系统</h3>
+      <h3 id="myModalLabel">车辆管理系统登录</h3>
     </div>
     <div class="modal-body">
-      <%= form_tag sessions_path do %>
-          <div class="field">
-            <%= label_tag "用户名" %>
-            <%= text_field_tag :name %>
+      <form class="form-horizontal" action="/sessions" method="post">
+        <div class="control-group">
+          <label class="control-label" for="inputEmail">用户名</label>
+          <div class="controls">
+            <input type="text" id="inputName" name="name" placeholder="您的姓名">
           </div>
-
-          <div class="field">
-            <%= label_tag "密码" %>
-            <%= password_field_tag :password %>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">密码</label>
+          <div class="controls">
+            <input type="password" id="inputPassword" name="password" placeholder="默认六个零">
           </div>
-      <% end %>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn" aria-hidden="true">登陆</button>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+          </div>
+        </div>
+      </form>
     </div>
     <div class="modal-footer">
-      <button type="submit" class="btn" onClick="submit()" aria-hidden="true">登录</button>
-      <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-
     </div>
   </div>
 </div>
