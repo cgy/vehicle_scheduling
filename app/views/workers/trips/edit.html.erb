@@ -3,12 +3,12 @@
 <div class="content span9">
   <div class="row">
     <div class="span9">
-      <h4>工作人员出差信息管理 </h4>
+      <h4>工作人员出差管理 </h4>
     </div>
   </div>
   <div class="row">
     <div class="span1">
-      <a href="/drivers/trips" class="btn btn-mini">«返回</a>
+      <a href="/workers/trips" class="btn btn-mini">«返回</a>
     </div>
     <div id="title" class="span8">出差信息编辑</div>
   </div>
@@ -21,7 +21,7 @@
   </div>
   <div class="row">
     <div class="span9">
-      <%= form_for @trip, :as => :trip, :url => '/drivers/trips/'+@trip.id.to_s, :method => :put,
+      <%= form_for @trip, :as => :trip, :url => '/workers/trips/'+@trip.id.to_s, :method => :put,
                    :html => {:class => "form-horizontal"} do |f| %>
 
           <%= render 'shared/error_messages' , object: f.object %>
@@ -33,7 +33,7 @@
               <div class="chosen">
                 <%= collection_select(:drivership, :car_id, @cars, :id, :model_plate, {:include_blank => true},
                                       {:class => "chzn-select-deselect", :id => "chzn-car-select",
-                                       :'data-placeholder' => "请选择车辆...", :name => "car_id"}) %>
+                                       :'data-placeholder' => "请选择车辆...", :name => "car_id", :disabled=>"true"}) %>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@
 
                 <%= collection_select(:drivership, :driver_id, @drivers, :id, :name, {:include_blank => true},
                                       {:class => "chzn-select-deselect", :id => "chzn-driver-select",
-                                       :'data-placeholder' => "请选择司机...", :name => "driver_id"}) %>
+                                       :'data-placeholder' => "请选择司机...", :name => "driver_id", :disabled=>"true"}) %>
 
 
               </div>
@@ -140,7 +140,7 @@
           <div class="control-group">
             <div class="controls">
               <button type="submit" class="btn">保存修改</button>
-              <a href="/drivers/trips" class="btn cancle">返回</a>
+              <a href="/workers/trips" class="btn cancle">返回</a>
             </div>
           </div>
       <% end %>

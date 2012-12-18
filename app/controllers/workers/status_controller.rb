@@ -23,8 +23,6 @@ module Workers
     def update
 
       @trip = Trip.find(current_user.current_trip)
-      car = @trip.car
-      driver = @trip.driver
 
       #出差人员改动
       if params[:workers_ids_] and params[:workers_ids_].size

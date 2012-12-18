@@ -1,21 +1,22 @@
 require 'date'
-class WorkerTripsDatatable
+class WorkerHistoryDatatable
   delegate :params, :h, :link_to, to: :@view
 
   def initialize(view, worker)
     @view = view
     @worker_id = worker.id
-    @date_start = Date.today.at_beginning_of_year()
-    @query = "worker_id = ? AND departure_time >= ?"
+    @date_range_start = Date.today.years_ago(1).at_beginning_of_year()
+    @date_range_end = Date.today.years_ago(1).end_of_year()
+    @query = "worker_id = ? AND departure_time >= ? AND departure_time <= ?"
     @query1 = "worker_id = ?"
-    @query2 = "departure_time >= ?"
+    @query2 = "departure_time >= ? AND departure_time <= ?"
   end
 
   def as_json(options = {})
     {
         sEcho: params[:sEcho].to_i,
         iTotalRecords: Trip.joins("LEFT OUTER JOIN workerships ON workerships.trip_id=
-                trips.id").where(@query, @worker_id, @date_start).count,
+                trips.id").where(@query, @worker_id, @date_range_start, @date_range_end).count,
         iTotalDisplayRecords: trips.total_entries,
         aaData: data
     }
@@ -33,7 +34,6 @@ class WorkerTripsDatatable
           h(trip.departure_time),
           h(trip.back_time),
           h(trip.note.name),
-          link_to('<i class="icon-edit"></i>'.html_safe, '/workers/trips/'+trip.id.to_s+'/edit')
       ]
     end
   end
@@ -68,27 +68,27 @@ class WorkerTripsDatatable
 
     #默认按归来时间排序
     trips = Trip.joins("LEFT OUTER JOIN workerships ON workerships.trip_id=
-                trips.id").where(@query, @worker_id, @date_start).order("back_time desc")
+                trips.id").where(@query, @worker_id, @date_range_start, @date_range_end).order("back_time desc")
 
     case sort_column
 
       when "departure_time", "back_time"
         trips = Trip.joins("LEFT OUTER JOIN workerships ON workerships.trip_id=
-                trips.id").where(@query, @worker_id, @date_start).order("#{sort_column} #{sort_direction}")
+                trips.id").where(@query, @worker_id, @date_range_start, @date_range_end).order("#{sort_column} #{sort_direction}")
       when "note", "destination"
         trips = Trip.joins("LEFT OUTER JOIN workerships ON workerships.trip_id=
                 trips.id").joins("LEFT OUTER JOIN #{sort_column}s ON #{sort_column}s.id =
-                trips.#{sort_column}_id").where(@query, @worker_id, @date_start).order("#{sort_column}s.name #{sort_direction}")
+                trips.#{sort_column}_id").where(@query, @worker_id, @date_range_start, @date_range_end).order("#{sort_column}s.name #{sort_direction}")
       when "plate"
         trips = Trip.joins("LEFT OUTER JOIN workerships ON workerships.trip_id=
                 trips.id").where(@query1, @worker_id).joins("LEFT OUTER JOIN driverships ON driverships.id=
                 trips.drivership_id").joins("LEFT OUTER JOIN cars ON cars.id=
-                driverships.car_id").where(@query2, @date_start).order("cars.plate #{sort_direction}")
+                driverships.car_id").where(@query2, @date_range_start, @date_range_end).order("cars.plate #{sort_direction}")
       when "driver"
         trips = Trip.joins("LEFT OUTER JOIN workerships ON workerships.trip_id=
                 trips.id").where(@query1, @worker_id).joins("LEFT OUTER JOIN driverships ON driverships.id=
                 trips.drivership_id").joins("LEFT OUTER JOIN users ON users.id=
-                driverships.driver_id").where(@query2, @date_start).order("users.name #{sort_direction}")
+                driverships.driver_id").where(@query2, @date_range_start, @date_range_end).order("users.name #{sort_direction}")
 
     end
 

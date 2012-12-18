@@ -1,6 +1,6 @@
 require 'date'
 class DriverTripsDatatable
-  delegate :params, :h, :link_to, :edit_admins_trip_path, :admins_trip_path, to: :@view
+  delegate :params, :h, :link_to, to: :@view
 
   def initialize(view, driver)
     @view = view
