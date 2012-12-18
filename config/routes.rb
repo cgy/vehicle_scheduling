@@ -34,17 +34,21 @@ VehicleScheduling::Application.routes.draw do
 
     match '/start',           to:"status#start"
     match '/tour',           to:"status#tour"
+    match '/update',           to:"status#update"
 
     resources :trips
 
-    match '/drivers-history', to:"drivers_history#index"
+    match '/driver-history', to:"driver_history#index"
   end
 
   namespace :workers do
     match '/start',           to:"status#start"
     match '/tour',            to:"status#tour"
-    match '/trips',            to:"trips#index"
-    match '/workers-history', to:"workers_history#index"
+    match '/update',           to:"status#update"
+
+    resources :trips
+
+    match '/worker-history', to:"worker_history#index"
   end
 
   # The priority is based upon order of creation:

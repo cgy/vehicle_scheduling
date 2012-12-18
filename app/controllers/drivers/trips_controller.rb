@@ -2,7 +2,10 @@ module Drivers
   class TripsController < BaseController
 
     def index
-      @trip = Trip.new
+      respond_to do |format|
+        format.html
+        format.json { render json: DriverTripsDatatable.new(view_context, current_user) }
+      end
     end
 
     # GET /trips/new
@@ -23,6 +26,19 @@ module Drivers
         format.json { render json: @trip }
       end
 
+    end
+
+    # GET /trips/1/edit
+    def edit
+      @trip = Trip.find(params[:id])
+      @cars = Car.order("model").all
+      @drivers = Driver.order("group_id").all
+      if @trip.ing
+        @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
+        @drivers = Driver.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("group_id").all
+      end
+      @drivership = @trip.drivership
+      @selected_key = @trip.workers_ids.split(",")
     end
 
 
@@ -93,11 +109,10 @@ module Drivers
 
       @trip = Trip.find(params[:id])
       car = @trip.car
-      driver = @trip.driver
+      driver = current_user
 
       #车辆或司机被改动
       unless params[:car_id] == car.id.to_s
-
         if params[:car_id] == ""
           @trip.drivership_id = ""
         else
@@ -105,15 +120,15 @@ module Drivers
           drivership = Drivership.where(:car_id => params[:car_id],
                                         :driver_id => driver.id).first_or_create
           @trip.drivership_id = drivership.id
-
-          if params[:car_id] != car.id.to_s
-            new_car = Car.find(params[:car_id])
-            new_car.update_attribute(:current_trip, @trip.id)
-            car.update_attribute(:current_trip, 0)
+          ##如果该出差还没结束 更新车辆和司机的出差状态
+          if @trip.ing
+            if params[:car_id] != car.id.to_s
+              new_car = Car.find(params[:car_id])
+              new_car.update_attribute(:current_trip, @trip.id)
+              car.update_attribute(:current_trip, 0)
+            end
           end
-
         end
-
       end
 
       #出差人员改动
@@ -126,7 +141,7 @@ module Drivers
         origin_workers_ids.each { |owi|
           if workers_ids_.index(owi).nil?
             worker = Worker.find(owi)
-            worker.update_attribute(:current_trip, 0)
+            worker.update_attribute(:current_trip, 0) if @trip.ing
             @trip.workers.delete(worker)
           else
             workers_ids_.delete(owi)
@@ -136,7 +151,7 @@ module Drivers
         workers_ids_.each { |wi|
           worker = Worker.find(wi)
           @trip.workers << worker
-          worker.update_attribute(:current_trip, @trip.id)
+          worker.update_attribute(:current_trip, @trip.id) if @trip.ing
         }
       end
 
@@ -151,30 +166,47 @@ module Drivers
       respond_to do |format|
         format.html do
           if @trip.save
-            #如果为出差结束 提交信息
-            if params[:commit]
-              @trip.ing = false
-              @trip.car.update_attribute(:current_trip, 0)
-              current_user.update_attribute(:current_trip, 0)
-              @trip.workers.each { |worker|
-                worker.update_attribute(:current_trip, 0)
-              }
-              @trip.save
-              sign_in(current_user)
-              redirect_to '/drivers/start'
-            else
-              #submit为保存修改
-              flash[:success] = "修改已保存！"
-              redirect_to '/drivers/tour'
-            end
+            flash[:success] = "修改已保存！"
+            redirect_to '/drivers/trips/'+@trip.id.to_s+'/edit'
           else
-            @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
+            @cars = Car.order("model").all
+            if @trip.ing
+              @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
+            end
             @drivership = @trip.drivership
             @selected_key = @trip.workers_ids.split(",")
-            render '/drivers/status/tour'
+            render 'edit'
           end
         end
         format.js
+      end
+    end
+
+    # DELETE /trips/1
+    # DELETE /trips/1.json
+    def destroy
+
+      @trip = Trip.find(params[:id])
+
+      if @trip.ing
+        @trip.driver.update_attribute(:current_trip, 0)
+        @trip.car.update_attribute(:current_trip, 0)
+        @trip.workers.each do |worker|
+          worker.update_attribute(:current_trip, 0)
+        end
+      end
+
+      @trip.workers.clear
+
+      @trip.destroy
+
+      respond_to do |format|
+        format.html do
+          flash[:success] = "该出差记录已删除！"
+          sign_in(current_user)
+          redirect_to '/drivers/trips'
+        end
+        format.json
       end
     end
 

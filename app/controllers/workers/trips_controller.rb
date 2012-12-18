@@ -1,16 +1,11 @@
 module Workers
   class TripsController < BaseController
 
-    def start
-
-    end
-
-    def tour
-
-    end
-
     def index
-      @test = "hello world"
+      respond_to do |format|
+        format.html
+        format.json { render json: WorkerTripsDatatable.new(view_context, current_user) }
+      end
     end
   end
 end

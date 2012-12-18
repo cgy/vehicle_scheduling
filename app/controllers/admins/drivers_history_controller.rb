@@ -14,10 +14,6 @@ module Admins
       @trip = Trip.find(params[:id])
       @cars = Car.order("model").all
       @drivers = Driver.order("group_id").all
-      if @trip.ing
-        @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
-        @drivers = Driver.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("group_id").all
-      end
       @drivership = @trip.drivership
     end
 
@@ -38,7 +34,7 @@ module Admins
           drivership = Drivership.where(:car_id => params[:car_id],
                                         :driver_id => params[:driver_id]).first_or_create
           @trip.drivership_id = drivership.id
-          ##如果该出差还没结束 更新车辆和司机的出差状态
+          #如果该出差还没结束 更新车辆和司机的出差状态
           if @trip.ing
             if params[:car_id] != car.id.to_s
               new_car = Car.find(params[:car_id])
@@ -58,7 +54,6 @@ module Admins
       @trip.destination_id = params[:destination_id]
       @trip.departure_time = params[:departure_time]
       @trip.back_time = params[:back_time]
-      @trip.note_id = params[:note_id]
 
 
       respond_to do |format|

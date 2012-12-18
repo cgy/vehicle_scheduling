@@ -3,7 +3,12 @@
     <div class="span12">
       <ul class="nav-right-top">
         <li class="active"><%= link_to "首页", root_path %></li>
-        <li><a href="#myModal" data-toggle="modal">登录</a></li>
+        <% if signed_in? %>
+            <li><%= current_user.name %>，您好！</li>
+            <li><%= link_to "注销", signout_path, method: "delete" %></li>
+        <% else %>
+            <li><a href="#myModal" data-toggle="modal">登录</a></li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -16,7 +21,7 @@
     <div class="modal-body">
       <%= form_tag sessions_path do %>
           <div class="field">
-            <%= label_tag "用户名"%>
+            <%= label_tag "用户名" %>
             <%= text_field_tag :name %>
           </div>
 

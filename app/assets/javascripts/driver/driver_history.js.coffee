@@ -15,10 +15,12 @@ jQuery ->
     #排版
     "sDom": "<'span9'<'row'<'span3'l><'span1'T><'span1'r><'span4'f>>><'span9't><'span9'<'row'<'span5'i><'span4'p>>>"
     "aLengthMenu": [[10, 25, 50, 100, 200, 500, 1000, -1], [10, 25, 50, 100, 200, 500, 1000, "所有"]]
+
     #禁用第三、七列排序
     "aoColumnDefs": [
-      { "bSortable": false, "aTargets": [ 5 ] }
+      { "bSortable": false, "aTargets": [ 2 ] }
     ]
+
     #首次打开默认以第六列排序
     "aaSorting": [[ 4, "desc" ]]
 

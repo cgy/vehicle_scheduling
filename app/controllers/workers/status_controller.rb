@@ -1,13 +1,13 @@
-module Drivers
+module Workers
   class StatusController < BaseController
 
     def start
-      redirect_to '/drivers/tour' if current_user.current_trip > 0
+      redirect_to '/workers/tour' if current_user.current_trip > 0
     end
 
     def tour
 
-      redirect_to '/drivers/start' unless current_user.current_trip > 0
+      redirect_to '/workers/start' unless current_user.current_trip > 0
 
       @trip = Trip.find(current_user.current_trip)
 
@@ -25,27 +25,6 @@ module Drivers
       @trip = Trip.find(current_user.current_trip)
       car = @trip.car
       driver = @trip.driver
-
-      #车辆或司机被改动
-      unless params[:car_id] == car.id.to_s
-
-        if params[:car_id] == ""
-          @trip.drivership_id = ""
-        else
-          #drivership是否存在 不存在就创建
-          drivership = Drivership.where(:car_id => params[:car_id],
-                                        :driver_id => driver.id).first_or_create
-          @trip.drivership_id = drivership.id
-
-          if params[:car_id] != car.id.to_s
-            new_car = Car.find(params[:car_id])
-            new_car.update_attribute(:current_trip, @trip.id)
-            car.update_attribute(:current_trip, 0)
-          end
-
-        end
-
-      end
 
       #出差人员改动
       if params[:workers_ids_] and params[:workers_ids_].size
@@ -82,27 +61,17 @@ module Drivers
       respond_to do |format|
         format.html do
           if @trip.save
-            #如果为出差结束 提交信息
-            if params[:commit]
-              @trip.ing = false
-              @trip.car.update_attribute(:current_trip, 0)
-              current_user.update_attribute(:current_trip, 0)
-              @trip.workers.each { |worker|
-                worker.update_attribute(:current_trip, 0)
-              }
-              @trip.save
-              sign_in(current_user)
-              redirect_to '/drivers/start'
-            else
-              #submit为保存修改
-              flash[:success] = "修改已保存！"
-              redirect_to '/drivers/tour'
-            end
+            #submit为保存修改
+            flash[:success] = "修改已保存！"
+            sign_in(current_user)
+            redirect_to '/workers/tour'
           else
             @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
+            @drivers = Driver.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("group_id").all
             @drivership = @trip.drivership
             @selected_key = @trip.workers_ids.split(",")
-            render '/drivers/status/tour'
+            sign_in(current_user)
+            render '/workers/status/tour'
           end
         end
         format.js
