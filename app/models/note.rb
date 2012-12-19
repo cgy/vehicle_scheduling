@@ -1,7 +1,8 @@
 class Note < ActiveRecord::Base
   attr_accessible :name
 
-  validates :name, presence: true, Length: { maximum: 50 }, uniqueness: { case_sensitive: false }
+  validates :name, :presence => {:message => '事由名不能为空'}, Length: { maximum: 50 },
+            :uniqueness => {:case_sensitive => false, :message => '事由重复'}
 
   has_many :trips
 

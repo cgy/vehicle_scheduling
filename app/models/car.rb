@@ -4,8 +4,9 @@ class Car < ActiveRecord::Base
   has_many :driverships
   has_many :drivers, through: :driverships
 
-  validates :plate, presence: true, Length: { maximum: 50 }, uniqueness: { case_sensitive: false }
-  validates :model, presence: true, Length: { maximum: 50 }
+  validates :plate, :presence => {:message => '车牌不能为空'}, Length: { maximum: 50 },
+            :uniqueness => {:case_sensitive => false, :message => '车牌重复'}
+  validates :model, :presence => {:message => '车型不能为空'}, Length: { maximum: 50 }
   validates_numericality_of :load, :allow_nil => true
 
   before_destroy :confirm_car_not_in_trip
