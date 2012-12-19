@@ -65,7 +65,7 @@ module Workers
         format.html do
           if @trip.save
             flash[:success] = "修改已保存！"
-            redirect_to '/drivers/trips/'+@trip.id.to_s+'/edit'
+            redirect_to '/workers/trips/'+@trip.id.to_s+'/edit'
           else
             @cars = Car.order("model").all
             @drivers = Driver.order("group_id").all
