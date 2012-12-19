@@ -58,7 +58,7 @@ module Workers
 
       respond_to do |format|
         format.html do
-          if @trip.save
+          if params[:workers_ids_] and params[:workers_ids_].size and @trip.save
             #submit为保存修改
             flash[:success] = "修改已保存！"
             sign_in(current_user)
@@ -68,6 +68,8 @@ module Workers
             @drivers = Driver.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("group_id").all
             @drivership = @trip.drivership
             @selected_key = @trip.workers_ids.split(",")
+            @trip.errors.add(:workers, "工作人员不能为空") unless params[:workers_ids_] and params[:workers_ids_].size
+
             sign_in(current_user)
             render '/workers/status/tour'
           end
