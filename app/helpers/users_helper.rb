@@ -9,4 +9,14 @@ module UsersHelper
     redirect_to(root_path) unless current_user?(@user)
   end
 
+  def user_root
+    if current_user.is_a? Admin
+      return '/admins/trips'
+    elsif current_user.is_a? Driver
+      return '/drivers/start'
+    else
+      return '/workers/start'
+    end
+  end
+
 end

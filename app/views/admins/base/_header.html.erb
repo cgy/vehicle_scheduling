@@ -2,7 +2,7 @@
   <div id="header" class="row">
     <div class="span12">
       <ul class="nav-right-top">
-        <li>管理员，您好！</li>
+        <li>管理员<%= link_to current_user.name, user_root %>，您好！</li>
         <li><%= link_to "首页", root_path %></li>
         <li><%= link_to "注销", signout_path, method: "delete" %></li>
       </ul>
