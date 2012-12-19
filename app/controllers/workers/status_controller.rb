@@ -44,7 +44,14 @@ module Workers
         workers_ids_.each { |wi|
           worker = Worker.find(wi)
           @trip.workers << worker
-          worker.update_attribute(:current_trip, @trip.id)
+          #冲突
+          if @trip.ing
+            if worker.current_trip > 0
+              @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
+            else
+              worker.update_attribute(:current_trip, @trip.id)
+            end
+          end
         }
       end
 

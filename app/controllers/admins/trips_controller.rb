@@ -44,11 +44,13 @@ module Admins
           if @trip.ing
             if params[:car_id] != car.id.to_s
               new_car = Car.find(params[:car_id])
+              #冲突
               new_car.update_attribute(:current_trip, @trip.id)
               car.update_attribute(:current_trip, 0)
             end
             if params[:driver_id] != driver.id.to_s
               new_driver = Driver.find(params[:driver_id])
+              #冲突
               new_driver.update_attribute(:current_trip, @trip.id)
               driver.update_attribute(:current_trip, 0)
             end
@@ -76,7 +78,14 @@ module Admins
         workers_ids_.each { |wi|
           worker = Worker.find(wi)
           @trip.workers << worker
-          worker.update_attribute(:current_trip, @trip.id) if @trip.ing
+          #冲突
+          if @trip.ing
+            if worker.current_trip > 0
+              @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
+            else
+              worker.update_attribute(:current_trip, @trip.id)
+            end
+          end
         }
       end
 

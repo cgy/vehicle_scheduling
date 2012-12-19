@@ -39,6 +39,7 @@ module Drivers
 
           if params[:car_id] != car.id.to_s
             new_car = Car.find(params[:car_id])
+            #冲突
             new_car.update_attribute(:current_trip, @trip.id)
             car.update_attribute(:current_trip, 0)
           end
@@ -67,6 +68,7 @@ module Drivers
         workers_ids_.each { |wi|
           worker = Worker.find(wi)
           @trip.workers << worker
+          #冲突
           worker.update_attribute(:current_trip, @trip.id)
         }
       end

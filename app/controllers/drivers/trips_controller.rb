@@ -72,11 +72,13 @@ module Drivers
           if params[:workers_ids_] and params[:workers_ids_].size and @trip.save
 
             #此处解决Trip.new之后未保存没有生成id产生的问题
+            #冲突
             @trip.car.update_attribute(:current_trip, @trip.id)
             driver.update_attribute(:current_trip, @trip.id)
             workers_ids_.each { |wi|
               worker = Worker.find(wi)
               @trip.workers << worker
+              #冲突
               worker.update_attribute(:current_trip, @trip.id)
             }
             @trip.workers_names = @trip.generate_workers_names
@@ -124,6 +126,7 @@ module Drivers
           if @trip.ing
             if params[:car_id] != car.id.to_s
               new_car = Car.find(params[:car_id])
+              #冲突
               new_car.update_attribute(:current_trip, @trip.id)
               car.update_attribute(:current_trip, 0)
             end
@@ -151,7 +154,16 @@ module Drivers
         workers_ids_.each { |wi|
           worker = Worker.find(wi)
           @trip.workers << worker
-          worker.update_attribute(:current_trip, @trip.id) if @trip.ing
+          #冲突解决
+          if @trip.ing
+            if worker.current_trip > 0
+              @trip.workers.delete(worker)
+              @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
+            else
+              worker.update_attribute(:current_trip, @trip.id)
+            end
+          end
+
         }
       end
 
