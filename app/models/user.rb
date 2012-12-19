@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
 
   before_save :create_remember_token
 
-  validates :name, presence: true, Length: { maximum: 50 }, uniqueness: { case_sensitive: false }
+  validates :name, :presence => {:message => '用户名不能为空'}, Length: { maximum: 50 },
+            :uniqueness => {:case_sensitive => false, :message => '用户重名'}
   validates :password, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
