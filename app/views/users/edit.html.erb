@@ -1,14 +1,36 @@
 <% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for @user do |f| %>
 
-      <%= render 'fields', f: f %>
+<div class="span6 ">
 
-      <%= f.submit "Save changes", class:"btn btn-large btn-primary" %>
+  <%= form_for @user, :as => :user, :url => '/users/'+@user.id.to_s, :method => :put,
+               :html => {:class => "form-horizontal"}  do |f| %>
+      <h4 class="title">更新用户设置</h4>
+      <%= render 'shared/error_messages' , object: f.object %>
 
-    <% end %>
-  </div>
+      <div class="control-group">
+        <label class="control-label" for="username">用户名</label>
+        <div class="controls">
+          <input type="text" id="username" placeholder="您的姓名" name="user[name]" value="<%= @user.name %>">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="password">密码</label>
+        <div class="controls">
+          <input type="password" id="password" placeholder="默认六个零" name="user[password]">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="password_confirmation">确认密码</label>
+        <div class="controls">
+          <input type="password" id="password_confirmation" name="user[password_confirmation]">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.submit "保存更改", class: "btn btn-primary" %>
+          <a href="<%= user_root %>" class="btn cancle">取消</a>
+        </div>
+      </div>
+  <% end %>
 </div>

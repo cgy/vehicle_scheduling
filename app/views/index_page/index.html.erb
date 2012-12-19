@@ -16,7 +16,7 @@
       <tr class="alert alert-success">
         <td><%= i+1 %></td>
         <td><%= c[:car].model %></td>
-        <td><%= link_to c[:car].plate, c[:car] %></td>
+        <td><%= c[:car].plate %></td>
         <td><%= c[:car].load %></td>
         <% if !c[:driver].nil? %>
             <td><%= c[:driver].name %>(<%= c[:driver].phone %>)</td>
@@ -48,7 +48,7 @@
       <tr class="alert alert-error">
         <td><%= i+1 %></td>
         <td><%= c[:car].model %></td>
-        <td><%= link_to c[:car].plate, c[:car] %></td>
+        <td><%= c[:car].plate %></td>
         <td><%= c[:driver] %></td>
         <td><%= c[:workers_names] %></td>
         <td><%= c[:destination] %></td>
