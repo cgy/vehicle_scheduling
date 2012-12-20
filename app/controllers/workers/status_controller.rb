@@ -47,6 +47,7 @@ module Workers
           #冲突
           if @trip.ing
             if worker.current_trip > 0
+              @trip.workers.delete(worker)
               @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
             else
               worker.update_attribute(:current_trip, @trip.id)
@@ -65,7 +66,7 @@ module Workers
 
       respond_to do |format|
         format.html do
-          if params[:workers_ids_] and params[:workers_ids_].size and @trip.save
+          if params[:workers_ids_] and params[:workers_ids_].size and @trip.errors.empty? and @trip.save
             #submit为保存修改
             flash[:success] = "修改已保存！"
             sign_in(current_user)

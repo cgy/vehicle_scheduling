@@ -12,6 +12,12 @@ module Drivers
     # GET /trips/new.json
     def new
 
+      if current_user.current_trip > 0
+        flash[:success] = "您刚已被管理员添加到出差记录。"
+        redirect_to '/drivers/tour'
+      end
+
+
       @trip = Trip.new
 
 
@@ -44,6 +50,11 @@ module Drivers
 
     def create
 
+      if current_user.current_trip > 0
+        flash[:success] = "您刚已被管理员添加到出差记录。"
+        redirect_to '/drivers/tour'
+      end
+
       @trip = Trip.new
 
       driver = current_user
@@ -67,18 +78,26 @@ module Drivers
       @trip.note_id = params[:note_id]
       @trip.ing = true
 
+      #冲突解决
+      @trip.errors.add(:cars, "就在刚才，你选的车辆已被添加到新增出差记录（出差）了，概率很小哦~ 囧~~~ 选其它车吧。") if @trip.car.current_trip > 0
+      workers_ids_.each { |wi|
+        worker = Worker.find(wi)
+        @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。") if worker.current_trip > 0
+
+      }
+
       respond_to do |format|
         format.html do
-          if params[:workers_ids_] and params[:workers_ids_].size and @trip.save
+          if params[:workers_ids_] and params[:workers_ids_].size and @trip.errors.empty? and @trip.save
 
             #此处解决Trip.new之后未保存没有生成id产生的问题
-            #冲突
+
             @trip.car.update_attribute(:current_trip, @trip.id)
             driver.update_attribute(:current_trip, @trip.id)
             workers_ids_.each { |wi|
               worker = Worker.find(wi)
               @trip.workers << worker
-              #冲突
+
               worker.update_attribute(:current_trip, @trip.id)
             }
             @trip.workers_names = @trip.generate_workers_names
@@ -126,9 +145,13 @@ module Drivers
           if @trip.ing
             if params[:car_id] != car.id.to_s
               new_car = Car.find(params[:car_id])
-              #冲突
-              new_car.update_attribute(:current_trip, @trip.id)
-              car.update_attribute(:current_trip, 0)
+              #冲突解决
+              if new_car.current_trip > 0
+                @trip.errors.add(:cars, "就在刚才，你选的车辆已被添加到新增出差记录（出差）了，概率很小哦~ 囧~~~ 选其它车吧。")
+              else
+                new_car.update_attribute(:current_trip, @trip.id)
+                car.update_attribute(:current_trip, 0)
+              end
             end
           end
         end
@@ -177,7 +200,7 @@ module Drivers
 
       respond_to do |format|
         format.html do
-          if params[:workers_ids_] and params[:workers_ids_].size and @trip.save
+          if params[:workers_ids_] and params[:workers_ids_].size and @trip.errors.empty? and @trip.save
             flash[:success] = "修改已保存！"
             redirect_to '/drivers/trips/'+@trip.id.to_s+'/edit'
           else

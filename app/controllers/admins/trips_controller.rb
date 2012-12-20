@@ -44,15 +44,23 @@ module Admins
           if @trip.ing
             if params[:car_id] != car.id.to_s
               new_car = Car.find(params[:car_id])
-              #冲突
-              new_car.update_attribute(:current_trip, @trip.id)
-              car.update_attribute(:current_trip, 0)
+              #冲突解决
+              if new_car.current_trip > 0
+                @trip.errors.add(:cars, "就在刚才，你选的车辆已被添加到新增出差记录（出差）了，概率很小哦~ 囧~~~ 选其它车吧。")
+              else
+                new_car.update_attribute(:current_trip, @trip.id)
+                car.update_attribute(:current_trip, 0)
+              end
             end
             if params[:driver_id] != driver.id.to_s
               new_driver = Driver.find(params[:driver_id])
-              #冲突
-              new_driver.update_attribute(:current_trip, @trip.id)
-              driver.update_attribute(:current_trip, 0)
+              #冲突解决
+              if new_driver.current_trip > 0
+                @trip.errors.add(:drivers, "就在刚才，你选的司机自己添加出差记录了，概率很小哦~ 囧~~~ 选其它人吧。")
+              else
+                new_driver.update_attribute(:current_trip, @trip.id)
+                driver.update_attribute(:current_trip, 0)
+              end
             end
           end
         end
@@ -81,6 +89,7 @@ module Admins
           #冲突
           if @trip.ing
             if worker.current_trip > 0
+              @trip.workers.delete(worker)
               @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
             else
               worker.update_attribute(:current_trip, @trip.id)
@@ -99,7 +108,7 @@ module Admins
 
       respond_to do |format|
         format.html do
-          if params[:workers_ids_] and params[:workers_ids_].size and @trip.save
+          if params[:workers_ids_] and params[:workers_ids_].size and @trip.errors.empty? and @trip.save
             flash[:success] = "修改已保存！"
             redirect_to edit_admins_trip_path(@trip)
           else
