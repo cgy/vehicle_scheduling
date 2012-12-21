@@ -1,5 +1,3 @@
 class TripUser < ActiveRecord::Base
-  attr_accessible :user_id
-  has_many :users
-
+  attr_accessible :user_id, :trip_id
 end

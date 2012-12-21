@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121221143606) do
+ActiveRecord::Schema.define(:version => 20121221152218) do
 
   create_table "cars", :force => true do |t|
     t.string   "model"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20121221143606) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "trip_id"
   end
 
   add_index "trip_users", ["user_id"], :name => "index_trip_users_on_user_id", :unique => true

@@ -1072,18 +1072,16 @@ namespace :db do
 
     ds1_car = ds1.car
 
-    driver1.current_trip = trip31.id
     ds1_car.current_trip = trip31.id
 
-    driver1.save
     ds1_car.save
 
-    worker15.current_trip = trip31.id
-    worker16.current_trip = trip31.id
-    worker17.current_trip = trip31.id
-    worker15.save
-    worker16.save
-    worker17.save
+
+    TripUser.create!(user_id:driver1.id, trip_id: trip31.id)
+    TripUser.create!(user_id:worker15.id, trip_id: trip31.id)
+    TripUser.create!(user_id:worker16.id, trip_id: trip31.id)
+    TripUser.create!(user_id:worker17.id, trip_id: trip31.id)
+
 
 
     trip32 = Trip.create!(drivership_id: ds2.id,
@@ -1097,20 +1095,17 @@ namespace :db do
     workerships90 = Workership.create!(trip_id: trip32.id, worker_id: worker26.id)
     workerships91 = Workership.create!(trip_id: trip32.id, worker_id: worker27.id)
 
+
     ds2_car = ds2.car
 
-    driver2.current_trip = trip32.id
     ds2_car.current_trip = trip32.id
 
-    driver2.save
     ds2_car.save
 
-    worker25.current_trip = trip32.id
-    worker26.current_trip = trip32.id
-    worker27.current_trip = trip32.id
-    worker25.save
-    worker26.save
-    worker27.save
+    TripUser.create!(user_id:driver2.id, trip_id: trip32.id)
+    TripUser.create!(user_id:worker25.id, trip_id: trip32.id)
+    TripUser.create!(user_id:worker26.id, trip_id: trip32.id)
+    TripUser.create!(user_id:worker27.id, trip_id: trip32.id)
 
 
     trip33 = Trip.create!(drivership_id: ds3.id,
@@ -1125,16 +1120,14 @@ namespace :db do
 
     ds3_car = ds3.car
 
-    driver3.current_trip = trip33.id
     ds3_car.current_trip = trip33.id
 
-    driver3.save
     ds3_car.save
 
-    worker36.current_trip = trip33.id
-    worker37.current_trip = trip33.id
-    worker36.save
-    worker37.save
+
+    TripUser.create!(user_id:driver3.id, trip_id: trip33.id)
+    TripUser.create!(user_id:worker36.id, trip_id: trip33.id)
+    TripUser.create!(user_id:worker37.id, trip_id: trip33.id)
 
 
     trip34 = Trip.create!(drivership_id: ds4.id,
@@ -1151,20 +1144,16 @@ namespace :db do
 
     ds4_car = ds4.car
 
-    driver4.current_trip = trip34.id
     ds4_car.current_trip = trip34.id
 
-    driver4.save
     ds4_car.save
 
-    worker38.current_trip = trip34.id
-    worker39.current_trip = trip34.id
-    worker40.current_trip = trip34.id
-    worker41.current_trip = trip34.id
-    worker38.save
-    worker39.save
-    worker40.save
-    worker41.save
+
+    TripUser.create!(user_id:driver4.id, trip_id: trip34.id)
+    TripUser.create!(user_id:worker38.id, trip_id: trip34.id)
+    TripUser.create!(user_id:worker39.id, trip_id: trip34.id)
+    TripUser.create!(user_id:worker40.id, trip_id: trip34.id)
+    TripUser.create!(user_id:worker41.id, trip_id: trip34.id)
 
 
     trip35 = Trip.create!(drivership_id: ds5.id,
@@ -1180,18 +1169,15 @@ namespace :db do
 
     ds5_car = ds5.car
 
-    driver5.current_trip = trip35.id
     ds5_car.current_trip = trip35.id
 
-    driver5.save
     ds5_car.save
 
-    worker52.current_trip = trip35.id
-    worker53.current_trip = trip35.id
-    worker54.current_trip = trip35.id
-    worker52.save
-    worker53.save
-    worker54.save
+
+    TripUser.create!(user_id:driver5.id, trip_id: trip35.id)
+    TripUser.create!(user_id:worker52.id, trip_id: trip35.id)
+    TripUser.create!(user_id:worker53.id, trip_id: trip35.id)
+    TripUser.create!(user_id:worker54.id, trip_id: trip35.id)
 
 
     trip36 = Trip.create!(drivership_id: ds6.id,
@@ -1206,16 +1192,15 @@ namespace :db do
 
     ds6_car = ds6.car
 
-    driver6.current_trip = trip36.id
     ds6_car.current_trip = trip36.id
 
-    driver6.save
     ds6_car.save
 
-    worker55.current_trip = trip36.id
-    worker56.current_trip = trip36.id
-    worker55.save
-    worker56.save
+
+
+    TripUser.create!(user_id:driver6.id, trip_id: trip36.id)
+    TripUser.create!(user_id:worker65.id, trip_id: trip36.id)
+    TripUser.create!(user_id:worker66.id, trip_id: trip36.id)
 
 
     trip37 = Trip.create!(drivership_id: ds7.id,
@@ -1230,22 +1215,21 @@ namespace :db do
     workerships105 = Workership.create!(trip_id: trip37.id, worker_id: worker79.id)
     workerships106 = Workership.create!(trip_id: trip37.id, worker_id: worker80.id)
 
+
     ds7_car = ds7.car
 
-    driver7.current_trip = trip37.id
     ds7_car.current_trip = trip37.id
 
-    driver7.save
     ds7_car.save
 
-    worker77.current_trip = trip37.id
-    worker78.current_trip = trip37.id
-    worker79.current_trip = trip37.id
-    worker80.current_trip = trip37.id
-    worker77.save
-    worker78.save
-    worker79.save
-    worker80.save
+
+    TripUser.create!(user_id:driver7.id, trip_id: trip37.id)
+    TripUser.create!(user_id:worker77.id, trip_id: trip37.id)
+    TripUser.create!(user_id:worker78.id, trip_id: trip37.id)
+    TripUser.create!(user_id:worker79.id, trip_id: trip37.id)
+    TripUser.create!(user_id:worker80.id, trip_id: trip37.id)
+
+
 
 
     trip38 = Trip.create!(drivership_id: ds8.id,
@@ -1260,21 +1244,16 @@ namespace :db do
     workerships108 = Workership.create!(trip_id: trip38.id, worker_id: worker82.id)
     workerships109 = Workership.create!(trip_id: trip38.id, worker_id: worker83.id)
 
-
     ds8_car = ds8.car
 
-    driver11.current_trip = trip38.id
     ds8_car.current_trip = trip38.id
 
-    driver11.save
     ds8_car.save
 
-    worker81.current_trip = trip38.id
-    worker82.current_trip = trip38.id
-    worker83.current_trip = trip38.id
-    worker81.save
-    worker82.save
-    worker83.save
+    TripUser.create!(user_id:driver11.id, trip_id: trip38.id)
+    TripUser.create!(user_id:worker81.id, trip_id: trip38.id)
+    TripUser.create!(user_id:worker82.id, trip_id: trip38.id)
+    TripUser.create!(user_id:worker83.id, trip_id: trip38.id)
 
 
 
