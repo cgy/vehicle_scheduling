@@ -32,21 +32,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="17" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1356074344367" expanded="true" signature="491:642" placeholder="production:" />
-              </folding>
+            <state line="27" column="12" selection-start="609" selection-end="609" vertical-scroll-proportion="0.7346939">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="12" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.48979592">
+            <state line="59" column="52" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -94,8 +92,8 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/driver/trips.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/drivers/trips/_assets.html.erb" />
         <option value="$PROJECT_DIR$/app/datatables/driver_trips_datatable.rb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -1217,18 +1215,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1356074344367" expanded="true" signature="491:642" placeholder="production:" />
-          </folding>
+        <state line="59" column="52" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="12" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.48979592">
+        <state line="27" column="12" selection-start="609" selection-end="609" vertical-scroll-proportion="0.7346939">
           <folding />
         </state>
       </provider>
