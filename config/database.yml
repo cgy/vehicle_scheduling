@@ -19,10 +19,14 @@ test: &test
   timeout: 5000
 
 production:
-  adapter: pg
-  database:
-  pool:
-  timeout:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: vm
+  pool: 5
+  username: clgl
+  password: admin668837@#
+  host: localhost
 
 cucumber:
   <<: *test
