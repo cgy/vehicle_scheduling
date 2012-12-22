@@ -49,14 +49,10 @@ class DriverTripsDatatable
 
     if params[:sSearch].present?
 
-
-      trips = trips.includes(:destination, :note, :drivership).includes(:car).where("
+      trips = trips.where("
             departure_time like :search or
             back_time like :search or
-            workers_names like :search or
-            notes.name like :search or
-            destinations.name like :search or
-            cars.plate like :search", search: "%#{params[:sSearch]}%")
+            workers_names like :search", search: "%#{params[:sSearch]}%")
 
     end
 
@@ -98,7 +94,7 @@ class DriverTripsDatatable
   end
 
   def sort_column
-    columns = %w[plate workers destination departure_time back_time note]
+    columns = %w[plate driver workers destination departure_time back_time note]
     columns[params[:iSortCol_0].to_i]
   end
 

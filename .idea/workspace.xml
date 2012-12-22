@@ -23,69 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="status_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/workers/status_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="4" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/workers/status/start.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="10" selection-start="590" selection-end="590" vertical-scroll-proportion="0.5190024">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tour.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/workers/status/tour.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="70" selection-end="157" vertical-scroll-proportion="-2.0357144">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_side.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/workers/status/_side.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_assets.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/workers/status/_assets.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/workers/trips/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="330" selection-end="519" vertical-scroll-proportion="-9.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/workers/base_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="worker_trips_datatable.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/datatables/worker_trips_datatable.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,19 +32,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="driver_trips_datatable.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/datatables/driver_trips_datatable.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="54" column="75" selection-start="1394" selection-end="1570" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trips_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/workers/trips_controller.rb">
+      <file leaf-file-name="driver_history_datatable.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/datatables/driver_history_datatable.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="54" selection-start="2952" selection-end="2952" vertical-scroll-proportion="0.0">
+            <state line="99" column="79" selection-start="3276" selection-end="3276" vertical-scroll-proportion="0.6984127">
               <folding />
             </state>
           </provider>
@@ -123,8 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/workers/trips/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/workers/status/tour.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/sessions_helper.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dataTables_bootstrap.js" />
@@ -139,6 +74,8 @@
         <option value="$PROJECT_DIR$/app/controllers/workers/base_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/workers/status_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/workers/status/start.html.erb" />
+        <option value="$PROJECT_DIR$/app/datatables/driver_trips_datatable.rb" />
+        <option value="$PROJECT_DIR$/app/datatables/driver_history_datatable.rb" />
       </list>
     </option>
   </component>
@@ -1258,12 +1195,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="1" class="java.lang.String" itemvalue="Ruby.sessions_helper" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="4" class="java.lang.String" itemvalue="Rails.Production: vehicle_scheduling" />
-      <item index="5" class="java.lang.String" itemvalue="Rails.Development: vehicle_scheduling" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: vehicle_scheduling" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: vehicle_scheduling" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="5" class="java.lang.String" itemvalue="Ruby.sessions_helper" />
     </list>
     <recent_temporary>
       <list size="2">
@@ -1378,51 +1315,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/workers/worker_history_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="6" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/drivers/trips_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="14" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/drivers/status_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/drivers/driver_history_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/drivers/base_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/datatables/worker_trips_datatable.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1457,7 +1352,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/workers/trips/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="330" selection-end="519" vertical-scroll-proportion="-9.5">
+        <state line="14" column="0" selection-start="330" selection-end="519" vertical-scroll-proportion="0.30680507">
           <folding />
         </state>
       </provider>
@@ -1478,14 +1373,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/workers/status/tour.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="70" selection-end="157" vertical-scroll-proportion="-2.0357144">
+        <state line="3" column="0" selection-start="70" selection-end="157" vertical-scroll-proportion="0.065743946">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/workers/status/start.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="10" selection-start="590" selection-end="590" vertical-scroll-proportion="0.5190024">
+        <state line="22" column="14" selection-start="589" selection-end="589" vertical-scroll-proportion="-14.928572">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/workers/base/_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="401" selection-end="401" vertical-scroll-proportion="-7.464286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/datatables/worker_history_datatable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="79" selection-start="3716" selection-end="3778" vertical-scroll-proportion="0.7027933">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/datatables/trips_datatable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="79" selection-start="3122" selection-end="3184" vertical-scroll-proportion="0.7346939">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/datatables/worker_trips_datatable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="42" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/datatables/driver_trips_datatable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="75" selection-start="1394" selection-end="1570" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/datatables/driver_history_datatable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="79" selection-start="3276" selection-end="3276" vertical-scroll-proportion="0.6984127">
           <folding />
         </state>
       </provider>
