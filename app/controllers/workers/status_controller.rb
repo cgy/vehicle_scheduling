@@ -1,7 +1,7 @@
 module Workers
   class StatusController < BaseController
 
-    before_filter :user_in_trip,     only: :update
+    before_filter :user_in_trip, only: :update
 
     def start
       redirect_to '/workers/tour' if in_trip?(current_user)
@@ -88,6 +88,13 @@ module Workers
         end
         format.js
       end
+    end
+
+    private
+
+    def user_in_trip
+      flash[:success] = "您的状态已被司机或管理员修改！"
+      redirect_to(user_root) unless in_trip?(current_user)
     end
 
   end
