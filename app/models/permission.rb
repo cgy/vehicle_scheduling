@@ -11,6 +11,14 @@ class Permission
       end
       allow :'drivers/driver_history', [:index]
     end
+    if user.is_a? Worker
+      allow :'workers/status', [:start, :tour, :update]
+      allow :'workers/trips', [:index]
+      allow :'workers/trips', [:edit, :update] do |trip|
+        trip.workers.exists? user
+      end
+      allow :'workers/worker_history', [:index]
+    end
   end
 
   def allow?(controller, action, resource = nil)

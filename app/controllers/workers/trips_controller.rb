@@ -1,6 +1,5 @@
 module Workers
   class TripsController < BaseController
-    before_filter :user_in_trip,     only: :update
     def index
       respond_to do |format|
         format.html
