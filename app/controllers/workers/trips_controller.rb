@@ -1,6 +1,6 @@
 module Workers
   class TripsController < BaseController
-
+    before_filter :user_in_trip,     only: :update
     def index
       respond_to do |format|
         format.html
@@ -19,6 +19,7 @@ module Workers
       end
       @drivership = @trip.drivership
       @selected_key = @trip.workers_ids.split(",")
+      @in_trip_users_ids = in_trip_users(@trip)
     end
 
 
@@ -39,7 +40,7 @@ module Workers
         origin_workers_ids.each { |owi|
           if workers_ids_.index(owi).nil?
             worker = Worker.find(owi)
-            worker.update_attribute(:current_trip, 0) if @trip.ing
+            trip_user_delete(worker) if @trip.ing
             @trip.workers.delete(worker)
           else
             workers_ids_.delete(owi)
@@ -51,11 +52,11 @@ module Workers
           @trip.workers << worker
           #冲突
           if @trip.ing
-            if worker.current_trip > 0
+            if in_trip?(worker)
               @trip.workers.delete(worker)
-              @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
+              @trip.errors.add(:workers, "就在刚才，你选的工作人员" + worker.name + "被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
             else
-              worker.update_attribute(:current_trip, @trip.id)
+              trip_user_add(@trip, worker)
             end
           end
         }
@@ -83,6 +84,7 @@ module Workers
             end
             @drivership = @trip.drivership
             @selected_key = @trip.workers_ids.split(",")
+            @in_trip_users_ids = in_trip_users(@trip)
             @trip.errors.add(:workers, "工作人员不能为空") unless params[:workers_ids_] and params[:workers_ids_].size
 
             render 'edit'

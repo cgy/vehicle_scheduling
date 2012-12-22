@@ -10,13 +10,13 @@ class SessionsController < ApplicationController
       if current_user.is_a? Admin
         redirect_back_or admins_trips_path
       elsif current_user.is_a? Driver
-        if current_user.current_trip > 0
+        if in_trip?(current_user)
           redirect_to '/drivers/tour'
         else
           redirect_to '/drivers/start'
         end
       else
-        if current_user.current_trip > 0
+        if in_trip?(current_user)
           redirect_to '/workers/tour'
         else
           redirect_to '/workers/start'

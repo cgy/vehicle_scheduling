@@ -24,7 +24,7 @@
       <%= form_for @trip, :as => :trip, :url => admins_trip_path(@trip), :method => :put,
                    :html => {:class => "form-horizontal"} do |f| %>
 
-          <%= render 'shared/error_messages' , object: f.object %>
+          <%= render 'shared/error_messages', object: f.object %>
 
           <div class="control-group">
             <label class="control-label" for="chzn-car-select">车辆</label>
@@ -42,12 +42,16 @@
 
             <div class="controls">
               <div class="chosen">
+                <% if @trip.ing %>
+                    <%= collection_select(:drivership, :driver_id, @drivers, :id, :name, {:include_blank => true},
+                                          {:class => "chzn-select-deselect", :id => "chzn-driver-select",
+                                           :'data-placeholder' => "请选择司机...", :name => "driver_id", :disabled => "true"}) %>
+                <% else %>
+                    <%= collection_select(:drivership, :driver_id, @drivers, :id, :name, {:include_blank => true},
+                                          {:class => "chzn-select-deselect", :id => "chzn-driver-select",
+                                           :'data-placeholder' => "请选择司机...", :name => "driver_id"}) %>
 
-                <%= collection_select(:drivership, :driver_id, @drivers, :id, :name, {:include_blank => true},
-                                      {:class => "chzn-select-deselect", :id => "chzn-driver-select",
-                                       :'data-placeholder' => "请选择司机...", :name => "driver_id"}) %>
-
-
+                <% end %>
               </div>
             </div>
           </div>
@@ -74,18 +78,18 @@
                   <% if @trip.ing %>
                       <% Group.all.each do |group| %>
                           <optgroup label="<%= group.name %>">
-                            <% group.workers.where("current_trip = ? OR current_trip = ?", @trip.id, 0).each do |worker| %>
+                            <% group.workers.where("id NOT IN (?)", @in_trip_users_ids).each do |worker| %>
                                 <option value="<%= worker.id %>"
-                                <% if @trip.workers.exists? worker %>
-                                   selected="selected"
-                                <% end %>
-                                ><%= worker.name %></option>
+                                        <% if @trip.workers.exists? worker %>
+                                        selected="selected"
+                                        <% end %>
+                                        ><%= worker.name %></option>
                             <% end %>
                           </optgroup>
                       <% end %>
                   <% else %>
                       <%= option_groups_from_collection_for_select(Group.all,
-                                    :workers, :name, :id, :name, @selected_key) %>
+                                                                   :workers, :name, :id, :name, @selected_key) %>
                   <% end %>
                 </select>
               </div>

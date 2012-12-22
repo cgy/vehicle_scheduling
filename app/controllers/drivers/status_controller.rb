@@ -2,19 +2,20 @@ module Drivers
   class StatusController < BaseController
 
     def start
-      redirect_to '/drivers/tour' if current_user.current_trip > 0
+      redirect_to '/drivers/tour' if in_trip?(current_user)
     end
 
     def tour
 
-      redirect_to '/drivers/start' unless current_user.current_trip > 0
+      redirect_to '/drivers/start' unless in_trip?(current_user)
 
-      @trip = Trip.find(current_user.current_trip)
+      @trip = Trip.find(current_trip(current_user))
 
       @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
       @drivers = Driver.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("group_id").all
       @drivership = @trip.drivership
       @selected_key = @trip.workers_ids.split(",")
+      @in_trip_users_ids = in_trip_users(@trip)
 
     end
 
@@ -22,11 +23,11 @@ module Drivers
     # PUT /trips/1.json
     def update
 
-      @trip = Trip.find(current_user.current_trip)
+      @trip = Trip.find(current_trip(current_user))
       car = @trip.car
       driver = @trip.driver
 
-      #车辆或司机被改动
+      #车辆被改动
       unless params[:car_id] == car.id.to_s
 
         if params[:car_id] == ""
@@ -62,7 +63,7 @@ module Drivers
         origin_workers_ids.each { |owi|
           if workers_ids_.index(owi).nil?
             worker = Worker.find(owi)
-            worker.update_attribute(:current_trip, 0)
+            trip_user_delete(worker)
             @trip.workers.delete(worker)
           else
             workers_ids_.delete(owi)
@@ -74,11 +75,11 @@ module Drivers
           @trip.workers << worker
           #冲突解决
           if @trip.ing
-            if worker.current_trip > 0
+            if in_trip?(worker)
               @trip.workers.delete(worker)
-              @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
+              @trip.errors.add(:workers, "就在刚才，你选的工作人员" + worker.name + "被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
             else
-              worker.update_attribute(:current_trip, @trip.id)
+              trip_user_add(@trip, worker)
             end
           end
         }
@@ -99,9 +100,9 @@ module Drivers
             if params[:commit]
               @trip.ing = false
               @trip.car.update_attribute(:current_trip, 0)
-              current_user.update_attribute(:current_trip, 0)
+              trip_user_delete(current_user)
               @trip.workers.each { |worker|
-                worker.update_attribute(:current_trip, 0)
+                trip_user_delete(worker)
               }
               @trip.save
               sign_in(current_user)
@@ -116,7 +117,7 @@ module Drivers
             @drivership = @trip.drivership
             @selected_key = @trip.workers_ids.split(",")
             @trip.errors.add(:workers, "工作人员不能为空") unless params[:workers_ids_] and params[:workers_ids_].size
-
+            @in_trip_users_ids = in_trip_users(@trip)
             render '/drivers/status/tour'
           end
         end

@@ -11,7 +11,7 @@ $.extend( true, $.fn.dataTable.defaults, {
         "sInfoPostFix":  "",
         "sSearch":       "搜索:",
         "sUrl":          "",
-        "sEmptyTable": "您没有去年的出差记录！",
+        "sEmptyTable": "无出差记录！",
         "oPaginate": {
             "sFirst":    "首页",
             "sPrevious": "上页",

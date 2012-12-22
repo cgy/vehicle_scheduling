@@ -12,12 +12,6 @@ module Drivers
     # GET /trips/new.json
     def new
 
-      if current_user.current_trip > 0
-        flash[:success] = "您刚已被管理员添加到出差记录。"
-        redirect_to '/drivers/tour'
-      end
-
-
       @trip = Trip.new
 
 
@@ -26,6 +20,7 @@ module Drivers
 
       @selected_key = ""
 
+      @in_trip_users_ids = in_trip_users(@trip)
 
       respond_to do |format|
         format.html # new.html.erb
@@ -45,15 +40,11 @@ module Drivers
       end
       @drivership = @trip.drivership
       @selected_key = @trip.workers_ids.split(",")
+      @in_trip_users_ids = in_trip_users(@trip)
     end
 
 
     def create
-
-      if current_user.current_trip > 0
-        flash[:success] = "您刚已被管理员添加到出差记录。"
-        redirect_to '/drivers/tour'
-      end
 
       @trip = Trip.new
 
@@ -82,7 +73,7 @@ module Drivers
       @trip.errors.add(:cars, "就在刚才，你选的车辆已被添加到新增出差记录（出差）了，概率很小哦~ 囧~~~ 选其它车吧。") if @trip.car.current_trip > 0
       workers_ids_.each { |wi|
         worker = Worker.find(wi)
-        @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。") if worker.current_trip > 0
+        @trip.errors.add(:workers, "就在刚才，你选的工作人员" + worker.name + "被别人选了，概率很小哦~ 囧~~~ 选其它人吧。") if in_trip?(worker)
 
       }
 
@@ -93,12 +84,11 @@ module Drivers
             #此处解决Trip.new之后未保存没有生成id产生的问题
 
             @trip.car.update_attribute(:current_trip, @trip.id)
-            driver.update_attribute(:current_trip, @trip.id)
+            trip_user_add(@trip, current_user)
             workers_ids_.each { |wi|
               worker = Worker.find(wi)
               @trip.workers << worker
-
-              worker.update_attribute(:current_trip, @trip.id)
+              trip_user_add(@trip, worker)
             }
             @trip.workers_names = @trip.generate_workers_names
             @trip.save
@@ -111,7 +101,7 @@ module Drivers
             @cars = Car.where("current_trip = ?", 0).order("model").all
             @drivership = @trip.drivership
             @selected_key = @trip.workers_ids.split(",") if @trip.workers_ids
-
+            @in_trip_users_ids = in_trip_users(@trip)
             @trip.errors.add(:workers, "工作人员不能为空") unless params[:workers_ids_] and params[:workers_ids_].size
 
             sign_in(current_user)
@@ -132,7 +122,7 @@ module Drivers
       car = @trip.car
       driver = current_user
 
-      #车辆或司机被改动
+      #车辆被改动
       unless params[:car_id] == car.id.to_s
         if params[:car_id] == ""
           @trip.drivership_id = ""
@@ -167,7 +157,7 @@ module Drivers
         origin_workers_ids.each { |owi|
           if workers_ids_.index(owi).nil?
             worker = Worker.find(owi)
-            worker.update_attribute(:current_trip, 0) if @trip.ing
+            trip_user_delete(worker) if @trip.ing
             @trip.workers.delete(worker)
           else
             workers_ids_.delete(owi)
@@ -179,11 +169,11 @@ module Drivers
           @trip.workers << worker
           #冲突解决
           if @trip.ing
-            if worker.current_trip > 0
+            if in_trip?(worker)
               @trip.workers.delete(worker)
               @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
             else
-              worker.update_attribute(:current_trip, @trip.id)
+              trip_user_add(@trip, worker)
             end
           end
 
@@ -226,10 +216,10 @@ module Drivers
       @trip = Trip.find(params[:id])
 
       if @trip.ing
-        @trip.driver.update_attribute(:current_trip, 0)
+        trip_user_delete(@trip.driver)
         @trip.car.update_attribute(:current_trip, 0)
         @trip.workers.each do |worker|
-          worker.update_attribute(:current_trip, 0)
+          trip_user_delete(worker)
         end
       end
 

@@ -14,9 +14,10 @@ module Admins
       @trip = Trip.find(params[:id])
       @cars = Car.order("model").all
       @drivers = Driver.order("group_id").all
+      @in_trip_users_ids = in_trip_users(@trip)
       if @trip.ing
         @cars = Car.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("model").all
-        @drivers = Driver.where("current_trip = ? OR current_trip = ?", @trip.id, 0).order("group_id").all
+        @drivers = Driver.where("id NOT IN (?)", @in_trip_users_ids).order("group_id").all
       end
       @drivership = @trip.drivership
       @selected_key = @trip.workers_ids.split(",")
@@ -26,11 +27,12 @@ module Admins
     # PUT /trips/1.json
     def update
 
-
       @trip = Trip.find(params[:id])
       car = @trip.car
       driver = @trip.driver
-
+      if @trip.ing
+        params[:driver_id] = driver.id.to_s
+      end
       #车辆或司机被改动
       unless params[:car_id] == car.id.to_s and params[:driver_id] == driver.id.to_s
         if params[:car_id] == "" or params[:driver_id] == ""
@@ -52,16 +54,16 @@ module Admins
                 car.update_attribute(:current_trip, 0)
               end
             end
-            if params[:driver_id] != driver.id.to_s
-              new_driver = Driver.find(params[:driver_id])
-              #冲突解决
-              if new_driver.current_trip > 0
-                @trip.errors.add(:drivers, "就在刚才，你选的司机自己添加出差记录了，概率很小哦~ 囧~~~ 选其它人吧。")
-              else
-                new_driver.update_attribute(:current_trip, @trip.id)
-                driver.update_attribute(:current_trip, 0)
-              end
-            end
+            #if params[:driver_id] != driver.id.to_s
+            #  new_driver = Driver.find(params[:driver_id])
+            #  #冲突解决
+            #  if in_trip?(new_driver)
+            #    @trip.errors.add(:drivers, "就在刚才，你选的司机自己添加出差记录了，概率很小哦~ 囧~~~ 选其它人吧。")
+            #  else
+            #    trip_user_add(@trip, new_driver)
+            #    trip_user_delete(driver)
+            #  end
+            #end
           end
         end
       end
@@ -76,7 +78,7 @@ module Admins
         origin_workers_ids.each { |owi|
           if workers_ids_.index(owi).nil?
             worker = Worker.find(owi)
-            worker.update_attribute(:current_trip, 0) if @trip.ing
+            trip_user_delete(worker) if @trip.ing
             @trip.workers.delete(worker)
           else
             workers_ids_.delete(owi)
@@ -88,11 +90,11 @@ module Admins
           @trip.workers << worker
           #冲突
           if @trip.ing
-            if worker.current_trip > 0
+            if in_trip?(worker)
               @trip.workers.delete(worker)
-              @trip.errors.add(:workers, "就在刚才，你选的工作人员被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
+              @trip.errors.add(:workers, "就在刚才，你选的工作人员" + worker.name + "被别人选了，概率很小哦~ 囧~~~ 选其它人吧。")
             else
-              worker.update_attribute(:current_trip, @trip.id)
+              trip_user_add(@trip, worker)
             end
           end
         }
@@ -120,6 +122,7 @@ module Admins
             end
             @drivership = @trip.drivership
             @selected_key = @trip.workers_ids.split(",")
+            @in_trip_users_ids = in_trip_users(@trip)
             @trip.errors.add(:workers, "工作人员不能为空") unless params[:workers_ids_] and params[:workers_ids_].size
 
             render 'edit'
@@ -135,10 +138,10 @@ module Admins
       @trip = Trip.find(params[:id])
 
       if @trip.ing
-        @trip.driver.update_attribute(:current_trip, 0)
+        trip_user_delete(@trip.driver)
         @trip.car.update_attribute(:current_trip, 0)
         @trip.workers.each do |worker|
-          worker.update_attribute(:current_trip, 0)
+          trip_user_delete(worker)
         end
       end
 

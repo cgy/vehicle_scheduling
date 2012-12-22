@@ -60,7 +60,7 @@
                   <option value=""></option>
                   <% Group.all.each do |group| %>
                           <optgroup label="<%= group.name %>">
-                            <% group.workers.where("current_trip = ? OR current_trip = ?", 0, @trip.id).each do |worker| %>
+                            <% group.workers.where("id NOT IN (?)", @in_trip_users_ids).each do |worker| %>
                                 <option value="<%= worker.id %>"
                                 <% if @selected_key and @selected_key.include? worker.id.to_s %>
                                    selected="selected"

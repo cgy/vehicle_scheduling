@@ -74,7 +74,7 @@
                   <% if @trip.ing %>
                       <% Group.all.each do |group| %>
                           <optgroup label="<%= group.name %>">
-                            <% group.workers.where("current_trip = ? OR current_trip = ?", @trip.id, 0).each do |worker| %>
+                            <% group.workers.where("id NOT IN (?)", @in_trip_users_ids).each do |worker| %>
                                 <option value="<%= worker.id %>"
                                 <% if @trip.workers.exists? worker %>
                                    selected="selected"
