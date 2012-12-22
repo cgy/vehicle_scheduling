@@ -19,8 +19,6 @@ module Drivers
 
     end
 
-    # PUT /trips/1
-    # PUT /trips/1.json
     def update
 
       @trip = Trip.find(current_trip(current_user))

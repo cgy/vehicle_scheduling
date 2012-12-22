@@ -25,6 +25,7 @@ module TripsHelper
 
     in_trip_users_ids = []
     trip_users = TripUser.where("trip_id != ?", trip.id)
+    trip_users = TripUser.all if trip.id.nil?
 
     unless trip_users.nil?
       trip_users.each { |trip_user|

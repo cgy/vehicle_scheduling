@@ -214,8 +214,8 @@ module Drivers
     def destroy
 
       @trip = Trip.find(params[:id])
-
-      if @trip.ing
+      ing = @trip.ing
+      if ing
         trip_user_delete(@trip.driver)
         @trip.car.update_attribute(:current_trip, 0)
         @trip.workers.each do |worker|
@@ -231,12 +231,21 @@ module Drivers
         format.html do
           flash[:success] = "该出差记录已删除！"
           sign_in(current_user)
-          redirect_to '/drivers/trips'
+          if ing
+            redirect_to '/drivers/start'
+          else
+            redirect_to '/drivers/trips'
+          end
         end
         format.json
       end
     end
 
+    private
+
+    def current_resource
+      @current_resource ||= Trip.find(params[:id]) if params[:id]
+    end
 
   end
 

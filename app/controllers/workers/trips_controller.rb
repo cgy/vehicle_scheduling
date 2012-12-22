@@ -93,6 +93,9 @@ module Workers
         format.js
       end
     end
-
+  private
+    def current_resource
+      @current_resource ||= Trip.find(params[:id]) if params[:id]
+    end
   end
 end
