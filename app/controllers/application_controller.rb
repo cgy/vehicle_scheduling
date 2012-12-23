@@ -18,7 +18,7 @@ private
 
   def authorize
     if !current_permission.allow?(params[:controller], params[:action], current_resource)
-      flash[:error] = "您没有该链接的访问权限！"
+      flash[:error] = "您没有该链接的访问权限！请登录相关账户。"
       redirect_to user_root
     end
   end

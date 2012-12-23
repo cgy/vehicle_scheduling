@@ -74,6 +74,7 @@ namespace :db do
     dest13 = Destination.create!(name:"文山变")
     dest14 = Destination.create!(name:"赣州变")
     dest15 = Destination.create!(name:"雷公山变")
+    dest16 = Destination.create!(name:"其它")
 
 
     note1 = Note.create!(name:"消缺")

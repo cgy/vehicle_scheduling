@@ -1,23 +1,37 @@
 class Permission
-  def initialize(user)
-    allow :index_page, [:index]
+  def initialize(current_user)
+    allow :index_page,   [:index]
     allow :static_pages, [:about, :contact]
-    allow :sessions, [:new, :create, :destroy]
-    if user.is_a? Driver
-      allow :'drivers/status', [:start, :tour, :update]
-      allow :'drivers/trips', [:index, :new, :create]
-      allow :'drivers/trips', [:edit, :update, :destroy] do |trip|
-        trip.driver.id == user.id
+    allow :sessions,     [:new, :create, :destroy]
+    allow :users,        [:edit, :update] do |edit_user|
+      edit_user.id == current_user.id
+    end
+    if current_user.is_a? Driver
+      allow :'drivers/status',         [:start, :tour, :update]
+      allow :'drivers/trips',          [:index, :new, :create]
+      allow :'drivers/trips',          [:edit, :update, :destroy] do |trip|
+        trip.driver.id == current_user.id
       end
       allow :'drivers/driver_history', [:index]
     end
-    if user.is_a? Worker
-      allow :'workers/status', [:start, :tour, :update]
-      allow :'workers/trips', [:index]
-      allow :'workers/trips', [:edit, :update] do |trip|
-        trip.workers.exists? user
+    if current_user.is_a? Worker
+      allow :'workers/status',         [:start, :tour, :update]
+      allow :'workers/trips',          [:index]
+      allow :'workers/trips',          [:edit, :update] do |trip|
+        trip.workers.exists? current_user
       end
       allow :'workers/worker_history', [:index]
+    end
+    if current_user.is_a? Admin
+      allow :'admins/trips',           [:index, :edit, :update, :destroy]
+      allow :'admins/drivers_history', [:index, :edit, :update, :destroy]
+      allow :'admins/workers_history', [:index, :edit, :update, :destroy]
+      allow :'admins/cars',            [:index, :new, :create, :edit, :update, :destroy]
+      allow :'admins/drivers',         [:index, :new, :create, :edit, :update, :destroy]
+      allow :'admins/groups',          [:index, :new, :create, :edit, :update, :destroy]
+      allow :'admins/workers',         [:index, :new, :create, :edit, :update, :destroy]
+      allow :'admins/destinations',    [:index, :new, :create, :edit, :update, :destroy]
+      allow :'admins/notes',           [:index, :new, :create, :edit, :update, :destroy]
     end
   end
 

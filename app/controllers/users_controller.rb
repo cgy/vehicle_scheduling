@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
 
-  before_filter :signed_in_user, only: [:edit, :update]
-  before_filter :correct_user, only: [:edit, :update]
-
-
   def edit
     @user = User.find(params[:id])
   end
@@ -17,8 +13,10 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
-
   end
 
-
+  private
+  def current_resource
+    @current_resource ||= User.find(params[:id]) if params[:id]
+  end
 end
