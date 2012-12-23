@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="permission.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="permission.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/permission.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="98" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.7217877">
+            <state line="34" column="98" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_footer.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/application/_footer.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="10" selection-start="357" selection-end="357" vertical-scroll-proportion="0.2848904">
               <folding />
             </state>
           </provider>
@@ -89,7 +98,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/datatables/driver_history_datatable.rb" />
         <option value="$PROJECT_DIR$/app/views/index_page/_content.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/application/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/drivers/status_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/trips_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/drivers/status/start.html.erb" />
@@ -103,6 +111,7 @@
         <option value="$PROJECT_DIR$/app/helpers/users_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/permission.rb" />
+        <option value="$PROJECT_DIR$/app/views/application/_footer.html.erb" />
       </list>
     </option>
   </component>
@@ -516,6 +525,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="drivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehicle_scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1300,13 +1331,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/admins/trips_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="14" selection-start="2842" selection-end="2846" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admins/cars_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="48" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
@@ -1407,7 +1431,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/permission.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="98" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.7217877">
+        <state line="34" column="98" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/application/_footer.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="10" selection-start="357" selection-end="357" vertical-scroll-proportion="0.2848904">
           <folding />
         </state>
       </provider>
