@@ -1,3 +1,4 @@
+#encoding: utf-8
 class GroupsDatatable
   delegate :params, :h, :link_to, :edit_admins_group_path, :admins_group_path, to: :@view
 

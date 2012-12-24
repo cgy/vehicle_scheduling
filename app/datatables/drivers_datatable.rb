@@ -1,3 +1,4 @@
+#encoding: utf-8
 class DriversDatatable
   delegate :params, :h, :link_to, :edit_admins_driver_path, :admins_driver_path, to: :@view
 

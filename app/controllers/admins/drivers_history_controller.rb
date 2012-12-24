@@ -1,3 +1,4 @@
+#encoding: utf-8
 module Admins
   class DriversHistoryController < BaseController
     # GET /drivers_history

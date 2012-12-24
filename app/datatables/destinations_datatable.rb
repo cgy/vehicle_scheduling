@@ -1,3 +1,4 @@
+#encoding: utf-8
 class DestinationsDatatable
   delegate :params, :h, :link_to, :edit_admins_destination_path, :admins_destination_path, to: :@view
 

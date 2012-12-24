@@ -1,3 +1,4 @@
+#encoding: utf-8
 module Admins
   class TripsController < BaseController
     # GET /trips

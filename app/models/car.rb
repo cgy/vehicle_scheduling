@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Car < ActiveRecord::Base
   attr_accessible :model, :plate, :load, :current_trip
 

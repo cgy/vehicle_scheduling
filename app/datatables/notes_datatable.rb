@@ -1,3 +1,4 @@
+#encoding: utf-8
 class NotesDatatable
   delegate :params, :h, :link_to, :edit_admins_note_path, :admins_note_path, to: :@view
 

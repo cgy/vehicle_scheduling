@@ -1,3 +1,4 @@
+#encoding: utf-8
 class CarsDatatable
   delegate :params, :h, :link_to, :edit_admins_car_path, :admins_car_path, to: :@view
 

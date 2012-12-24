@@ -1,3 +1,4 @@
+#encoding: utf-8
 module Workers
   class TripsController < BaseController
     def index

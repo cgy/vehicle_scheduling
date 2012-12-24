@@ -1,3 +1,4 @@
+#encoding: utf-8
 require 'date'
 class TripsDatatable
   delegate :params, :h, :link_to, :edit_admins_trip_path, :admins_trip_path, to: :@view

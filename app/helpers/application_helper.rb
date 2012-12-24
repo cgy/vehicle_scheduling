@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#encoding: utf-8
 module ApplicationHelper
   def full_title(page_title)
     base_title = "变电检修中心车辆管理系统"

@@ -1,3 +1,4 @@
+#encoding: utf-8
 class WorkersDatatable
   delegate :params, :h, :link_to, :edit_admins_worker_path, :admins_worker_path, to: :@view
 

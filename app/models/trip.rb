@@ -1,4 +1,5 @@
-require "date"
+#encoding: utf-8
+#require "date"
 class Trip < ActiveRecord::Base
   include ActiveModel::Validations
 

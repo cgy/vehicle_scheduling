@@ -1,3 +1,4 @@
+#encoding: utf-8
 require 'date'
 class DriverHistoryDatatable
   delegate :params, :h, :link_to, to: :@view

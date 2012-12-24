@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Drivership < ActiveRecord::Base
   attr_accessible :car_id, :driver_id
 
