@@ -1,7 +1,6 @@
 /*
  *= require jquery.ui.datepicker
  */
-#encoding: utf-8
 
 .content {
   margin-left: -15px;
@@ -38,7 +37,7 @@
   width: 735px;
 }
 
-/*表格*/
+/*table*/
 
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
@@ -58,7 +57,7 @@
   margin-left: 3px;
 }
 
-/*表单*/
+/*form*/
 #chzn-car-select {
   width: 250px;
 }
@@ -105,7 +104,6 @@
 }
 
 
-/*附页标题*/
 #title {
   margin-bottom: 20px;
   font-size: 1.1em;
@@ -117,7 +115,6 @@
 }
 
 
-/*日期选择图标*/
 .icon-calendar {
   margin-top: 7px;
 }
