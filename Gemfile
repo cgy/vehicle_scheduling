@@ -53,7 +53,6 @@ group :test do
 end
 
 group :production do
-  gem 'mysql', '2.8.1'
 end
 
 
