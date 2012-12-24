@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Worker < User
 
   has_many :workerships
