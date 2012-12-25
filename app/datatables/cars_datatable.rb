@@ -24,19 +24,19 @@ class CarsDatatable
     #        DT_RowId:0,
     #        model:"Trident",
     #        plate:"Internet Explorer 4.0",
-    #        load:"4"
+    #        load_limit:"4"
     #      },
     #      {
     #        DT_RowId:1,
     #        model:"Trident",
     #        plate:"Internet Explorer 5.0",
-    #        load:"5"
+    #        load_limit:"5"
     #      },
     #      {
     #        DT_RowId:2,
     #        model:"Trident",
     #        plate:"Internet Explorer 5.5",
-    #        load:"Win 95+",
+    #        load_limit:"Win 95+",
     #      }
     #   ]
     #}
@@ -50,7 +50,7 @@ class CarsDatatable
           DT_RowId: car.id, #行id
           model: h(car.model),
           plate: h(car.plate),
-          load: h(car.load)
+          load_limit: h(car.load_limit)
       }
     end
   end
@@ -66,8 +66,8 @@ class CarsDatatable
 
     if params[:sSearch].present?
 
+      cars = cars.where("model like :search or plate like :search or load_limit like :search", search: "%#{params[:sSearch]}%")
 
-      cars = cars.where("model like :search or plate like :search or load like :search", search: "%#{params[:sSearch]}%")
     end
 
     cars
@@ -97,7 +97,7 @@ class CarsDatatable
   end
 
   def sort_column
-    columns = %w[model plate load]
+    columns = %w[model plate load_limit]
     columns[params[:iSortCol_0].to_i]
   end
 
