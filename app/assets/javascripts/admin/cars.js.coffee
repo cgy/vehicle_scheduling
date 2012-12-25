@@ -23,7 +23,7 @@ jQuery ->
     "aoColumns": [
       { "mData": "model" },
       { "mData": "plate" },
-      { "mData": "load" }
+      { "mData": "load_limit" }
     ]
     "oTableTools": {
       "sRowSelect": "single"
