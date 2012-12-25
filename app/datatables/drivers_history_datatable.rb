@@ -46,15 +46,11 @@ class DriversHistoryDatatable
     trips = trips.page(page).per_page(per_page)
 
     if params[:sSearch].present?
-
-
-      trips = trips.includes(:destination, :note, :drivership).includes(:car, :driver).where("
-            departure_time like :search or
-            back_time like :search or
+      trips = trips.includes(:destination, :note, :drivership => [:car, :driver]).where("
+            notes.name like :search or
             destinations.name like :search or
             cars.plate like :search or
             users.name like :search", search: "%#{params[:sSearch]}%")
-
     end
 
     trips

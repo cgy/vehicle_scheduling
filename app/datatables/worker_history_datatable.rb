@@ -51,14 +51,9 @@ class WorkerHistoryDatatable
     if params[:sSearch].present?
 
 
-      trips = trips.includes(:destination, :note, :drivership).includes(:car, :driver).where("
+      trips = trips.where("
             departure_time like :search or
-            back_time like :search or
-            workers_names like :search or
-            notes.name like :search or
-            destinations.name like :search or
-            cars.plate like :search or
-            users.name like :search", search: "%#{params[:sSearch]}%")
+            back_time like :search", search: "%#{params[:sSearch]}%")
 
     end
 

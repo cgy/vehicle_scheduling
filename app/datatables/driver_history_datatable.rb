@@ -50,12 +50,12 @@ class DriverHistoryDatatable
 
       trips = trips.where("
             departure_time like :search or
-            back_time like :search or
-            workers_names like :search", search: "%#{params[:sSearch]}%")
+            back_time like :search", search: "%#{params[:sSearch]}%")
 
     end
 
     trips
+
   end
 
   def fetch_trips_helper(sort_column, sort_direction)

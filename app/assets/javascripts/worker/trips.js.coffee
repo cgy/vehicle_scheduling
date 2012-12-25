@@ -16,20 +16,27 @@ jQuery ->
     #排版
     "sDom": "<'span9'<'row'<'span3'l><'span1'T><'span1'r><'span4'f>>><'span9't><'span9'<'row'<'span5'i><'span4'p>>>"
     "aLengthMenu": [[10, 25, 50, 100, 200, 500, 1000, -1], [10, 25, 50, 100, 200, 500, 1000, "所有"]]
-
     #禁用第三、七列排序
     "aoColumnDefs": [
-      { "bSortable": false, "aTargets": [ 2 ] }
+      { "bSortable": false, "aTargets": [ 2 ] },
+      { "bSortable": false, "aTargets": [ 7 ] }
     ]
-
+    #首次打开默认以第六列排序
+    "aaSorting": [[ 5, "desc" ]]
     "oLanguage": {
       "sSearch": "按时间搜索:"
     }
-
-    #首次打开默认以第六列排序
-    "aaSorting": [[ 4, "desc" ]]
-
     "bAutoWidth": false,
+    "aoColumns": [
+      { "sWidth": "65px", "aTargets": [ 0 ] },
+      { "sWidth": "40px", "aTargets": [ 1 ] },
+      { "sWidth": "145px", "aTargets": [ 2 ] },
+      { "sWidth": "50px", "aTargets": [ 3 ] },
+      { "sWidth": "65px", "aTargets": [ 4 ] },
+      { "sWidth": "65px", "aTargets": [ 5 ] },
+      { "sWidth": "45px", "aTargets": [ 6 ] },
+      { "sWidth": "28px", "aTargets": [ 7 ] }
+    ]
     "oTableTools": {
       "aButtons": [
         {
@@ -67,5 +74,16 @@ jQuery ->
   $('#inputBack_time').datepicker()
   $('#inputBack_time').attr( 'readOnly', 'true' )
 
+  #根据所选班组对optgroup重排
+  $("#chzn-group-select").chosen().change ->
+    #alert $("#chzn-worker-select").val()
+    $sel = $("#chzn-worker-select")
+    val = $(this).val()
+    group =  $('option:selected', this).text()
+    $('span > optgroup', $sel).unwrap()
+    if val isnt '%'
+      $('optgroup:not([label="' + group + '"])', $sel).appendTo($sel)
+    #chosen属性 选项更新
+    $sel.trigger("liszt:updated")
 
 

@@ -50,8 +50,6 @@ class WorkersHistoryDatatable
 
 
       trips = trips.includes(:destination, :note).where("
-            departure_time like :search or
-            back_time like :search or
             workers_names like :search or
             notes.name like :search or
             destinations.name like :search", search: "%#{params[:sSearch]}%")

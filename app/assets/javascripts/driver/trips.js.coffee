@@ -22,6 +22,9 @@ jQuery ->
       { "bSortable": false, "aTargets": [ 2 ] },
       { "bSortable": false, "aTargets": [ 7 ] }
     ]
+    "oLanguage": {
+      "sSearch": "按时间搜索:"
+    }
     #首次打开默认以第六列排序
     "aaSorting": [[ 5, "desc" ]]
 

@@ -52,8 +52,7 @@ class DriverTripsDatatable
 
       trips = trips.where("
             departure_time like :search or
-            back_time like :search or
-            workers_names like :search", search: "%#{params[:sSearch]}%")
+            back_time like :search", search: "%#{params[:sSearch]}%")
 
     end
 
