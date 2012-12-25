@@ -45,22 +45,16 @@ class TripsDatatable
     trips = trips.page(page).per_page(per_page)
 
     if params[:sSearch].present?
-
-      trips1 = trips.where("
-            departure_time like :search or
-            back_time like :search", search: "%#{params[:sSearch]}%")
-
-      trips2 = trips.includes(:destination, :note, :drivership).includes(:car, :driver).where("
+      trips = trips.includes(:destination, :note, :drivership => [:car, :driver]).where("
             workers_names like :search or
             notes.name like :search or
             destinations.name like :search or
             cars.plate like :search or
             users.name like :search", search: "%#{params[:sSearch]}%")
-      trips = trips1+trips2
-
     end
 
     trips
+
   end
 
   def fetch_trips_helper(sort_column, sort_direction)
