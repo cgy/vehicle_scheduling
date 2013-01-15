@@ -23,7 +23,7 @@ module TripsHelper
 
   def in_trip_users(trip)
 
-    in_trip_users_ids = []
+    in_trip_users_ids = [0]
     trip_users = TripUser.where("trip_id != ?", trip.id)
     trip_users = TripUser.all if trip.id.nil?
 
