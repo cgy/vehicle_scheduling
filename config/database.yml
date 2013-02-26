@@ -25,7 +25,7 @@ production:
   database: vm
   pool: 5
   username: clgl
-  password: admin668837
+  password: 
   host: localhost
 
 cucumber:
