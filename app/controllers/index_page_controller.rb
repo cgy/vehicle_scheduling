@@ -6,9 +6,9 @@ class IndexPageController < ApplicationController
     cars = Car.all
     drivers = Driver.all
 
-    @available_drivers = []
     @available_cars = []
     @cars_in_use = []
+    @available_drivers = []
 
     cars.each { |car|
       #该车已出差
@@ -40,43 +40,48 @@ class IndexPageController < ApplicationController
         end
       end
     }
+
     drivers.each { |driver|
 
       if TripUser.where(:user_id => driver.id).exists?
         next
       end
-      
+
       latest_drivership = Drivership.where("driver_id=?", driver.id).order('created_at desc').first
-      
+
+
       if latest_drivership.nil?
+
         @available_drivers << {
-          name: driver.name,
-          phone: driver.phone,
-          latest_trip_time: nil,
-          latest_trip_destination: nil
+            name: driver.name,
+            phone: driver.phone,
+            latest_trip_time: nil,
+            latest_trip_destination: nil
         }
+
       else
-       latest_trip = Trip.where("drivership_id=?", latest_drivership.id).order('created_at desc').first
-       if lastest_trip.nil?
-         @available_drivers << {
-           name: driver.name,
-           phone: driver.phone,
-           latest_trip_time: nil,
-           latest_trip_destination: nil
-         }
-       else
-         @available_drivers << {
-           name: driver.name,
-           phone: driver.phone,
-           latest_trip_time: latest_trip.back_time,
-           latest_trip_destination: latest_trip.destination.name
-         }
-       end
+        latest_trip = Trip.where("drivership_id=?", latest_drivership.id).order('created_at desc').first
+        if latest_trip.nil?
+
+          @available_drivers << {
+              name: driver.name,
+              phone: driver.phone,
+              latest_trip_time: nil,
+              latest_trip_destination: nil
+          }
+
+        else
+
+          @available_drivers << {
+              name: driver.name,
+              phone: driver.phone,
+              latest_trip_time: latest_trip.back_time,
+              latest_trip_destination: latest_trip.destination.name
+          }
+
+        end
       end
 
-
-
-    }   
+    }
   end
-
 end
