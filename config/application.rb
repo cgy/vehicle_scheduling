@@ -63,7 +63,5 @@ module VehicleScheduling
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
 
   end
-
-
-
-
+  
+end

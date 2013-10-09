@@ -3,7 +3,7 @@
 class Trip < ActiveRecord::Base
   include ActiveModel::Validations
 
-  attr_accessible :drivership_id, :destination_id, :note_id, :back_time, :departure_time, :workers_ids, :ing, :workers_names
+  # attr_accessible :drivership_id, :destination_id, :note_id, :back_time, :departure_time, :workers_ids, :ing, :workers_names
 
   validates :drivership_id, :presence => {:message => '车辆或司机不能为空'}
   validates :destination_id, :presence => {:message => '出差地不能为空'}

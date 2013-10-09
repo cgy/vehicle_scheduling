@@ -18,13 +18,13 @@ VehicleScheduling::Application.routes.draw do
     resources :destinations
     resources :notes
 
-    match '/workers-history', to:"workers_history#index"
-    match '/workers-history/:id/edit' => 'workers_history#edit'
+    get '/workers-history', to:"workers_history#index"
+    get '/workers-history/:id/edit' => 'workers_history#edit'
     match '/workers-history/:id' => 'workers_history#update', :via => :put
     match '/workers-history/:id' => 'workers_history#destroy', :via => :delete
 
-    match '/drivers-history', to:"drivers_history#index"
-    match '/drivers-history/:id/edit' => 'drivers_history#edit'
+    get '/drivers-history', to:"drivers_history#index"
+    get '/drivers-history/:id/edit' => 'drivers_history#edit'
     match '/drivers-history/:id' => 'drivers_history#update', :via => :put
     match '/drivers-history/:id' => 'drivers_history#destroy', :via => :delete
 
@@ -32,23 +32,23 @@ VehicleScheduling::Application.routes.draw do
 
   namespace :drivers do
 
-    match '/start',           to:"status#start"
-    match '/tour',           to:"status#tour"
-    match '/update',           to:"status#update"
+    get '/start',           to:"status#start"
+    get '/tour',           to:"status#tour"
+    get '/update',           to:"status#update"
 
     resources :trips
 
-    match '/driver-history', to:"driver_history#index"
+    get '/driver-history', to:"driver_history#index"
   end
 
   namespace :workers do
-    match '/start',           to:"status#start"
-    match '/tour',            to:"status#tour"
-    match '/update',           to:"status#update"
+    get '/start',           to:"status#start"
+    get '/tour',            to:"status#tour"
+    get '/update',           to:"status#update"
 
     resources :trips
 
-    match '/worker-history', to:"worker_history#index"
+    get '/worker-history', to:"worker_history#index"
   end
 
   # The priority is based upon order of creation:
@@ -59,15 +59,15 @@ VehicleScheduling::Application.routes.draw do
   #static pages
   root to:"index_page#index"
 
-  match '/about', to:"static_pages#about"
+  get '/about', to:"static_pages#about"
 
-  match '/help', to:"static_pages#help"
+  get '/help', to:"static_pages#help"
 
-  match '/contact', to:"static_pages#contact"
+  get '/contact', to:"static_pages#contact"
 
   # user pages
-  match '/signup',  to:'users#new'
-  match '/signin',  to:'sessions#new'
+  get '/signup',  to:'users#new'
+  get '/signin',  to:'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
 

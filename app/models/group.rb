@@ -1,6 +1,6 @@
 #encoding: utf-8
 class Group < ActiveRecord::Base
-  attr_accessible :name
+  # attr_accessible :name
 
   validates :name, :presence => {:message => '班组名称不能为空'}, Length: { maximum: 50 },
             :uniqueness => {:case_sensitive => false, :message => '班组重复'}

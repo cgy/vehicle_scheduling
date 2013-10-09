@@ -14,6 +14,8 @@ gem 'client_side_validations'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'sqlite3', '1.3.8'
 
+gem 'protected_attributes'
+
 
 
 # Gems used only for assets and not required
@@ -22,8 +24,7 @@ gem 'sqlite3', '1.3.8'
 gem 'sass-rails', "~> 4.0.0"
 gem 'coffee-rails', "~> 4.0.0"
 
-gem 'compass-rails', git: 'git@github.com:Compass/compass-rails.git', branch: 'rails4'
-gem 'chosen-rails'
+gem "chosen-rails", "~> 0.12.0"
 
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
@@ -34,6 +35,8 @@ gem "uglifier", "~> 2.2.1"
 
 gem 'jquery-ui-rails'
 gem 'jquery-rails'
+
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 
 group :production do
